@@ -166,14 +166,192 @@ def _extract_vp(sentence: str, target: str) -> str:
     return vp or target
 
 
-def _varied_context(phrase: Phrase, stage: ExerciseType, variant_idx: int) -> tuple[str, str]:
-    """Build distinct natural sentences for Context 2 (guided), Context 3 (completion), and Context 4 (recall)."""
-    t0, t1, m0, m1, _ = _extract_targets(phrase)
+_TOPIC_CONTEXTS: dict[str, dict[str, list[tuple[str, str]]]] = {
+    "food-and-drink": {
+        "places": [
+            ("at the neighborhood café", "en la cafetería del barrio"),
+            ("during lunch at the bistro", "durante el almuerzo en el bistró"),
+            ("when ordering dinner", "al pedir la cena"),
+            ("with the server at our table", "con el mesero en nuestra mesa"),
+            ("at the bakery counter", "en el mostrador de la panadería"),
+        ],
+        "tasks": [
+            ("ordering the tasting menu", "pedir el menú degustación"),
+            ("splitting the dinner bill", "dividir la cuenta de la cena"),
+            ("choosing a table on the patio", "elegir una mesa en la terraza"),
+            ("asking about daily specials", "preguntar por los especiales del día"),
+            ("customizing the coffee order", "personalizar el pedido de café"),
+        ],
+    },
+    "travel-and-transport": {
+        "places": [
+            ("at the departure gate", "en la puerta de embarque"),
+            ("at the central train station", "en la estación central de trenes"),
+            ("before boarding the flight", "antes de abordar el vuelo"),
+            ("at the ticket kiosk", "en el quiosco de boletos"),
+            ("near the baggage claim area", "cerca de la zona de equipaje"),
+        ],
+        "tasks": [
+            ("checking the platform number", "revisar el número de andén"),
+            ("catching the express train", "tomar el tren expreso"),
+            ("finding the airport shuttle", "encontrar el traslado al aeropuerto"),
+            ("confirming the seat upgrade", "confirmar el cambio de asiento"),
+            ("updating the travel itinerary", "actualizar el itinerario de viaje"),
+        ],
+    },
+    "hotel-and-shopping": {
+        "places": [
+            ("at the hotel front desk", "en la recepción del hotel"),
+            ("at the checkout counter", "en la caja de la tienda"),
+            ("near the fitting rooms", "cerca de los probadores"),
+            ("when calling room service", "al llamar al servicio a la habitación"),
+            ("at customer service", "en atención al cliente"),
+        ],
+        "tasks": [
+            ("completing the late check-in", "completar el registro tardío"),
+            ("exchanging a jacket size", "cambiar la talla de una chaqueta"),
+            ("requesting extra towels", "pedir toallas adicionales"),
+            ("reviewing the store receipt", "revisar el recibo de la tienda"),
+            ("booking a quieter room", "reservar una habitación más tranquila"),
+        ],
+    },
+    "work-and-career": {
+        "places": [
+            ("during the weekly stand-up", "durante la reunión semanal"),
+            ("on the client review call", "en la llamada de revisión con el cliente"),
+            ("before the quarterly presentation", "antes de la presentación trimestral"),
+            ("while updating the project board", "al actualizar el tablero del proyecto"),
+            ("in the team retrospective", "en la retrospectiva del equipo"),
+        ],
+        "tasks": [
+            ("aligning the sprint priorities", "alinear las prioridades del sprint"),
+            ("preparing the status deck", "preparar la presentación de avance"),
+            ("handing off the client brief", "entregar el resumen del cliente"),
+            ("reviewing the budget forecast", "revisar la proyección de presupuesto"),
+            ("onboarding the new analyst", "integrar al nuevo analista"),
+        ],
+    },
+    "health-and-emergencies": {
+        "places": [
+            ("at the clinic reception", "en la recepción de la clínica"),
+            ("when talking to the pharmacist", "al hablar con el farmacéutico"),
+            ("during the medical check-up", "durante el chequeo médico"),
+            ("at the urgent care desk", "en el mostrador de urgencias"),
+            ("on the follow-up call with the nurse", "en la llamada de seguimiento con la enfermera"),
+        ],
+        "tasks": [
+            ("explaining the symptoms clearly", "explicar los síntomas con claridad"),
+            ("picking up the prescription", "recoger la receta médica"),
+            ("scheduling a follow-up visit", "programar una cita de seguimiento"),
+            ("checking the dosage instructions", "revisar las instrucciones de dosis"),
+            ("updating the allergy form", "actualizar el formulario de alergias"),
+        ],
+    },
+    "social-and-smalltalk": {
+        "places": [
+            ("over coffee with a friend", "tomando un café con un amigo"),
+            ("at the weekend barbecue", "en la parrillada del fin de semana"),
+            ("at the neighborhood gathering", "en la reunión del vecindario"),
+            ("when catching up after work", "al ponerse al día después del trabajo"),
+            ("at the dinner party", "en la cena con amigos"),
+        ],
+        "tasks": [
+            ("planning the weekend hike", "planear la caminata del fin de semana"),
+            ("sharing travel stories", "compartir historias de viaje"),
+            ("recommending a local restaurant", "recomendar un restaurante local"),
+            ("organizing the birthday dinner", "organizar la cena de cumpleaños"),
+            ("introducing new neighbors", "presentar a nuevos vecinos"),
+        ],
+    },
+    "grammar-and-connectors": {
+        "places": [
+            ("when comparing both options", "al comparar ambas opciones"),
+            ("during the class discussion", "durante el debate en clase"),
+            ("while explaining your reasoning", "al explicar tu razonamiento"),
+            ("when summarizing the main point", "al resumir el punto principal"),
+            ("while connecting two viewpoints", "al conectar dos puntos de vista"),
+        ],
+        "tasks": [
+            ("structuring a clear argument", "estructurar un argumento claro"),
+            ("contrasting two proposals", "contrastar dos propuestas"),
+            ("clarifying the timeline", "aclarar el cronograma"),
+            ("supporting the final decision", "respaldar la decisión final"),
+            ("rephrasing the key takeaway", "reformular la idea clave"),
+        ],
+    },
+    "daily-tech-and-media": {
+        "places": [
+            ("when setting up the Wi-Fi", "al configurar el Wi-Fi"),
+            ("before joining the video call", "antes de entrar a la videollamada"),
+            ("while troubleshooting the app", "al resolver un fallo en la aplicación"),
+            ("when updating device settings", "al actualizar los ajustes del dispositivo"),
+            ("while managing cloud backups", "al gestionar las copias en la nube"),
+        ],
+        "tasks": [
+            ("securing the home router", "asegurar el router de casa"),
+            ("syncing the shared calendar", "sincronizar el calendario compartido"),
+            ("checking the privacy permissions", "revisar los permisos de privacidad"),
+            ("clearing the browser cache", "limpiar la caché del navegador"),
+            ("testing the microphone audio", "probar el audio del micrófono"),
+        ],
+    },
+    "cv-dhl-gsc-tl": {
+        "places": [
+            ("in the global operations review", "en la revisión de operaciones globales"),
+            ("during the DHL leadership panel", "durante el panel de liderazgo de DHL"),
+            ("when presenting KPI improvements", "al presentar mejoras de KPIs"),
+            ("in the UAT handover session", "en la sesión de entrega UAT"),
+            ("during the automation briefing", "durante la reunión de automatización"),
+        ],
+        "tasks": [
+            ("standardizing regional reporting", "estandarizar los reportes regionales"),
+            ("stabilizing the EDI data flow", "estabilizar el flujo de datos EDI"),
+            ("aligning the cross-functional team", "alinear al equipo multifuncional"),
+            ("automating the recurring dashboard", "automatizar el tablero recurrente"),
+            ("closing the audit action items", "cerrar los puntos de acción de auditoría"),
+        ],
+    },
+}
+
+_BARE_VERB_PREFIXES = (
+    "have ", "call ", "make ", "take ", "get ", "feel ", "fit ", "break ", "hit ",
+    "cut ", "keep ", "let ", "iron ", "move ", "sort ", "fill ", "pick ", "wake ",
+    "hold ", "check ", "set ", "wrap ", "lock ", "bridge ", "scale ", "drive ",
+    "step ", "stay ", "own ", "roll ", "flag ", "pull ", "push ", "turn ", "bring ",
+    "run ", "map ", "streamline ", "fast-track ", "stay ", "work ", "build ",
+)
+
+
+def _lc_first(s: str) -> str:
+    if len(s) > 1 and not s.startswith(("I ", "I'")):
+        return s[0].lower() + s[1:]
+    return s
+
+
+def _cap_first(s: str) -> str:
+    return s[0].upper() + s[1:] if s else s
+
+
+def _varied_context(
+    phrase: Phrase,
+    stage: ExerciseType,
+    variant_idx: int,
+    topic: str = "work-and-career",
+) -> tuple[str, str]:
+    """Build distinct, topic-aware, grammatically sound sentences for Contexts 2, 3, and 4."""
+    t0, _, m0, _, _ = _extract_targets(phrase)
     lower0 = t0.lower()
     base_en = phrase.text.strip()
     base_es = phrase.translation.split("(")[0].strip().rstrip(".")
+    ctx = _TOPIC_CONTEXTS.get(topic, _TOPIC_CONTEXTS["work-and-career"])
+    places = ctx["places"]
+    tasks = ctx["tasks"]
 
-    # 1. Phrasal verbs (e.g. wake up, fill out, hold on, call back, sort out, pick up)
+    stage_offset = 0 if stage == ExerciseType.GUIDED else (1 if stage == ExerciseType.COMPLETION else 2)
+    place_en, place_es = places[(variant_idx + stage_offset) % len(places)]
+    task_en, task_es = tasks[(variant_idx + stage_offset) % len(tasks)]
+
+    # 1. Phrasal verbs
     if phrase.kind == "phrasal_verb":
         vp_text = _extract_vp(base_en, t0)
         vp_apply = t0
@@ -182,159 +360,91 @@ def _varied_context(phrase: Phrase, stage: ExerciseType, variant_idx: int) -> tu
             if after and not after.startswith(","):
                 vp_apply = f"{t0} {after}".split(",")[0].strip()
         if lower0.endswith("ing"):
+            return (
+                f"{_cap_first(place_en)}, we were focused on {vp_apply}.",
+                f'{_cap_first(place_es)}, nos enfocamos en "{m0}".',
+            )
+        if stage == ExerciseType.GUIDED:
+            return (
+                f"{_cap_first(place_en)}, you often need to {vp_text}.",
+                f'{_cap_first(place_es)}, a menudo necesitas "{m0}" ({base_es.lower()}).',
+            )
+        if stage == ExerciseType.COMPLETION:
+            return (
+                f"{_cap_first(place_en)}, make sure to {vp_apply}.",
+                f'{_cap_first(place_es)}, asegúrate de "{m0}".',
+            )
+        return (
+            f"{_cap_first(place_en)}, our team tries to {vp_apply} right away.",
+            f'{_cap_first(place_es)}, nuestro equipo procura "{m0}" de inmediato.',
+        )
+
+    # 2. Idioms and expressions: only slot t0 directly when its grammatical role is verified
+    if phrase.kind in ("idiom", "expression"):
+        is_nominal = lower0.startswith(("a ", "an ", "the ", "piece of"))
+        is_bare_verb = lower0.startswith(_BARE_VERB_PREFIXES)
+        if is_nominal:
             if stage == ExerciseType.GUIDED:
                 return (
-                    f"At the central station, my coworker was {vp_apply}.",
-                    f'En la estación central, mi compañero estaba aplicando "{m0}".',
+                    f"{_cap_first(place_en)}, {_lc_first(task_en)} was {t0} for everyone.",
+                    f'{_cap_first(place_es)}, {task_es} fue "{m0}" para todos.',
                 )
             if stage == ExerciseType.COMPLETION:
                 return (
-                    f"During the afternoon break, we were {vp_text}.",
-                    f'Durante la pausa de la tarde, estábamos practicando "{m0}".',
+                    f"After preparing well {place_en}, {task_en} felt like {t0}.",
+                    f'Después de prepararnos bien {place_es}, {task_es} se sintió como "{m0}".',
                 )
             return (
-                f"Right before the flight, several passengers were {vp_apply}.",
-                f'Justo antes del vuelo, varios pasajeros estaban usando "{m0}".',
+                f"With clear steps {place_en}, {task_en} became {t0}.",
+                f'Con pasos claros {place_es}, {task_es} se volvió "{m0}".',
             )
-        if stage == ExerciseType.GUIDED:
-            opts = [
-                (
-                    f"During a busy morning at work, you often need to {vp_text}.",
-                    f'En una mañana ocupada en el trabajo, a menudo necesitas "{m0}" ({base_es.lower()}).',
-                ),
-                (
-                    f"When traveling with friends, we always try to {vp_text}.",
-                    f'Al viajar con amigos, siempre intentamos "{m0}" en esta situación.',
-                ),
-                (
-                    f"At the service counter, the staff asked us to {vp_text}.",
-                    f'En el mostrador de atención, el personal nos pidió "{m0}".',
-                ),
-            ]
-            return opts[variant_idx % len(opts)]
-        if stage == ExerciseType.COMPLETION:
-            opts = [
-                (
-                    f"Before finishing the shift, make sure to {vp_apply}.",
-                    f'Antes de terminar el turno, asegúrate de "{m0}" según lo indicado.',
-                ),
-                (
-                    f"Even on a hectic Monday, our team managed to {vp_apply}.",
-                    f'Incluso en un lunes ajetreado, nuestro equipo logró "{m0}" a tiempo.',
-                ),
-                (
-                    f"At the hotel reception, guests usually need to {vp_apply}.",
-                    f'En la recepción del hotel, los huéspedes suelen necesitar "{m0}".',
-                ),
-            ]
-            return opts[variant_idx % len(opts)]
-        opts = [
-            (
-                f"Whenever a new client arrives, we {vp_apply} right away.",
-                f'Siempre que llega un cliente nuevo, decidimos "{m0}" de inmediato.',
-            ),
-            (
-                f"Before the meeting starts, everyone should {vp_apply}.",
-                f'Antes de que empiece la reunión, todos deberían "{m0}".',
-            ),
-        ]
-        return opts[variant_idx % len(opts)]
+        if is_bare_verb:
+            if stage == ExerciseType.GUIDED:
+                return (
+                    f"{_cap_first(place_en)}, we decided to {t0} before continuing.",
+                    f'{_cap_first(place_es)}, decidimos "{m0}" antes de continuar.',
+                )
+            if stage == ExerciseType.COMPLETION:
+                return (
+                    f"When {_lc_first(task_en)} {place_en}, it helps to {t0}.",
+                    f'Al {task_es} {place_es}, conviene "{m0}".',
+                )
+            return (
+                f"{_cap_first(place_en)}, everyone agreed to {t0} together.",
+                f'{_cap_first(place_es)}, todos acordaron "{m0}" juntos.',
+            )
 
-    # 2. Idioms and expressions (e.g. a piece of cake, on time, right away, fit like a glove, call it a day)
-    if phrase.kind in ("idiom", "expression"):
-        is_nominal = lower0.startswith(("a ", "an ", "the ", "piece of"))
-        is_verb_idiom = lower0.startswith((
-            "have ", "call ", "make ", "take ", "get ", "feel ", "fit ", "break ", "hit ", "cut ", "keep ", "let ",
-        ))
-        if stage == ExerciseType.GUIDED:
-            if is_nominal:
-                return (
-                    f"Thanks to the clear guide, setting up the account was {t0} for the team.",
-                    f'Gracias a la guía clara, configurar la cuenta fue "{m0}" para el equipo.',
-                )
-            if is_verb_idiom:
-                return (
-                    f"After finishing the main presentation, the team decided to {t0} together.",
-                    f'Después de terminar la presentación principal, el equipo decidió "{m0}" juntos.',
-                )
+        # For adverbial/prepositional/clausal idioms, use apply_sentence if available
+        # or wrap the complete grammatical clause.
+        apply_full = ""
+        if phrase.apply_sentence and phrase.apply_answer:
+            apply_full = phrase.apply_sentence.replace("____", phrase.apply_answer).strip()
+        if stage == ExerciseType.COMPLETION and apply_full:
             return (
-                f"At the downtown office, our colleagues handled the request {t0} this morning.",
-                f'En la oficina del centro, nuestros colegas gestionaron la solicitud "{m0}" esta mañana.',
-            )
-        if stage == ExerciseType.COMPLETION:
-            if is_nominal:
-                return (
-                    f"Once we practiced the steps, the final interview felt like {t0} today.",
-                    f'Una vez que practicamos los pasos, la entrevista final se sintió como "{m0}" hoy.',
-                )
-            if is_verb_idiom:
-                return (
-                    f"Before the weekend trip starts, we always {t0} so everything goes well.",
-                    f'Antes del viaje de fin de semana, siempre procuramos "{m0}" para que todo salga bien.',
-                )
-            return (
-                f"During the afternoon check-in, the receptionist confirmed our booking {t0}.",
-                f'Durante el registro de la tarde, la recepcionista confirmó nuestra reserva "{m0}".',
+                f"{_cap_first(place_en)}, {_lc_first(apply_full)}",
+                f"{_cap_first(place_es)}: {(phrase.apply_translation or base_es)}",
             )
         return (
-            f"In the new project, everyone was glad to see the plan work {t0}.",
-            f'En el nuevo proyecto, todos se alegraron de ver funcionar el plan "{m0}".',
+            f"{_cap_first(place_en)}, {_lc_first(base_en)}",
+            f"{_cap_first(place_es)}: {base_es}.",
         )
 
-    # 3. Conversational phrases (kind == 'phrase'):
-    # Vary the real-world situational context around the natural clause so target expressions stay 100% grammatical.
-    clause = (
-        base_en[0].lower() + base_en[1:]
-        if len(base_en) > 1 and not base_en.startswith(("I ", "I'"))
-        else base_en
-    )
+    # 3. Conversational phrases (kind == 'phrase'): concise, topic-matched spoken context without narrator boilerplate
+    clause = _lc_first(base_en)
     if stage == ExerciseType.GUIDED:
-        frames = [
-            (
-                f"At the hotel lounge, you turn to the staff and say: {clause}",
-                f"En el salón del hotel, te diriges al personal y dices: «{base_es}».",
-            ),
-            (
-                f"During your morning break downtown, you politely say: {clause}",
-                f"Durante tu descanso de la mañana en el centro, dices con cortesía: «{base_es}».",
-            ),
-            (
-                f"At the airport counter before boarding, you tell the agent: {clause}",
-                f"En el mostrador del aeropuerto antes de abordar, dices al agente: «{base_es}».",
-            ),
-        ]
-        return frames[variant_idx % len(frames)]
+        return (
+            f"{_cap_first(place_en)}, {clause}",
+            f"{_cap_first(place_es)}: «{base_es}».",
+        )
     if stage == ExerciseType.COMPLETION:
-        frames = [
-            (
-                f"While visiting a new city with friends, you step up and say: {clause}",
-                f"Mientras visitas una ciudad nueva con amigos, te acercas y dices: «{base_es}».",
-            ),
-            (
-                f"At the central station desk, you smile and say: {clause}",
-                f"En el mostrador de la estación central, sonríes y dices: «{base_es}».",
-            ),
-            (
-                f"Before the afternoon meeting begins, you ask the host: {clause}",
-                f"Antes de que empiece la reunión de la tarde, dices al anfitrión: «{base_es}».",
-            ),
-        ]
-        return frames[variant_idx % len(frames)]
-    frames = [
-        (
-            f"Later that evening at the reception desk, you naturally say: {clause}",
-            f"Más tarde esa noche en recepción, dices con naturalidad: «{base_es}».",
-        ),
-        (
-            f"When arriving at the main office, you clearly say: {clause}",
-            f"Al llegar a la oficina principal, dices claramente: «{base_es}».",
-        ),
-        (
-            f"During the business trip abroad, you confidently say: {clause}",
-            f"Durante el viaje de negocios en el extranjero, dices con confianza: «{base_es}».",
-        ),
-    ]
-    return frames[variant_idx % len(frames)]
+        return (
+            f"While {task_en}, {clause}",
+            f"Al {task_es}: «{base_es}».",
+        )
+    return (
+        f"Actually, {place_en}, {clause}",
+        f"De hecho, {place_es}: «{base_es}».",
+    )
 
 
 def build_exercise(
@@ -364,7 +474,7 @@ def build_exercise(
             ctx2_en = phrase.practice_sentence
             ctx2_es = phrase.practice_translation or phrase.translation
         else:
-            ctx2_en, ctx2_es = _varied_context(phrase, ExerciseType.GUIDED, variant_idx)
+            ctx2_en, ctx2_es = _varied_context(phrase, ExerciseType.GUIDED, variant_idx, scenario.topic)
         prompt = ExercisePrompt(
             instruction_es=instruction,
             display_text=_mask_sentence(ctx2_en, terms, mode="partial"),
@@ -379,7 +489,7 @@ def build_exercise(
         if phrase.complete_sentence:
             ctx3_en = phrase.complete_sentence
         else:
-            ctx3_en, _ = _varied_context(phrase, ExerciseType.COMPLETION, variant_idx)
+            ctx3_en, _ = _varied_context(phrase, ExerciseType.COMPLETION, variant_idx, scenario.topic)
         prompt = ExercisePrompt(
             instruction_es=instruction,
             display_text=_mask_sentence(ctx3_en, terms, mode="cloze"),
@@ -405,7 +515,7 @@ def build_exercise(
             )
             expected = completed
         else:
-            ctx4_en, ctx4_es = _varied_context(phrase, ExerciseType.RECALL, variant_idx)
+            ctx4_en, ctx4_es = _varied_context(phrase, ExerciseType.RECALL, variant_idx, scenario.topic)
             prompt = ExercisePrompt(
                 instruction_es=instruction,
                 display_text=_mask_sentence(ctx4_en, terms, mode="partial"),
