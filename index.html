@@ -76710,11 +76710,15 @@
       return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || '');
     }
 
-    // On mobile browsers (Android & iOS), parallel getUserMedia + SpeechRecognition
+    // On some Android devices, parallel getUserMedia + SpeechRecognition
     // causes hardware audio channel contention ("audio-capture" / "aborted").
-    // Default sf_android_no_parallel_rec to '1' on mobile so SpeechRecognition has exclusive mic access.
-    if (isMobileBrowser() && !localStorage.getItem('sf_android_no_parallel_rec')) {
-      try { localStorage.setItem('sf_android_no_parallel_rec', '1'); } catch (_) {}
+    // Clear any stale unconditional pre-set once so mobile devices attempt MediaRecorder
+    // and only fall back to sf_android_no_parallel_rec='1' if rec.onerror hits contention.
+    if (!localStorage.getItem('sf_parallel_rec_migrated_v2')) {
+      try {
+        localStorage.removeItem('sf_android_no_parallel_rec');
+        localStorage.setItem('sf_parallel_rec_migrated_v2', '1');
+      } catch (_) {}
     }
 
     // Deduplicate cumulative speech recognition segments emitted by Android Chrome
@@ -76768,6 +76772,7 @@
           if (res.ok) {
             const blob = await res.blob();
             const audio = new Audio(URL.createObjectURL(blob));
+            if (customRate) audio.playbackRate = customRate;
             if (doneCb) {
               audio.onended = () => doneCb();
               audio.onerror = () => doneCb();
@@ -77340,11 +77345,166 @@
         return vp || target;
       };
 
+      const TOPIC_CONTEXTS = {
+        'food-and-drink': {
+          places: [
+            ['at the neighborhood café', 'en la cafetería del barrio'],
+            ['during lunch at the bistro', 'durante el almuerzo en el bistró'],
+            ['when ordering dinner', 'al pedir la cena'],
+            ['with the server at our table', 'con el mesero en nuestra mesa'],
+            ['at the bakery counter', 'en el mostrador de la panadería'],
+          ],
+          tasks: [
+            ['ordering the tasting menu', 'pedir el menú degustación'],
+            ['splitting the dinner bill', 'dividir la cuenta de la cena'],
+            ['choosing a table on the patio', 'elegir una mesa en la terraza'],
+            ['asking about daily specials', 'preguntar por los especiales del día'],
+            ['customizing the coffee order', 'personalizar el pedido de café'],
+          ],
+        },
+        'travel-and-transport': {
+          places: [
+            ['at the departure gate', 'en la puerta de embarque'],
+            ['at the central train station', 'en la estación central de trenes'],
+            ['before boarding the flight', 'antes de abordar el vuelo'],
+            ['at the ticket kiosk', 'en el quiosco de boletos'],
+            ['near the baggage claim area', 'cerca de la zona de equipaje'],
+          ],
+          tasks: [
+            ['checking the platform number', 'revisar el número de andén'],
+            ['catching the express train', 'tomar el tren expreso'],
+            ['finding the airport shuttle', 'encontrar el traslado al aeropuerto'],
+            ['confirming the seat upgrade', 'confirmar el cambio de asiento'],
+            ['updating the travel itinerary', 'actualizar el itinerario de viaje'],
+          ],
+        },
+        'hotel-and-shopping': {
+          places: [
+            ['at the hotel front desk', 'en la recepción del hotel'],
+            ['at the checkout counter', 'en la caja de la tienda'],
+            ['near the fitting rooms', 'cerca de los probadores'],
+            ['when calling room service', 'al llamar al servicio a la habitación'],
+            ['at customer service', 'en atención al cliente'],
+          ],
+          tasks: [
+            ['completing the late check-in', 'completar el registro tardío'],
+            ['exchanging a jacket size', 'cambiar la talla de una chaqueta'],
+            ['requesting extra towels', 'pedir toallas adicionales'],
+            ['reviewing the store receipt', 'revisar el recibo de la tienda'],
+            ['booking a quieter room', 'reservar una habitación más tranquila'],
+          ],
+        },
+        'work-and-career': {
+          places: [
+            ['during the weekly stand-up', 'durante la reunión semanal'],
+            ['on the client review call', 'en la llamada de revisión con el cliente'],
+            ['before the quarterly presentation', 'antes de la presentación trimestral'],
+            ['while updating the project board', 'al actualizar el tablero del proyecto'],
+            ['in the team retrospective', 'en la retrospectiva del equipo'],
+          ],
+          tasks: [
+            ['aligning the sprint priorities', 'alinear las prioridades del sprint'],
+            ['preparing the status deck', 'preparar la presentación de avance'],
+            ['handing off the client brief', 'entregar el resumen del cliente'],
+            ['reviewing the budget forecast', 'revisar la proyección de presupuesto'],
+            ['onboarding the new analyst', 'integrar al nuevo analista'],
+          ],
+        },
+        'health-and-emergencies': {
+          places: [
+            ['at the clinic reception', 'en la recepción de la clínica'],
+            ['when talking to the pharmacist', 'al hablar con el farmacéutico'],
+            ['during the medical check-up', 'durante el chequeo médico'],
+            ['at the urgent care desk', 'en el mostrador de urgencias'],
+            ['on the follow-up call with the nurse', 'en la llamada de seguimiento con la enfermera'],
+          ],
+          tasks: [
+            ['explaining the symptoms clearly', 'explicar los síntomas con claridad'],
+            ['picking up the prescription', 'recoger la receta médica'],
+            ['scheduling a follow-up visit', 'programar una cita de seguimiento'],
+            ['checking the dosage instructions', 'revisar las instrucciones de dosis'],
+            ['updating the allergy form', 'actualizar el formulario de alergias'],
+          ],
+        },
+        'social-and-smalltalk': {
+          places: [
+            ['over coffee with a friend', 'tomando un café con un amigo'],
+            ['at the weekend barbecue', 'en la parrillada del fin de semana'],
+            ['at the neighborhood gathering', 'en la reunión del vecindario'],
+            ['when catching up after work', 'al ponerse al día después del trabajo'],
+            ['at the dinner party', 'en la cena con amigos'],
+          ],
+          tasks: [
+            ['planning the weekend hike', 'planear la caminata del fin de semana'],
+            ['sharing travel stories', 'compartir historias de viaje'],
+            ['recommending a local restaurant', 'recomendar un restaurante local'],
+            ['organizing the birthday dinner', 'organizar la cena de cumpleaños'],
+            ['introducing new neighbors', 'presentar a nuevos vecinos'],
+          ],
+        },
+        'grammar-and-connectors': {
+          places: [
+            ['when comparing both options', 'al comparar ambas opciones'],
+            ['during the class discussion', 'durante el debate en clase'],
+            ['while explaining your reasoning', 'al explicar tu razonamiento'],
+            ['when summarizing the main point', 'al resumir el punto principal'],
+            ['while connecting two viewpoints', 'al conectar dos puntos de vista'],
+          ],
+          tasks: [
+            ['structuring a clear argument', 'estructurar un argumento claro'],
+            ['contrasting two proposals', 'contrastar dos propuestas'],
+            ['clarifying the timeline', 'aclarar el cronograma'],
+            ['supporting the final decision', 'respaldar la decisión final'],
+            ['rephrasing the key takeaway', 'reformular la idea clave'],
+          ],
+        },
+        'daily-tech-and-media': {
+          places: [
+            ['when setting up the Wi-Fi', 'al configurar el Wi-Fi'],
+            ['before joining the video call', 'antes de entrar a la videollamada'],
+            ['while troubleshooting the app', 'al resolver un fallo en la aplicación'],
+            ['when updating device settings', 'al actualizar los ajustes del dispositivo'],
+            ['while managing cloud backups', 'al gestionar las copias en la nube'],
+          ],
+          tasks: [
+            ['securing the home router', 'asegurar el router de casa'],
+            ['syncing the shared calendar', 'sincronizar el calendario compartido'],
+            ['checking the privacy permissions', 'revisar los permisos de privacidad'],
+            ['clearing the browser cache', 'limpiar la caché del navegador'],
+            ['testing the microphone audio', 'probar el audio del micrófono'],
+          ],
+        },
+        'cv-dhl-gsc-tl': {
+          places: [
+            ['in the global operations review', 'en la revisión de operaciones globales'],
+            ['during the DHL leadership panel', 'durante el panel de liderazgo de DHL'],
+            ['when presenting KPI improvements', 'al presentar mejoras de KPIs'],
+            ['in the UAT handover session', 'en la sesión de entrega UAT'],
+            ['during the automation briefing', 'durante la reunión de automatización'],
+          ],
+          tasks: [
+            ['standardizing regional reporting', 'estandarizar los reportes regionales'],
+            ['stabilizing the EDI data flow', 'estabilizar el flujo de datos EDI'],
+            ['aligning the cross-functional team', 'alinear al equipo multifuncional'],
+            ['automating the recurring dashboard', 'automatizar el tablero recurrente'],
+            ['closing the audit action items', 'cerrar los puntos de acción de auditoría'],
+          ],
+        },
+      };
+
+      const lcFirst = s => (s && s.length > 1 && !/^I[\s']/i.test(s)) ? s[0].toLowerCase() + s.slice(1) : s;
+      const capFirst = s => s ? s[0].toUpperCase() + s.slice(1) : s;
+      const bareVerbRe = /^(have |call |make |take |get |feel |fit |break |hit |cut |keep |let |iron |move |sort |fill |pick |wake |hold |check |set |wrap |lock |bridge |scale |drive |step |stay |own |roll |flag |pull |push |turn |bring |run |map |streamline |fast-track |work |build )/i;
+
       const variedContext = (p, stageType, idx, targets) => {
         const { target0, mean0 } = targets;
         const lower0 = target0.toLowerCase();
         const baseEn = String(p.text || '').trim();
         const baseEs = String(p.translation || '').split('(')[0].trim().replace(/\.$/, '');
+        const ctx = TOPIC_CONTEXTS[scenario.topic] || TOPIC_CONTEXTS['work-and-career'];
+        const stageOffset = stageType === 'guided' ? 0 : (stageType === 'completion' ? 1 : 2);
+        const [placeEn, placeEs] = ctx.places[(idx + stageOffset) % ctx.places.length];
+        const [taskEn, taskEs] = ctx.tasks[(idx + stageOffset) % ctx.tasks.length];
 
         if (p.kind === 'phrasal_verb') {
           const vpText = extractVp(baseEn, target0);
@@ -77356,167 +77516,100 @@
             }
           }
           if (lower0.endsWith('ing')) {
+            return {
+              en: `${capFirst(placeEn)}, we were focused on ${vpApply}.`,
+              es: `${capFirst(placeEs)}, nos enfocamos en "${mean0}".`
+            };
+          }
+          if (stageType === 'guided') {
+            return {
+              en: `${capFirst(placeEn)}, you often need to ${vpText}.`,
+              es: `${capFirst(placeEs)}, a menudo necesitas "${mean0}" (${baseEs.toLowerCase()}).`
+            };
+          }
+          if (stageType === 'completion') {
+            return {
+              en: `${capFirst(placeEn)}, make sure to ${vpApply}.`,
+              es: `${capFirst(placeEs)}, asegúrate de "${mean0}".`
+            };
+          }
+          return {
+            en: `${capFirst(placeEn)}, our team tries to ${vpApply} right away.`,
+            es: `${capFirst(placeEs)}, nuestro equipo procura "${mean0}" de inmediato.`
+          };
+        }
+
+        if (p.kind === 'idiom' || p.kind === 'expression') {
+          const isNominal = /^(a |an |the |piece of )/i.test(lower0);
+          const isBareVerb = bareVerbRe.test(lower0);
+          if (isNominal) {
             if (stageType === 'guided') {
               return {
-                en: `At the central station, my coworker was ${vpApply}.`,
-                es: `En la estación central, mi compañero estaba aplicando "${mean0}".`
+                en: `${capFirst(placeEn)}, ${lcFirst(taskEn)} was ${target0} for everyone.`,
+                es: `${capFirst(placeEs)}, ${taskEs} fue "${mean0}" para todos.`
               };
             }
             if (stageType === 'completion') {
               return {
-                en: `During the afternoon break, we were ${vpText}.`,
-                es: `Durante la pausa de la tarde, estábamos practicando "${mean0}".`
+                en: `After preparing well ${placeEn}, ${taskEn} felt like ${target0}.`,
+                es: `Después de prepararnos bien ${placeEs}, ${taskEs} se sintió como "${mean0}".`
               };
             }
             return {
-              en: `Right before the flight, several passengers were ${vpApply}.`,
-              es: `Justo antes del vuelo, varios pasajeros estaban usando "${mean0}".`
+              en: `With clear steps ${placeEn}, ${taskEn} became ${target0}.`,
+              es: `Con pasos claros ${placeEs}, ${taskEs} se volvió "${mean0}".`
             };
           }
-          if (stageType === 'guided') {
-            const opts = [
-              {
-                en: `During a busy morning at work, you often need to ${vpText}.`,
-                es: `En una mañana ocupada en el trabajo, a menudo necesitas "${mean0}" (${baseEs.toLowerCase()}).`
-              },
-              {
-                en: `When traveling with friends, we always try to ${vpText}.`,
-                es: `Al viajar con amigos, siempre intentamos "${mean0}" en esta situación.`
-              },
-              {
-                en: `At the service counter, the staff asked us to ${vpText}.`,
-                es: `En el mostrador de atención, el personal nos pidió "${mean0}".`
-              }
-            ];
-            return opts[idx % opts.length];
-          }
-          if (stageType === 'completion') {
-            const opts = [
-              {
-                en: `Before finishing the shift, make sure to ${vpApply}.`,
-                es: `Antes de terminar el turno, asegúrate de "${mean0}" según lo indicado.`
-              },
-              {
-                en: `Even on a hectic Monday, our team managed to ${vpApply}.`,
-                es: `Incluso en un lunes ajetreado, nuestro equipo logró "${mean0}" a tiempo.`
-              },
-              {
-                en: `At the hotel reception, guests usually need to ${vpApply}.`,
-                es: `En la recepción del hotel, los huéspedes suelen necesitar "${mean0}".`
-              }
-            ];
-            return opts[idx % opts.length];
-          }
-          const opts = [
-            {
-              en: `Whenever a new client arrives, we ${vpApply} right away.`,
-              es: `Siempre que llega un cliente nuevo, decidimos "${mean0}" de inmediato.`
-            },
-            {
-              en: `Before the meeting starts, everyone should ${vpApply}.`,
-              es: `Antes de que empiece la reunión, todos deberían "${mean0}".`
-            }
-          ];
-          return opts[idx % opts.length];
-        }
-
-        if (p.kind === 'idiom' || p.kind === 'expression') {
-          const isNominal = /^(a |an |the |piece of)/i.test(lower0);
-          const isVerbIdiom = /^(have |call |make |take |get |feel |fit |break |hit |cut |keep |let )/i.test(lower0);
-          if (stageType === 'guided') {
-            if (isNominal) {
+          if (isBareVerb) {
+            if (stageType === 'guided') {
               return {
-                en: `Thanks to the clear guide, setting up the account was ${target0} for the team.`,
-                es: `Gracias a la guía clara, configurar la cuenta fue "${mean0}" para el equipo.`
+                en: `${capFirst(placeEn)}, we decided to ${target0} before continuing.`,
+                es: `${capFirst(placeEs)}, decidimos "${mean0}" antes de continuar.`
               };
             }
-            if (isVerbIdiom) {
+            if (stageType === 'completion') {
               return {
-                en: `After finishing the main presentation, the team decided to ${target0} together.`,
-                es: `Después de terminar la presentación principal, el equipo decidió "${mean0}" juntos.`
+                en: `When ${lcFirst(taskEn)} ${placeEn}, it helps to ${target0}.`,
+                es: `Al ${taskEs} ${placeEs}, conviene "${mean0}".`
               };
             }
             return {
-              en: `At the downtown office, our colleagues handled the request ${target0} this morning.`,
-              es: `En la oficina del centro, nuestros colegas gestionaron la solicitud "${mean0}" esta mañana.`
+              en: `${capFirst(placeEn)}, everyone agreed to ${target0} together.`,
+              es: `${capFirst(placeEs)}, todos acordaron "${mean0}" juntos.`
             };
           }
-          if (stageType === 'completion') {
-            if (isNominal) {
-              return {
-                en: `Once we practiced the steps, the final interview felt like ${target0} today.`,
-                es: `Una vez que practicamos los pasos, la entrevista final se sintió como "${mean0}" hoy.`
-              };
-            }
-            if (isVerbIdiom) {
-              return {
-                en: `Before the weekend trip starts, we always ${target0} so everything goes well.`,
-                es: `Antes de que empiece el viaje de fin de semana, siempre procuramos "${mean0}" para que todo salga bien.`
-              };
-            }
+          const applyFull = (p.apply_sentence && p.apply_answer)
+            ? p.apply_sentence.replace('____', p.apply_answer).trim()
+            : '';
+          if (stageType === 'completion' && applyFull) {
             return {
-              en: `During the afternoon check-in, the receptionist confirmed our booking ${target0}.`,
-              es: `Durante el registro de la tarde, la recepcionista confirmó nuestra reserva "${mean0}".`
+              en: `${capFirst(placeEn)}, ${lcFirst(applyFull)}`,
+              es: `${capFirst(placeEs)}: ${p.apply_translation || baseEs}`
             };
           }
           return {
-            en: `In the new project, everyone was glad to see the plan work ${target0}.`,
-            es: `En el nuevo proyecto, todos se alegraron de ver funcionar el plan "${mean0}".`
+            en: `${capFirst(placeEn)}, ${lcFirst(baseEn)}`,
+            es: `${capFirst(placeEs)}: ${baseEs}.`
           };
         }
 
-        const clause = (baseEn.length > 1 && !/^I[\s']/i.test(baseEn))
-          ? baseEn[0].toLowerCase() + baseEn.slice(1)
-          : baseEn;
+        const clause = lcFirst(baseEn);
         if (stageType === 'guided') {
-          const frames = [
-            {
-              en: `At the hotel lounge, you turn to the staff and say: ${clause}`,
-              es: `En el salón del hotel, te diriges al personal y dices: «${baseEs}».`
-            },
-            {
-              en: `During your morning break downtown, you politely say: ${clause}`,
-              es: `Durante tu descanso de la mañana en el centro, dices con cortesía: «${baseEs}».`
-            },
-            {
-              en: `At the airport counter before boarding, you tell the agent: ${clause}`,
-              es: `En el mostrador del aeropuerto antes de abordar, dices al agente: «${baseEs}».`
-            }
-          ];
-          return frames[idx % frames.length];
+          return {
+            en: `${capFirst(placeEn)}, ${clause}`,
+            es: `${capFirst(placeEs)}: «${baseEs}».`
+          };
         }
         if (stageType === 'completion') {
-          const frames = [
-            {
-              en: `While visiting a new city with friends, you step up and say: ${clause}`,
-              es: `Mientras visitas una ciudad nueva con amigos, te acercas y dices: «${baseEs}».`
-            },
-            {
-              en: `At the central station desk, you smile and say: ${clause}`,
-              es: `En el mostrador de la estación central, sonríes y dices: «${baseEs}».`
-            },
-            {
-              en: `Before the afternoon meeting begins, you ask the host: ${clause}`,
-              es: `Antes de que empiece la reunión de la tarde, dices al anfitrión: «${baseEs}».`
-            }
-          ];
-          return frames[idx % frames.length];
+          return {
+            en: `While ${taskEn}, ${clause}`,
+            es: `Al ${taskEs}: «${baseEs}».`
+          };
         }
-        const frames = [
-          {
-            en: `Later that evening at the reception desk, you naturally say: ${clause}`,
-            es: `Más tarde esa noche en recepción, dices con naturalidad: «${baseEs}».`
-          },
-          {
-            en: `When arriving at the main office, you clearly say: ${clause}`,
-            es: `Al llegar a la oficina principal, dices claramente: «${baseEs}».`
-          },
-          {
-            en: `During the business trip abroad, you confidently say: ${clause}`,
-            es: `Durante el viaje de negocios en el extranjero, dices con confianza: «${baseEs}».`
-          }
-        ];
-        return frames[idx % frames.length];
+        return {
+          en: `Actually, ${placeEn}, ${clause}`,
+          es: `De hecho, ${placeEs}: «${baseEs}».`
+        };
       };
 
       const mk = (p, type, support, th, inst, disp, tr, gl, aud, expOverride = null, focusTerms = null) => {
@@ -77869,15 +77962,76 @@
     }
 
     // ─── Practice History & Upper Panel ──────────────────────────────────────────
+    function blobToDataUrl(blob, maxBytes = 400000) {
+      return new Promise((resolve) => {
+        if (!blob || !blob.size || blob.size > maxBytes) return resolve(null);
+        try {
+          const reader = new FileReader();
+          reader.onloadend = () => resolve(typeof reader.result === 'string' ? reader.result : null);
+          reader.onerror = () => resolve(null);
+          reader.readAsDataURL(blob);
+        } catch (_) {
+          resolve(null);
+        }
+      });
+    }
+
+    function playHistoryAudio(attemptId) {
+      const att = state.practiceHistory.find(h => h.id === attemptId);
+      const src = (att && att.audioDataUrl) || (state.practiceHistory[0] && state.practiceHistory[0].id === attemptId ? state.lastUserAudioUrl : null);
+      if (!src) {
+        showMicNotice('No hay grabación de voz guardada para esta versión.');
+        return;
+      }
+      if (state._historyAudioPlayer && !state._historyAudioPlayer.paused && state._historyAudioId === attemptId) {
+        state._historyAudioPlayer.pause();
+        state._historyAudioPlayer.currentTime = 0;
+        state._historyAudioId = null;
+        return;
+      }
+      if (state._userAudioPlayer && !state._userAudioPlayer.paused) {
+        state._userAudioPlayer.pause();
+      }
+      if (state._historyAudioPlayer && !state._historyAudioPlayer.paused) {
+        state._historyAudioPlayer.pause();
+      }
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+      try {
+        state._historyAudioId = attemptId;
+        state._historyAudioPlayer = new Audio(src);
+        state._historyAudioPlayer.onended = () => { state._historyAudioId = null; };
+        state._historyAudioPlayer.onerror = () => { state._historyAudioId = null; };
+        state._historyAudioPlayer.play().catch(() => { state._historyAudioId = null; });
+      } catch (_) {
+        state._historyAudioId = null;
+      }
+    }
+
     function recordAttemptHistory(entry) {
       if (!entry) return;
       state.practiceHistory.unshift(entry);
       if (state.practiceHistory.length > 60) {
         state.practiceHistory = state.practiceHistory.slice(0, 60);
       }
+      // Keep audioDataUrl on at most the 8 most recent entries with audio to respect localStorage quota
+      let audioKept = 0;
+      for (const item of state.practiceHistory) {
+        if (item.audioDataUrl) {
+          audioKept++;
+          if (audioKept > 8) {
+            delete item.audioDataUrl;
+          }
+        }
+      }
       try {
         localStorage.setItem('sf_practice_history', JSON.stringify(state.practiceHistory));
-      } catch (_) {}
+      } catch (_) {
+        // Fallback: strip audioDataUrl from older entries if quota is exceeded
+        for (let i = 1; i < state.practiceHistory.length; i++) {
+          delete state.practiceHistory[i].audioDataUrl;
+        }
+        try { localStorage.setItem('sf_practice_history', JSON.stringify(state.practiceHistory)); } catch (_2) {}
+      }
       renderLastPracticeHeader();
     }
 
@@ -77974,6 +78128,7 @@
                       <span class="text-slate-400 text-[11px] truncate">“${att.transcript || att.expected}”</span>
                     </div>
                     <div class="flex items-center gap-2 shrink-0 text-[10px] text-slate-500">
+                      ${att.audioDataUrl ? `<button onclick="playHistoryAudio('${att.id}')" class="px-2 py-0.5 rounded-md bg-purple-600/25 hover:bg-purple-600/40 border border-purple-500/40 text-purple-200 text-[10px] font-semibold transition" title="Escuchar mi grabación">🎧</button>` : ''}
                       <span>${errCount === 0 ? '✔ Sin errores' : `${errCount} error${errCount > 1 ? 'es' : ''}`}</span>
                       <span>•</span>
                       <span>hace ${tStr}</span>
@@ -77988,6 +78143,7 @@
 
       const latestVNum = scenarioAttempts.length;
       const latestVLabel = latest.isCorrectedVersion ? `Versión ${latestVNum} (Corregida)` : `Versión ${latestVNum}`;
+      const hasLatestAudio = Boolean(latest.audioDataUrl || (state.practiceHistory[0] && state.practiceHistory[0].id === latest.id && state.lastUserAudioUrl));
 
       panel.innerHTML = `
         <div class="space-y-2">
@@ -78010,6 +78166,11 @@
             </div>
 
             <div class="flex items-center gap-2">
+              ${hasLatestAudio ? `
+                <button onclick="playHistoryAudio('${latest.id}')" class="px-2.5 py-1 rounded-lg bg-purple-600/30 hover:bg-purple-600/50 border border-purple-500/40 text-purple-200 text-[11px] font-semibold transition flex items-center gap-1" title="Escuchar mi grabación guardada">
+                  <span>🎧</span><span>Mi voz</span>
+                </button>
+              ` : ''}
               ${scenarioAttempts.length > 1 ? `
                 <button onclick="toggleHistoryExpanded()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] font-medium transition flex items-center gap-1">
                   <span>📜</span><span>${state.historyExpanded ? 'Ocultar versiones' : `Versiones (${scenarioAttempts.length})`}</span>
@@ -78427,6 +78588,9 @@
             <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
               ${allowListenBeforeEval ? `<button onclick="speakText('${fullEsc}')" class="px-3.5 py-2 text-xs rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 font-medium transition flex items-center gap-1.5">
                 <span>🔊</span><span>Escuchar guía de audio</span>
+              </button>
+              <button onclick="speakText('${fullEsc}', 0.65)" class="px-3 py-2 text-xs rounded-xl bg-slate-800 hover:bg-slate-700 border border-amber-500/30 text-amber-300 font-semibold transition flex items-center gap-1.5" title="Escuchar más despacio (0.65x)">
+                <span>🐢</span><span>0.65x</span>
               </button>` : ''}
               <button onclick="openTranslateOverlay('${fullEsc}', '${fullEsc}', '${scenEsc}', '${phrEsc}')" class="px-3.5 py-2 text-xs rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-indigo-300 font-medium transition flex items-center gap-1.5">
                 <span>🌐</span><span>Ver traducción y ayuda</span>
@@ -78946,6 +79110,9 @@
             <div class="flex flex-wrap items-center gap-2">
               <button onclick="speakText('${correctEsc}')" class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md">
                 <span>🔊</span><span>Escuchar modelo</span>
+              </button>
+              <button onclick="speakText('${correctEsc}', 0.65)" class="px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-amber-500/30 text-amber-300 text-xs font-bold transition flex items-center gap-1 shadow-md" title="Escuchar modelo más despacio (0.65x)">
+                <span>🐢</span><span>0.65x</span>
               </button>
               <button id="btn-play-user-audio" onclick="togglePlayUserAudio()" class="px-3 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md ${state.lastUserAudioUrl ? '' : 'opacity-50 cursor-not-allowed'}" ${state.lastUserAudioUrl ? '' : 'disabled'}>
                 <span id="user-audio-icon">🎧</span><span id="user-audio-label">Escuchar mi pronunciación</span>
@@ -79503,6 +79670,7 @@
                 const fb = state.lastEvaluation.feedback || {};
                 const stageObj = (state.lesson && state.lesson.stages) ? state.lesson.stages[Math.min(state.stageIndex, 3)] : null;
                 const curEx = stageObj ? stageObj.exercises[state.exerciseIndex] : null;
+                const audioDataUrl = await blobToDataUrl(state.lastUserAudioBlob);
                 recordAttemptHistory({
                   id: 'att-' + Date.now(),
                   timestamp: Date.now(),
@@ -79519,7 +79687,8 @@
                     status: w.status,
                     heard: w.heard || null
                   })),
-                  feedback: fb.message_es || ''
+                  feedback: fb.message_es || '',
+                  audioDataUrl
                 });
               }
               await refreshProgress();
@@ -79860,6 +80029,7 @@
         const fb = state.lastEvaluation.feedback || {};
         const stageObj = (state.lesson && state.lesson.stages) ? state.lesson.stages[Math.min(state.stageIndex, 3)] : null;
         const curEx = stageObj ? stageObj.exercises[state.exerciseIndex] : null;
+        const audioDataUrl = await blobToDataUrl(state.lastUserAudioBlob);
         recordAttemptHistory({
           id: 'att-' + Date.now(),
           timestamp: Date.now(),
@@ -79876,7 +80046,8 @@
             status: w.status,
             heard: w.heard || null
           })),
-          feedback: fb.message_es || ''
+          feedback: fb.message_es || '',
+          audioDataUrl
         });
       }
       await refreshProgress();
