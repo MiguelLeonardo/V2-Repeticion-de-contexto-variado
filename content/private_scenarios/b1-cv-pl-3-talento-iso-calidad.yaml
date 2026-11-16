@@ -1,0 +1,100 @@
+id: b1-cv-pl-3-talento-iso-calidad
+title: HR Payroll, ISO Audits & Time-Motion Studies
+title_es: Talento Humano, Nómina (NGSOFT), ISO y Estudios de Tiempos (Tecnicolor)
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: Diplomado en Talento Humano, administración de nómina en NGSOFT, coordinación
+  de cuadrillas, auditorías ISO y estudios de tiempos y movimientos en Tecnicolor.
+phrases:
+- id: cv-pl-3-talento-iso-calidad-1
+  text: I coordinated field crews while administering payroll in NGSOFT.
+  translation: Coordiné cuadrillas mientras administraba nómina en NGSOFT.
+  visual_hint: 📋⏱️
+  cloze:
+  - 1
+  glossary:
+  - word: coordinated
+    meaning: coordiné
+  common: true
+  kind: idiom
+  apply_sentence: Assistants ____ daily crew tasks.
+  apply_answer: coordinated
+  apply_translation: Asistentes coordinaron tareas de cuadrillas.
+- id: cv-pl-3-talento-iso-calidad-2
+  text: Supporting ISO audits taught me how to document processes clearly.
+  translation: Apoyar auditorías ISO me enseñó a documentar con claridad.
+  visual_hint: 📋⏱️
+  cloze:
+  - 7
+  glossary:
+  - word: document
+    meaning: documentar
+  common: true
+  kind: idiom
+  apply_sentence: Audits require teams to ____ rules.
+  apply_answer: document
+  apply_translation: Auditorías exigen documentar reglas.
+- id: cv-pl-3-talento-iso-calidad-3
+  text: My diploma in Talent Management strengthened my coaching skills.
+  translation: Mi diplomado en Talento Humano fortaleció mi coaching.
+  visual_hint: 📋⏱️
+  cloze:
+  - 5
+  glossary:
+  - word: strengthened
+    meaning: fortaleció
+  common: true
+  kind: idiom
+  apply_sentence: Training ____ my leadership style.
+  apply_answer: strengthened
+  apply_translation: La formación fortaleció mi liderazgo.
+- id: cv-pl-3-talento-iso-calidad-4
+  text: At Tecnicolor, I ran time-and-motion studies to spot inefficiencies.
+  translation: En Tecnicolor realicé estudios de tiempos para detectar ineficiencias.
+  visual_hint: 📋⏱️
+  cloze:
+  - 7
+  glossary:
+  - word: spot
+    meaning: detectar
+  common: true
+  kind: idiom
+  apply_sentence: Time studies help ____ bottlenecks.
+  apply_answer: spot
+  apply_translation: Estudios de tiempos detectan bloqueos.
+- id: cv-pl-3-talento-iso-calidad-5
+  text: Standardizing manufacturing workflows helped reduce hidden costs.
+  translation: Estandarizar flujos de manufactura ayudó a reducir costos ocultos.
+  visual_hint: 📋⏱️
+  cloze:
+  - 5
+  glossary:
+  - word: hidden
+    meaning: ocultos
+  common: true
+  kind: idiom
+  apply_sentence: Process audits reveal ____ costs.
+  apply_answer: hidden
+  apply_translation: Auditorías revelan costos ocultos.
+roleplay:
+  ai_role: HR Operations & Quality Assurance Director
+  user_role: Process & People Operations Specialist
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Talento Humano,
+    Nómina (NGSOFT), ISO y Estudios de Tiempos (Tecnicolor).'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - I coordinated field crews while administering payroll in NGSOFT.
+    - Supporting ISO audits taught me how to document processes clearly.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - My diploma in Talent Management strengthened my coaching skills.
+    - At Tecnicolor, I ran time-and-motion studies to spot inefficiencies.

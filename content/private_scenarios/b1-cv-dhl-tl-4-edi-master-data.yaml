@@ -1,0 +1,103 @@
+id: b1-cv-dhl-tl-4-edi-master-data
+title: 'Module 4: EDI, Master Data & Supply Chain'
+title_es: 'Módulo 4: Integraciones EDI, Master Data y Cadena de Suministro'
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: Master Data, control documental, gobernanza a prueba de auditorías, integraciones
+  SAP/CargoWise/EDI y costos CPG.
+phrases:
+- id: dhl-tl-4-1
+  text: I use real-time controls to keep track of assets and compliance.
+  translation: Uso controles en tiempo real para rastrear activos y cumplimiento.
+  visual_hint: 🗂️🔎
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: keep track
+    meaning: hacer seguimiento
+  common: true
+  kind: idiom
+  apply_sentence: Central tools help ____ of changes.
+  apply_answer: keep track
+  apply_translation: Herramientas centrales ayudan a rastrear cambios.
+- id: dhl-tl-4-2
+  text: We keep records ready for audits so we start smoothly.
+  translation: Mantenemos registros listos para auditorías para empezar bien.
+  visual_hint: 🏛️⚡
+  cloze:
+  - 5
+  glossary:
+  - word: audits
+    meaning: auditorías
+  common: true
+  kind: idiom
+  apply_sentence: Clear SOPs prepare us for ____.
+  apply_answer: audits
+  apply_translation: SOPs claros nos preparan para auditorías.
+- id: dhl-tl-4-3
+  text: With SAP and EDI experience, I respond fast to fix glitches.
+  translation: Con experiencia SAP y EDI, respondo rápido a fallas.
+  visual_hint: 🔌🛠️
+  cloze:
+  - 6
+  glossary:
+  - word: respond
+    meaning: responder
+  common: true
+  kind: idiom
+  apply_sentence: Support leads ____ first to outages.
+  apply_answer: respond
+  apply_translation: Los líderes responden primero a caídas.
+- id: dhl-tl-4-4
+  text: I analyzed supply data in order to cut down on costs.
+  translation: Analicé datos de suministro para reducir costos.
+  visual_hint: 📦📉
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: cut down
+    meaning: reducir
+  common: true
+  kind: idiom
+  apply_sentence: Better routing helps ____ on waste.
+  apply_answer: cut down
+  apply_translation: Mejores rutas ayudan a reducir desperdicios.
+- id: dhl-tl-4-5
+  text: Planning tools allowed our team to scale up capacity quickly.
+  translation: Herramientas de planeación permitieron escalar capacidad rápido.
+  visual_hint: 🎛️📈
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: scale up
+    meaning: escalar / ampliar
+  common: true
+  kind: idiom
+  apply_sentence: We can ____ support when demand rises.
+  apply_answer: scale up
+  apply_translation: Podemos escalar soporte cuando sube la demanda.
+roleplay:
+  ai_role: DHL Master Data & Systems Integration Manager
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Módulo 4: Integraciones
+    EDI, Master Data y Cadena de Suministro.'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - I use real-time controls to keep track of assets and compliance.
+    - We keep records ready for audits so we start smoothly.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - With SAP and EDI experience, I respond fast to fix glitches.
+    - I analyzed supply data in order to cut down on costs.

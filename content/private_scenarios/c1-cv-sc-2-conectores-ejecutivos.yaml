@@ -1,0 +1,111 @@
+id: c1-cv-sc-2-conectores-ejecutivos
+title: Executive Connectors in Operational Context
+title_es: Conectores Ejecutivos en Contexto Operativo (CV)
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: Práctica enfocada de conectores de causa, contraste, propósito e inversión
+  aplicados a logros reales en Rappi, El Carutal y Topografía Satelital.
+phrases:
+- id: cv-sc-2-conectores-ejecutivos-1
+  text: We engineered SIMIO models so as to test the waters before altering production.
+  translation: Diseñamos modelos SIMIO con el fin de probar antes de alterar producción.
+  visual_hint: 🧩🔗
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: so as to
+    meaning: con el fin de
+  common: true
+  kind: idiom
+  apply_sentence: We run UAT ____ avert launch bugs.
+  apply_answer: so as to
+  apply_translation: Corremos UAT para evitar fallas.
+- id: cv-sc-2-conectores-ejecutivos-2
+  text: Notwithstanding complex decentralized vendors, audit-proof governance kept
+    risks low.
+  translation: No obstante proveedores descentralizados complejos, gobernanza a prueba
+    de auditorías bajó riesgos.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: Notwithstanding
+    meaning: no obstante / a pesar de
+  common: true
+  kind: idiom
+  apply_sentence: ____ peak demand, SLA compliance held.
+  apply_answer: Notwithstanding
+  apply_translation: Pese a demanda pico, el SLA se mantuvo.
+- id: cv-sc-2-conectores-ejecutivos-3
+  text: Consequently, automating frozen-order releases freed analysts to tackle root
+    causes.
+  translation: En consecuencia, automatizar órdenes congeladas liberó analistas para
+    causas raíz.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: Consequently
+    meaning: en consecuencia
+  common: true
+  kind: idiom
+  apply_sentence: Fraud controls tightened; ____, losses fell.
+  apply_answer: consequently
+  apply_translation: Controles subieron; en consecuencia, pérdidas bajaron.
+- id: cv-sc-2-conectores-ejecutivos-4
+  text: Rather than merely putting out fires, we built playbooks that empower teams.
+  translation: En lugar de solo apagar incendios, creamos playbooks que empoderan
+    equipos.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Rather than
+    meaning: en lugar de
+  common: true
+  kind: idiom
+  apply_sentence: ____ guessing, we drill down into SQL.
+  apply_answer: Rather than
+  apply_translation: En lugar de adivinar, profundizamos en SQL.
+- id: cv-sc-2-conectores-ejecutivos-5
+  text: Furthermore, pairing Google ADK with local AI SOPs future-proofs team operations.
+  translation: Asimismo, unir Google ADK con SOPs de IA local prepara operaciones
+    al futuro.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: Furthermore
+    meaning: asimismo / además
+  common: true
+  kind: idiom
+  apply_sentence: Excel crunches data; ____, Power BI tells the story.
+  apply_answer: furthermore
+  apply_translation: Excel procesa datos; además, Power BI cuenta.
+roleplay:
+  ai_role: Executive Communication & Interview Coach
+  user_role: Team Leader Candidate
+  setting: Sesión de coaching para articular logros del CV usando conectores ejecutivos
+    precisos (because, although, in order to, whereas, despite, not only... but also).
+  turns:
+  - speaker: ai
+    text: Let's practice connecting cause, contrast, and impact when explaining your
+      achievements at Rappi and El Carutal.
+  - speaker: user
+    goal: Usa conectores como 'in order to', 'whereas' y 'despite' para enlazar acciones
+      y resultados del CV.
+    suggested_lines:
+    - At Rappi, we rolled out n8n workflows in order to release frozen orders automatically,
+      whereas manual queues used to delay SLAs.
+    - Despite seasonal demand spikes, our holiday playbooks kept cancellation rates
+      low across all logistics partners.
+  - speaker: ai
+    text: Now summarize your project governance at Topografía Satelital using an emphatic
+      connector.
+  - speaker: user
+    goal: Usa 'not only... but also' o 'so as to' con EVM y Ruta Crítica.
+    suggested_lines:
+    - Not only did we map out builds with Critical Path optimization, but we also
+      tracked SPI and CPI so as to stay within budget.

@@ -1,0 +1,98 @@
+id: a1-cv-pl-1-obras-evm
+title: Construction Projects, Critical Path & EVM
+title_es: Proyectos Constructivos, Ruta Crítica (CPM) y EVM
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en Topografía Satelital de Colombia: EDT (WBS), Ruta Crítica
+  (CPM), Control Financiero EVM (SPI/CPI), Gantt, Asana, Notion y Workday.'
+phrases:
+- id: cv-pl-1-obras-evm-1
+  text: I work on building projects.
+  translation: Trabajo en proyectos de construcción.
+  visual_hint: 🏗️📐
+  cloze:
+  - 4
+  glossary:
+  - word: projects
+    meaning: proyectos
+  common: true
+  kind: phrase
+  apply_sentence: I work on building ____.
+  apply_answer: projects
+  apply_translation: Trabajo en proyectos de construcción.
+- id: cv-pl-1-obras-evm-2
+  text: We use Asana and Excel daily.
+  translation: Usamos Asana y Excel a diario.
+  visual_hint: 🏗️📐
+  cloze:
+  - 4
+  glossary:
+  - word: Excel
+    meaning: Excel
+  common: true
+  kind: phrase
+  apply_sentence: We use Asana and ____.
+  apply_answer: Excel
+  apply_translation: Usamos Asana y Excel.
+- id: cv-pl-1-obras-evm-3
+  text: Where is the project budget file?
+  translation: ¿Dónde está el archivo de presupuesto?
+  visual_hint: 🏗️📐
+  cloze:
+  - 4
+  glossary:
+  - word: budget
+    meaning: presupuesto
+  common: true
+  kind: phrase
+  apply_sentence: Where is the ____ file?
+  apply_answer: budget
+  apply_translation: ¿Dónde está el archivo de presupuesto?
+- id: cv-pl-1-obras-evm-4
+  text: There is a Gantt chart here.
+  translation: Aquí hay un tablero Gantt.
+  visual_hint: 🏗️📐
+  cloze:
+  - 3
+  glossary:
+  - word: Gantt
+    meaning: Gantt
+  common: true
+  kind: phrase
+  apply_sentence: There is a ____ chart here.
+  apply_answer: Gantt
+  apply_translation: Aquí hay un tablero Gantt.
+- id: cv-pl-1-obras-evm-5
+  text: Workday shows our site stock.
+  translation: Workday muestra nuestro inventario.
+  visual_hint: 🏗️📐
+  cloze:
+  - 4
+  glossary:
+  - word: stock
+    meaning: inventario
+  common: true
+  kind: phrase
+  apply_sentence: Workday shows our site ____.
+  apply_answer: stock
+  apply_translation: Workday muestra nuestro inventario.
+roleplay:
+  ai_role: PMO & Construction Operations Director
+  user_role: Project & Product Manager (Topografía Satelital)
+  setting: 'Práctica básica A1 sobre: Proyectos Constructivos, Ruta Crítica (CPM)
+    y EVM.'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - I work on building projects.
+    - We use Asana and Excel daily.
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - Where is the project budget file?
+    - There is a Gantt chart here.

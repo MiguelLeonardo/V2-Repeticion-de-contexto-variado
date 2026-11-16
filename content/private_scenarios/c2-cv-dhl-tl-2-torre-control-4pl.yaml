@@ -1,0 +1,129 @@
+id: c2-cv-dhl-tl-2-torre-control-4pl
+title: 'Module 2: 4PL Control Tower & Support'
+title_es: 'Módulo 2: Operaciones en Torre de Control 4PL y Soporte'
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: Torre de control 4PL, manejo de escalaciones, prevención de churn y fraude,
+  picos de demanda y n8n.
+phrases:
+- id: dhl-tl-2-1
+  text: Acting as the operational nerve center, our Control Tower seamlessly tied
+    together fleets and playbooks.
+  translation: Actuando como centro neurálgico, nuestra Torre conectó sin fisuras
+    flotas y playbooks.
+  visual_hint: 🗼🔗
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: nerve center
+    meaning: centro neurálgico / conectó
+  - word: tied together
+    meaning: centro neurálgico / conectó
+  common: true
+  kind: idiom
+  apply_sentence: A GSC hub serves as the ____ that ties teams together.
+  apply_answer: nerve center
+  apply_translation: Un hub GSC sirve como el centro neurálgico que conecta equipos.
+- id: dhl-tl-2-2
+  text: No longer content with merely putting out fires, we engineered workflows so
+    analysts could step up.
+  translation: Sin conformarnos con apagar incendios, diseñamos flujos para que el
+    equipo respondiera.
+  visual_hint: 🧯🚀
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: putting out fires
+    meaning: apagar incendios / responder
+  - word: step up
+    meaning: apagar incendios / responder
+  common: true
+  kind: idiom
+  apply_sentence: Structured escalation lets specialists ____ rather than fire-fight.
+  apply_answer: step up
+  apply_translation: La escalación estructurada permite responder a la altura.
+- id: dhl-tl-2-3
+  text: So effectively did we curb churn through UX fixes that we simultaneously cracked
+    down on fraud.
+  translation: Tan eficazmente frenamos el abandono con mejoras UX que también combatimos
+    el fraude.
+  visual_hint: 🛡️📉
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: curb churn
+    meaning: frenar abandono / combatimos
+  - word: cracked down
+    meaning: frenar abandono / combatimos
+  common: true
+  kind: idiom
+  apply_sentence: Tighter controls ____ on fraud without hurting UX.
+  apply_answer: cracked down
+  apply_translation: Controles más firmes combatieron el fraude sin dañar la UX.
+- id: dhl-tl-2-4
+  text: Having braced for holiday surges well in advance, we sustained SLA quality
+    throughout peak hours.
+  translation: Habiéndonos preparado con antelación para picos festivos, mantuvimos
+    el SLA en horas pico.
+  visual_hint: ⏱️📈
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: braced for
+    meaning: preparado para / horas pico
+  - word: peak hours
+    meaning: preparado para / horas pico
+  common: true
+  kind: idiom
+  apply_sentence: Teams that ____ surges rarely falter during peak hours.
+  apply_answer: brace for
+  apply_translation: Los equipos que se preparan para picos rara vez fallan.
+- id: dhl-tl-2-5
+  text: Once we rolled out n8n automation, aging tickets ceased bottling up in the
+    support queue.
+  translation: Una vez desplegamos automatización n8n, los tickets dejaron de estancarse
+    en la cola.
+  visual_hint: 🤖⚡
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: rolled out
+    meaning: desplegamos / estancarse
+  - word: bottling up
+    meaning: desplegamos / estancarse
+  common: true
+  kind: idiom
+  apply_sentence: Automated triage keeps tickets from ____ in queues.
+  apply_answer: bottling up
+  apply_translation: El triaje automático evita que tickets se estanquen en colas.
+roleplay:
+  ai_role: DHL GSC Service Delivery Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Módulo 2: Operaciones en Torre de Control 4PL y Soporte.'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - Acting as the operational nerve center, our Control Tower seamlessly tied together
+      fleets and playbooks.
+    - No longer content with merely putting out fires, we engineered workflows so
+      analysts could step up.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - So effectively did we curb churn through UX fixes that we simultaneously cracked
+      down on fraud.
+    - Having braced for holiday surges well in advance, we sustained SLA quality throughout
+      peak hours.

@@ -1,0 +1,187 @@
+id: c1-cv-dhl-tl-1-perfil-liderazgo
+title: 'Module 1: Professional Profile, GSC Leadership & Storytelling'
+title_es: 'Módulo 1: Perfil Profesional, Liderazgo GSC y Storytelling'
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: Elevator pitch de Ingeniería Industrial y Shared Services, decisiones
+  basadas en datos, excelencia operativa, gestión de stakeholders globales y liderazgo
+  de equipos.
+phrases:
+- id: dhl-tl-1-1
+  text: As an Industrial Engineer with extensive operations and data analytics experience,
+    I have streamlined workflows and standardized reporting solutions across the board
+    for regional and global stakeholders.
+  translation: Como Ingeniero Industrial con amplia experiencia en operaciones y analítica
+    de datos, he agilizado flujos de trabajo (streamlined workflows) y estandarizado
+    soluciones de reporte en todos los ámbitos (across the board) para stakeholders
+    regionales y globales.
+  visual_hint: 🏭📊
+  cloze:
+  - 13
+  - 14
+  - 19
+  - 20
+  - 21
+  glossary:
+  - word: streamline workflows
+    meaning: agilizar flujos de trabajo
+  - word: across the board
+    meaning: en todos los ámbitos o áreas
+  common: true
+  kind: idiom
+  apply_sentence: In a Global Service Center, standardizing master data governance
+    helps ____ and improve accuracy across the board.
+  apply_answer: streamline workflows
+  apply_translation: En un Centro de Servicios Globales, estandarizar la gobernanza
+    de datos maestros ayuda a agilizar flujos de trabajo y mejorar la precisión en
+    todas las áreas.
+- id: dhl-tl-1-2
+  text: I specialize in translating large, complex datasets into data-driven insights
+    and executive-level dashboards that define key KPIs and truly move the needle
+    on operational performance.
+  translation: Me especializo en traducir grandes conjuntos de datos complejos en
+    hallazgos basados en datos (data-driven insights) y tableros ejecutivos que definen
+    KPIs clave y generan un impacto real (move the needle) en el desempeño operativo.
+  visual_hint: 📈🎯
+  cloze:
+  - 8
+  - 9
+  - 19
+  - 20
+  - 21
+  glossary:
+  - word: data-driven insights
+    meaning: hallazgos basados en datos
+  - word: move the needle
+    meaning: generar un impacto real o medible
+  common: true
+  kind: idiom
+  apply_sentence: When presenting to global Business Partners, raw spreadsheets aren't
+    enough; we need ____ that move the needle on service levels.
+  apply_answer: data-driven insights
+  apply_translation: Al presentar ante Business Partners globales, las hojas de cálculo
+    crudas no bastan; necesitamos hallazgos basados en datos que generen un impacto
+    real en los niveles de servicio.
+- id: dhl-tl-1-3
+  text: Through disciplined capacity management and process automation, I mitigate
+    operational risks, iron out stakeholder and user experience friction, and maximize
+    bottom-line profitability.
+  translation: Mediante una gestión disciplinada de la capacidad y automatización
+    de procesos, mitigo riesgos operativos, resuelvo fricciones (iron out) de experiencia
+    de usuario y stakeholders, y maximizo la rentabilidad neta (bottom-line profitability).
+  visual_hint: ⚙️💰
+  cloze:
+  - 11
+  - 12
+  - 20
+  - 21
+  glossary:
+  - word: iron out
+    meaning: pulir o resolver fricciones
+  - word: bottom-line profitability
+    meaning: rentabilidad neta
+  common: true
+  kind: idiom
+  apply_sentence: Business Support leads must ____ bottlenecks in service delivery
+    to protect both stakeholder satisfaction and bottom-line profitability.
+  apply_answer: iron out
+  apply_translation: Los líderes de Business Support deben pulir los cuellos de botella
+    en la entrega del servicio para proteger la satisfacción de los stakeholders y
+    la rentabilidad neta.
+- id: dhl-tl-1-4
+  text: Acting as the main point of contact for Business Partners, I combine active
+    listening and structured storytelling to keep the big picture clear and get everyone
+    on the same page across global teams.
+  translation: Actuando como punto de contacto principal para Business Partners, combino
+    escucha activa y storytelling estructurado para mantener claro el panorama general
+    (big picture) y alinear a todos (get everyone on the same page) en equipos globales.
+  visual_hint: 🌍🤝
+  cloze:
+  - 20
+  - 21
+  - 24
+  - 25
+  - 26
+  - 27
+  glossary:
+  - word: big picture
+    meaning: panorama general
+  - word: get everyone on the same page
+    meaning: alinear a todo el equipo
+  common: true
+  kind: idiom
+  apply_sentence: During quarterly service reviews, sharing clear operational narratives
+    highlights the ____ so global Business Partners can get everyone on the same page.
+  apply_answer: big picture
+  apply_translation: Durante las revisiones trimestrales de servicio, compartir narrativas
+    operativas claras destaca el panorama general para que los Business Partners globales
+    alineen a todo el equipo.
+- id: dhl-tl-1-5
+  text: Having directly overseen multi-tier operational teams of over 60 people, I
+    balance workload distribution, provide regular coaching and upskilling, and hold
+    team members accountable against clear SLA expectations.
+  translation: Habiendo supervisado directamente (overseen) equipos operativos multinivel
+    de más de 60 personas, equilibro la carga de trabajo, brindo coaching y capacitación
+    continua, y exijo cumplimiento (hold accountable) frente a expectativas claras
+    de SLA.
+  visual_hint: 👥📋
+  cloze:
+  - 2
+  glossary:
+  - word: oversee
+    meaning: supervisar o dirigir
+  - word: hold accountable
+    meaning: hacer responsable o exigir cumplimiento
+  common: true
+  kind: idiom
+  apply_sentence: To lead a 16-person Business Support team effectively, a Team Leader
+    must ____ daily capacity fairly while holding everyone accountable for quality.
+  apply_answer: oversee
+  apply_translation: Para liderar eficazmente un equipo de Business Support de 16
+    personas, un Team Leader debe supervisar la capacidad diaria con justicia mientras
+    exige responsabilidad por la calidad.
+roleplay:
+  ai_role: DHL GSC Hiring Manager (Bogotá)
+  user_role: Team Leader (Business Support) Candidate
+  setting: Entrevista ejecutiva para Team Leader (Business Support) en DHL GSC Bogotá
+    evaluando perfil, liderazgo y storytelling.
+  turns:
+  - speaker: ai
+    text: Welcome! Could you give me your elevator pitch for the Team Leader (Business
+      Support) role, focusing on how you bridge Industrial Engineering, data analytics,
+      and global operations?
+  - speaker: user
+    goal: Presenta tu perfil de Ingeniería Industrial y analítica usando 'streamlined
+      workflows' y 'across the board', y explica cómo traduces datos en 'data-driven
+      insights' que 'move the needle'.
+    suggested_lines:
+    - As an Industrial Engineer with extensive operations and data analytics experience,
+      I have streamlined workflows and standardized reporting solutions across the
+      board for regional and global stakeholders.
+    - I specialize in translating large, complex datasets into data-driven insights
+      and executive-level dashboards that define key KPIs and truly move the needle
+      on operational performance.
+  - speaker: ai
+    text: Great. How do you connect process optimization and user experience to financial
+      impact, and how do you keep international Business Partners aligned?
+  - speaker: user
+    goal: Explica cómo resuelves fricciones ('iron out') para proteger la 'bottom-line
+      profitability', y cómo usas storytelling para mantener el 'big picture' y 'get
+      everyone on the same page'.
+    suggested_lines:
+    - Through disciplined capacity management and process automation, I mitigate operational
+      risks, iron out stakeholder and user experience friction, and maximize bottom-line
+      profitability.
+    - Acting as the main point of contact for Business Partners, I combine active
+      listening and structured storytelling to keep the big picture clear and get
+      everyone on the same page across global teams.
+  - speaker: ai
+    text: Finally, how would you manage capacity, coaching, and accountability for
+      a 16-person Business Support team?
+  - speaker: user
+    goal: Describe tu experiencia supervisando equipos ('overseen') y cómo mantienes
+      la responsabilidad ('hold team members accountable') frente a SLAs.
+    suggested_lines:
+    - Having directly overseen multi-tier operational teams of over 60 people, I balance
+      workload distribution, provide regular coaching and upskilling, and hold team
+      members accountable against clear SLA expectations.

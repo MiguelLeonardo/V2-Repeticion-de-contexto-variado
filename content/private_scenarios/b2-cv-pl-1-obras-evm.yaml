@@ -1,0 +1,99 @@
+id: b2-cv-pl-1-obras-evm
+title: Construction Projects, Critical Path & EVM
+title_es: Proyectos Constructivos, Ruta Crítica (CPM) y EVM
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en Topografía Satelital de Colombia: EDT (WBS), Ruta Crítica
+  (CPM), Control Financiero EVM (SPI/CPI), Gantt, Asana, Notion y Workday.'
+phrases:
+- id: cv-pl-1-obras-evm-1
+  text: Using WBS and Critical Path optimization, I structure civil projects in Notion.
+  translation: Usando EDT y Ruta Crítica, estructuro proyectos en Notion.
+  visual_hint: 🏗️📐
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: Critical Path
+    meaning: Ruta Crítica
+  common: true
+  kind: idiom
+  apply_sentence: We map dependencies using ____ optimization.
+  apply_answer: Critical Path
+  apply_translation: Mapeamos dependencias con optimización de Ruta Crítica.
+- id: cv-pl-1-obras-evm-2
+  text: With EVM metrics like SPI and CPI, we catch budget variances early.
+  translation: Con métricas EVM como SPI y CPI, detectamos variaciones a tiempo.
+  visual_hint: 🏗️📐
+  cloze:
+  - 10
+  glossary:
+  - word: variances
+    meaning: desviaciones / variaciones
+  common: true
+  kind: idiom
+  apply_sentence: Earned Value spots cost ____ early.
+  apply_answer: variances
+  apply_translation: El Valor Ganado detecta variaciones temprano.
+- id: cv-pl-1-obras-evm-3
+  text: We align field crews through Gantt dashboards and deviation controls.
+  translation: Alineamos cuadrillas mediante tableros Gantt y control de desviaciones.
+  visual_hint: 🏗️📐
+  cloze:
+  - 1
+  glossary:
+  - word: align
+    meaning: alinear
+  common: true
+  kind: idiom
+  apply_sentence: Weekly Gantt reviews ____ field teams.
+  apply_answer: align
+  apply_translation: Revisiones Gantt alinean equipos de campo.
+- id: cv-pl-1-obras-evm-4
+  text: Local AI-assisted SOPs standardize how engineers document site changes.
+  translation: SOPs asistidos por IA local estandarizan la documentación de cambios.
+  visual_hint: 🏗️📐
+  cloze:
+  - 3
+  glossary:
+  - word: standardize
+    meaning: estandarizar
+  common: true
+  kind: idiom
+  apply_sentence: Clear SOPs ____ field reporting.
+  apply_answer: standardize
+  apply_translation: SOPs claros estandarizan reportes de campo.
+- id: cv-pl-1-obras-evm-5
+  text: Automated Workday workflows give us full supply chain traceability.
+  translation: Flujos automatizados en Workday dan trazabilidad total de suministros.
+  visual_hint: 🏗️📐
+  cloze:
+  - 8
+  glossary:
+  - word: traceability
+    meaning: trazabilidad
+  common: true
+  kind: idiom
+  apply_sentence: Digital logs ensure end-to-end ____.
+  apply_answer: traceability
+  apply_translation: Registros digitales aseguran trazabilidad total.
+roleplay:
+  ai_role: PMO & Construction Operations Director
+  user_role: Project & Product Manager (Topografía Satelital)
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Proyectos Constructivos,
+    Ruta Crítica (CPM) y EVM.'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - Using WBS and Critical Path optimization, I structure civil projects in Notion.
+    - With EVM metrics like SPI and CPI, we catch budget variances early.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - We align field crews through Gantt dashboards and deviation controls.
+    - Local AI-assisted SOPs standardize how engineers document site changes.

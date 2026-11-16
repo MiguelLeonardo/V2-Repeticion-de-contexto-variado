@@ -1,0 +1,100 @@
+id: b2-cv-pl-2-suministro-flota
+title: Timber Supply Chain, Fleet & Peak Logistics
+title_es: Cadena de Suministro (El Carutal) y Flota en Horas Pico (Rappi)
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en El Carutal y Rappi: canales maderables, previsión de
+  mano de obra, inventarios ERP, coordinación de transportistas, días festivos y flota.'
+phrases:
+- id: cv-pl-2-suministro-flota-1
+  text: At El Carutal, I governed ERP inventory cycles and outbound quality.
+  translation: En El Carutal goberné ciclos de inventario ERP y calidad de salidas.
+  visual_hint: 🚚🌲
+  cloze:
+  - 4
+  glossary:
+  - word: governed
+    meaning: goberné
+  common: true
+  kind: idiom
+  apply_sentence: We ____ inventory audits monthly.
+  apply_answer: governed
+  apply_translation: Gobernamos auditorías de inventario mensualmente.
+- id: cv-pl-2-suministro-flota-2
+  text: Labor forecasting ensured we staffed up to meet manufacturing demand.
+  translation: El pronóstico laboral aseguró personal para cumplir la demanda fabril.
+  visual_hint: 🚚🌲
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: staffed up
+    meaning: dimensionamos personal
+  common: true
+  kind: idiom
+  apply_sentence: Managers ____ before high season.
+  apply_answer: staffed up
+  apply_translation: Gerentes dimensionaron personal antes de temporada.
+- id: cv-pl-2-suministro-flota-3
+  text: During holidays, carrier-specific playbooks cut cancellations significantly.
+  translation: En festivos, playbooks por operador redujeron cancelaciones notablemente.
+  visual_hint: 🚚🌲
+  cloze:
+  - 6
+  glossary:
+  - word: significantly
+    meaning: notablemente
+  common: true
+  kind: idiom
+  apply_sentence: Targeted playbooks reduced delays ____.
+  apply_answer: significantly
+  apply_translation: Playbooks específicos redujeron retrasos notablemente.
+- id: cv-pl-2-suministro-flota-4
+  text: Optimizing fleet dispatch during peak hours boosted customer UX.
+  translation: Optimizar el despacho de flota en horas pico mejoró la UX.
+  visual_hint: 🚚🌲
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: peak hours
+    meaning: horas pico
+  common: true
+  kind: idiom
+  apply_sentence: Fleet efficiency matters most in ____.
+  apply_answer: peak hours
+  apply_translation: La eficiencia de flota importa más en horas pico.
+- id: cv-pl-2-suministro-flota-5
+  text: I acted as the bridge between carriers and corporate clients.
+  translation: Actué como puente entre transportistas y clientes corporativos.
+  visual_hint: 🚚🌲
+  cloze:
+  - 4
+  glossary:
+  - word: bridge
+    meaning: puente
+  common: true
+  kind: idiom
+  apply_sentence: Clear reporting builds a ____ with clients.
+  apply_answer: bridge
+  apply_translation: Reportes claros tienden un puente con clientes.
+roleplay:
+  ai_role: VP of Logistics & Fleet Operations
+  user_role: Logistics Manager Candidate
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Cadena de Suministro
+    (El Carutal) y Flota en Horas Pico (Rappi).'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - At El Carutal, I governed ERP inventory cycles and outbound quality.
+    - Labor forecasting ensured we staffed up to meet manufacturing demand.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - During holidays, carrier-specific playbooks cut cancellations significantly.
+    - Optimizing fleet dispatch during peak hours boosted customer UX.

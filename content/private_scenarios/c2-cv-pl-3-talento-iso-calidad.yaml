@@ -1,0 +1,119 @@
+id: c2-cv-pl-3-talento-iso-calidad
+title: HR Payroll, ISO Audits & Time-Motion Studies
+title_es: Talento Humano, Nómina (NGSOFT), ISO y Estudios de Tiempos (Tecnicolor)
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: Diplomado en Talento Humano, administración de nómina en NGSOFT, coordinación
+  de cuadrillas, auditorías ISO y estudios de tiempos y movimientos en Tecnicolor.
+phrases:
+- id: cv-pl-3-talento-iso-calidad-1
+  text: Having worn many hats across NGSOFT payroll and ISO audits, I internalized
+    compliance early.
+  translation: Habiendo desempeñado múltiples roles en nómina NGSOFT y auditorías
+    ISO, internalicé el cumplimiento.
+  visual_hint: 📋⏱️
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: worn many hats
+    meaning: múltiples roles
+  common: true
+  kind: idiom
+  apply_sentence: Leaders who have ____ grasp operational nuance.
+  apply_answer: worn many hats
+  apply_translation: Líderes versátiles comprenden matices operativos.
+- id: cv-pl-3-talento-iso-calidad-2
+  text: By pairing Talent Management principles with engineering rigor, we cultivate
+    accountable teams.
+  translation: Al unir Talento Humano con rigor de ingeniería, cultivamos equipos
+    responsables.
+  visual_hint: 📋⏱️
+  cloze:
+  - 9
+  glossary:
+  - word: cultivate
+    meaning: cultivamos
+  common: true
+  kind: idiom
+  apply_sentence: Consistent coaching helps ____ ownership.
+  apply_answer: cultivate
+  apply_translation: Coaching constante cultiva apropiación.
+- id: cv-pl-3-talento-iso-calidad-3
+  text: Scarcely had we completed time-and-motion studies at Tecnicolor than hidden
+    waste surfaced.
+  translation: Apenas completamos estudios de tiempos en Tecnicolor, emergieron desperdicios
+    ocultos.
+  visual_hint: 📋⏱️
+  cloze:
+  - 0
+  - 11
+  glossary:
+  - word: Scarcely
+    meaning: apenas / emergieron
+  - word: surfaced
+    meaning: apenas / emergieron
+  common: true
+  kind: idiom
+  apply_sentence: ____ had we timed the line than bottlenecks surfaced.
+  apply_answer: Scarcely
+  apply_translation: Apenas medimos la línea, surgieron bloqueos.
+- id: cv-pl-3-talento-iso-calidad-4
+  text: Standardizing shop-floor sequences left no room for waste or erratic cost
+    variances.
+  translation: Estandarizar secuencias en planta no dejó margen para desperdicio ni
+    variaciones.
+  visual_hint: 📋⏱️
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: no room for waste
+    meaning: sin margen al desperdicio
+  common: true
+  kind: idiom
+  apply_sentence: Lean governance leaves ____.
+  apply_answer: no room for waste
+  apply_translation: La gobernanza Lean no deja margen al desperdicio.
+- id: cv-pl-3-talento-iso-calidad-5
+  text: Executed strictly by the book, ISO audits transformed compliance into a competitive
+    asset.
+  translation: Ejecutadas bajo norma, las auditorías ISO volvieron el cumplimiento
+    una ventaja.
+  visual_hint: 📋⏱️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: by the book
+    meaning: bajo norma
+  common: true
+  kind: idiom
+  apply_sentence: Processes run ____ withstand any inspection.
+  apply_answer: by the book
+  apply_translation: Procesos bajo norma resisten toda inspección.
+roleplay:
+  ai_role: HR Operations & Quality Assurance Director
+  user_role: Process & People Operations Specialist
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Talento Humano, Nómina (NGSOFT), ISO y Estudios de Tiempos (Tecnicolor).'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - Having worn many hats across NGSOFT payroll and ISO audits, I internalized compliance
+      early.
+    - By pairing Talent Management principles with engineering rigor, we cultivate
+      accountable teams.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - Scarcely had we completed time-and-motion studies at Tecnicolor than hidden
+      waste surfaced.
+    - Standardizing shop-floor sequences left no room for waste or erratic cost variances.

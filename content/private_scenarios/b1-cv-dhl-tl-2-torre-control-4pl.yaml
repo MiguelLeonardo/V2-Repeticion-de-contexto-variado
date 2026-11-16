@@ -1,0 +1,102 @@
+id: b1-cv-dhl-tl-2-torre-control-4pl
+title: 'Module 2: 4PL Control Tower & Support'
+title_es: 'Módulo 2: Operaciones en Torre de Control 4PL y Soporte'
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: Torre de control 4PL, manejo de escalaciones, prevención de churn y fraude,
+  picos de demanda y n8n.
+phrases:
+- id: dhl-tl-2-1
+  text: Our Control Tower worked as the main center connecting fleets and playbooks.
+  translation: Nuestra Torre funcionó como centro principal conectando flotas y playbooks.
+  visual_hint: 🗼🔗
+  cloze:
+  - 8
+  glossary:
+  - word: connecting
+    meaning: conectando
+  common: true
+  kind: idiom
+  apply_sentence: A central hub succeeds by ____ every team.
+  apply_answer: connecting
+  apply_translation: Un hub central triunfa conectando a cada equipo.
+- id: dhl-tl-2-2
+  text: Instead of only fixing crises, I built workflows so teams could respond.
+  translation: En lugar de solo apagar crisis, creé flujos para que respondieran.
+  visual_hint: 🧯🚀
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: instead of
+    meaning: en lugar de
+  common: true
+  kind: idiom
+  apply_sentence: We prevent errors ____ just reacting.
+  apply_answer: instead of
+  apply_translation: Prevenimos errores en lugar de solo reaccionar.
+- id: dhl-tl-2-3
+  text: I improved user experience to stop clients from leaving our service.
+  translation: Mejoré la experiencia de usuario para evitar que clientes abandonaran.
+  visual_hint: 🛡️📉
+  cloze:
+  - 8
+  glossary:
+  - word: leaving
+    meaning: abandonar
+  common: true
+  kind: idiom
+  apply_sentence: Better support stops clients from ____.
+  apply_answer: leaving
+  apply_translation: Un mejor soporte evita que los clientes se vayan.
+- id: dhl-tl-2-4
+  text: We prepared playbooks ahead of time to handle holiday demand spikes.
+  translation: Preparamos playbooks con tiempo para manejar picos de demanda.
+  visual_hint: ⏱️📈
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: ahead of
+    meaning: con anticipación
+  common: true
+  kind: idiom
+  apply_sentence: Plan capacity ____ peak seasons.
+  apply_answer: ahead of
+  apply_translation: Planea la capacidad antes de temporadas pico.
+- id: dhl-tl-2-5
+  text: We launched automated workflows so tickets would not get stuck in queues.
+  translation: Lanzamos flujos automatizados para que los tickets no se atascaran.
+  visual_hint: 🤖⚡
+  cloze:
+  - 9
+  glossary:
+  - word: stuck
+    meaning: atascados
+  common: true
+  kind: idiom
+  apply_sentence: Automation prevents tickets from getting ____.
+  apply_answer: stuck
+  apply_translation: La automatización evita que los tickets se atasquen.
+roleplay:
+  ai_role: DHL GSC Service Delivery Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Módulo 2: Operaciones
+    en Torre de Control 4PL y Soporte.'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - Our Control Tower worked as the main center connecting fleets and playbooks.
+    - Instead of only fixing crises, I built workflows so teams could respond.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - I improved user experience to stop clients from leaving our service.
+    - We prepared playbooks ahead of time to handle holiday demand spikes.

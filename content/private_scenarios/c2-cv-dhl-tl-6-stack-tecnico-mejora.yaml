@@ -1,0 +1,129 @@
+id: c2-cv-dhl-tl-6-stack-tecnico-mejora
+title: 'Module 6: Tech Stack & Continuous Improvement'
+title_es: 'Módulo 6: Stack Técnico (Excel, Power BI, SQL) y Mejora Continua'
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: Ingeniería Industrial, Google Cloud/ADK, Excel/Power BI/SQL/Python, ETL,
+  SIMIO, ISO, Git y estudios de tiempos.
+phrases:
+- id: dhl-tl-6-1
+  text: Building on Industrial Engineering with Cloud and ADK certifications ensures
+    I stay ahead of the curve.
+  translation: Construir sobre Ingeniería Industrial con Cloud y ADK me mantiene a
+    la vanguardia.
+  visual_hint: 🎓☁️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Building on
+    meaning: construir sobre / vanguardia
+  - word: ahead of the curve
+    meaning: construir sobre / vanguardia
+  common: true
+  kind: idiom
+  apply_sentence: ____ strong fundamentals keeps leaders ahead of the curve.
+  apply_answer: Building on
+  apply_translation: Construir sobre bases sólidas mantiene a la vanguardia.
+- id: dhl-tl-6-2
+  text: Sifting through massive datasets via SQL and Python lets me connect the dots
+    effortlessly.
+  translation: Filtrar datos masivos con SQL y Python me permite conectar patrones
+    sin esfuerzo.
+  visual_hint: 💻📊
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Sifting through
+    meaning: filtrar / conectar patrones
+  - word: connect the dots
+    meaning: filtrar / conectar patrones
+  common: true
+  kind: idiom
+  apply_sentence: Executive BI ____ noise to connect the dots.
+  apply_answer: sifts through
+  apply_translation: El BI ejecutivo filtra ruido para conectar patrones.
+- id: dhl-tl-6-3
+  text: Architected from the ground up, my ETL pipelines crunch the numbers with zero
+    manual rework.
+  translation: Diseñados desde cero, mis pipelines ETL procesan cifras sin retrabajo
+    manual.
+  visual_hint: 🏗️🧮
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: from the ground up
+    meaning: desde cero / procesar cifras
+  - word: crunch the numbers
+    meaning: desde cero / procesar cifras
+  common: true
+  kind: idiom
+  apply_sentence: Models built ____ crunch the numbers reliably.
+  apply_answer: from the ground up
+  apply_translation: Modelos hechos desde cero procesan datos con fiabilidad.
+- id: dhl-tl-6-4
+  text: SIMIO simulations let us test the waters before modifying production workflows
+    under the hood.
+  translation: Simulaciones SIMIO permiten probar escenarios antes de cambiar flujos
+    por dentro.
+  visual_hint: 🧪🔧
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: test the waters
+    meaning: probar / por dentro
+  - word: under the hood
+    meaning: probar / por dentro
+  common: true
+  kind: idiom
+  apply_sentence: UAT sandboxes ____ before altering systems under the hood.
+  apply_answer: test the waters
+  apply_translation: Los sandboxes UAT prueban antes de cambiar por dentro.
+- id: dhl-tl-6-5
+  text: Having worn many hats across payroll and ISO audits, I later cut waste at
+    Tecnicolor.
+  translation: Habiendo desempeñado múltiples roles en nómina y auditorías ISO, luego
+    reduje desperdicio en Tecnicolor.
+  visual_hint: 🎩⏱️
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: worn many hats
+    meaning: múltiples roles / reducir desperdicio
+  - word: cut waste
+    meaning: múltiples roles / reducir desperdicio
+  common: true
+  kind: idiom
+  apply_sentence: Leaders who have ____ spot ways to cut waste.
+  apply_answer: worn many hats
+  apply_translation: Líderes versátiles detectan cómo reducir desperdicios.
+roleplay:
+  ai_role: DHL BI, Reporting & Process Excellence Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Módulo 6: Stack Técnico (Excel, Power BI, SQL) y Mejora Continua.'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - Building on Industrial Engineering with Cloud and ADK certifications ensures
+      I stay ahead of the curve.
+    - Sifting through massive datasets via SQL and Python lets me connect the dots
+      effortlessly.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - Architected from the ground up, my ETL pipelines crunch the numbers with zero
+      manual rework.
+    - SIMIO simulations let us test the waters before modifying production workflows
+      under the hood.

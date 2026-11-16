@@ -1,0 +1,112 @@
+id: c1-cv-tech-2-n8n-sap-simio
+title: n8n Automation, SAP ERP, SIMIO & Git
+title_es: Automatización n8n, SAP ERP, SIMIO y Git/GitHub
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: Integraciones con n8n para liberar órdenes congeladas, control de fraude
+  en tarjetas, SAP ERP, simulación SIMIO, CMS y control de versiones Git.
+phrases:
+- id: cv-tech-2-n8n-sap-simio-1
+  text: Deploying n8n automation released frozen orders on the fly, preventing backlog
+    bottlenecks.
+  translation: Desplegar automatización n8n liberó órdenes sobre la marcha evitando
+    cuellos de botella.
+  visual_hint: ⚡🔧
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: on the fly
+    meaning: sobre la marcha
+  common: true
+  kind: idiom
+  apply_sentence: n8n resolves stuck orders ____.
+  apply_answer: on the fly
+  apply_translation: n8n resuelve órdenes sobre la marcha.
+- id: cv-tech-2-n8n-sap-simio-2
+  text: Optimizing courier card controls cracked down on fraud without slowing legitimate
+    deliveries.
+  translation: Optimizar controles en tarjetas combatió el fraude sin frenar entregas
+    legítimas.
+  visual_hint: ⚡🔧
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: cracked down on
+    meaning: combatió
+  common: true
+  kind: idiom
+  apply_sentence: Smart thresholds ____ card fraud.
+  apply_answer: cracked down on
+  apply_translation: Umbrales inteligentes combatieron fraude.
+- id: cv-tech-2-n8n-sap-simio-3
+  text: Drawing on SAP ERP and EDI workflows, I iron out integration kinks swiftly.
+  translation: Apoyado en SAP ERP y flujos EDI, pulo fallas de integración rápido.
+  visual_hint: ⚡🔧
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: iron out
+    meaning: pulo / resuelvo
+  common: true
+  kind: idiom
+  apply_sentence: System leads ____ integration kinks.
+  apply_answer: iron out
+  apply_translation: Líderes pulen fallas de integración.
+- id: cv-tech-2-n8n-sap-simio-4
+  text: Using SIMIO to test the waters protects production workflows before altering
+    anything under the hood.
+  translation: Usar SIMIO para probar escenarios protege producción antes de cambiar
+    por dentro.
+  visual_hint: ⚡🔧
+  cloze:
+  - 12
+  - 13
+  glossary:
+  - word: under the hood
+    meaning: por dentro
+  common: true
+  kind: idiom
+  apply_sentence: Check architecture ____ before deploying.
+  apply_answer: under the hood
+  apply_translation: Revisa arquitectura por dentro antes.
+- id: cv-tech-2-n8n-sap-simio-5
+  text: Managing versions via Git, GitHub, and CMS keeps operational governance audit-proof.
+  translation: Gestionar versiones vía Git, GitHub y CMS mantiene gobernanza a prueba
+    de auditorías.
+  visual_hint: ⚡🔧
+  cloze:
+  - 10
+  glossary:
+  - word: audit-proof
+    meaning: a prueba de auditorías
+  common: true
+  kind: idiom
+  apply_sentence: Git history makes SOPs ____.
+  apply_answer: audit-proof
+  apply_translation: Historial Git hace SOPs auditables.
+roleplay:
+  ai_role: Systems Automation & ERP Lead
+  user_role: Automation & Process Specialist
+  setting: Revisión técnica sobre integraciones n8n, SAP ERP, simulación de escenarios
+    en SIMIO y control de versiones con Git/GitHub.
+  turns:
+  - speaker: ai
+    text: Walk me through how you used n8n, SAP, and SIMIO in your operations roles.
+  - speaker: user
+    goal: Explica el release automático de órdenes congeladas con n8n, respaldo en
+      SAP y simulación en SIMIO antes de cambiar producción.
+    suggested_lines:
+    - At Rappi, I built n8n workflows to automatically release stuck orders, cutting
+      SLA breaches and manual backlog.
+    - I also leverage SAP ERP integrations and SIMIO simulations to test changes safely
+      before touching live operations.
+  - speaker: ai
+    text: How do you govern documentation and workflow versions?
+  - speaker: user
+    goal: Menciona CMS, Git y GitHub para trazabilidad y control de cambios.
+    suggested_lines:
+    - I manage content via CMS and govern all scripts and SOP versions with Git and
+      GitHub for full auditability.

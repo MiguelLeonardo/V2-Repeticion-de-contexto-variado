@@ -197,7 +197,8 @@ def dev_token(body: DevTokenIn, settings: Settings = Depends(get_settings)) -> d
     """Local/test only. Staging/production use an external IdP (Firebase Auth / Cognito) issuing JWTs."""
     if not settings.is_dev:
         raise HTTPException(404, "not found")
-    return {"access_token": create_token(body.user_id, settings), "token_type": "bearer"}
+    return {"access_token": create_token(body.user_id, settings), "token_type": "bearer"}  # nosec B105
+
 
 
 @router.post("/v1/dev/fast-forward-srs", tags=["dev"])

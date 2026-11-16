@@ -1,0 +1,100 @@
+id: b1-cv-tech-2-n8n-sap-simio
+title: n8n Automation, SAP ERP, SIMIO & Git
+title_es: Automatización n8n, SAP ERP, SIMIO y Git/GitHub
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: Integraciones con n8n para liberar órdenes congeladas, control de fraude
+  en tarjetas, SAP ERP, simulación SIMIO, CMS y control de versiones Git.
+phrases:
+- id: cv-tech-2-n8n-sap-simio-1
+  text: I integrated n8n workflows to release frozen orders automatically.
+  translation: Integré flujos n8n para liberar órdenes congeladas automáticamente.
+  visual_hint: ⚡🔧
+  cloze:
+  - 5
+  glossary:
+  - word: release
+    meaning: liberar
+  common: true
+  kind: idiom
+  apply_sentence: n8n flows ____ stuck tickets.
+  apply_answer: release
+  apply_translation: Flujos n8n liberan tickets atascados.
+- id: cv-tech-2-n8n-sap-simio-2
+  text: We optimized card budgets so we could reduce fraud rates.
+  translation: Optimizamos presupuestos de tarjetas para reducir fraude.
+  visual_hint: ⚡🔧
+  cloze:
+  - 7
+  glossary:
+  - word: reduce
+    meaning: reducir
+  common: true
+  kind: idiom
+  apply_sentence: Smart controls ____ fraud risk.
+  apply_answer: reduce
+  apply_translation: Controles inteligentes reducen fraude.
+- id: cv-tech-2-n8n-sap-simio-3
+  text: My SAP ERP experience helps me troubleshoot order integration errors.
+  translation: Mi experiencia SAP ERP ayuda a resolver errores de integración.
+  visual_hint: ⚡🔧
+  cloze:
+  - 6
+  glossary:
+  - word: troubleshoot
+    meaning: resolver / diagnosticar
+  common: true
+  kind: idiom
+  apply_sentence: Analysts ____ SAP sync errors.
+  apply_answer: troubleshoot
+  apply_translation: Analistas resuelven errores SAP.
+- id: cv-tech-2-n8n-sap-simio-4
+  text: I run SIMIO models to test process changes before launch.
+  translation: Corro modelos SIMIO para probar cambios antes de lanzar.
+  visual_hint: ⚡🔧
+  cloze:
+  - 8
+  glossary:
+  - word: before
+    meaning: antes de
+  common: true
+  kind: idiom
+  apply_sentence: Test models ____ changing live flows.
+  apply_answer: before
+  apply_translation: Prueba modelos antes de cambiar en vivo.
+- id: cv-tech-2-n8n-sap-simio-5
+  text: I use Git, GitHub, and CMS tools to organize documentation.
+  translation: Uso Git, GitHub y CMS para organizar documentación.
+  visual_hint: ⚡🔧
+  cloze:
+  - 9
+  glossary:
+  - word: documentation
+    meaning: documentación
+  common: true
+  kind: idiom
+  apply_sentence: GitHub stores technical ____.
+  apply_answer: documentation
+  apply_translation: GitHub guarda documentación técnica.
+roleplay:
+  ai_role: Systems Automation & ERP Lead
+  user_role: Automation & Process Specialist
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Automatización
+    n8n, SAP ERP, SIMIO y Git/GitHub.'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - I integrated n8n workflows to release frozen orders automatically.
+    - We optimized card budgets so we could reduce fraud rates.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - My SAP ERP experience helps me troubleshoot order integration errors.
+    - I run SIMIO models to test process changes before launch.

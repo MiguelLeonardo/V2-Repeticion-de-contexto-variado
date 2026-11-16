@@ -1,0 +1,104 @@
+id: b2-cv-dhl-tl-4-edi-master-data
+title: 'Module 4: EDI, Master Data & Supply Chain'
+title_es: 'Módulo 4: Integraciones EDI, Master Data y Cadena de Suministro'
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: Master Data, control documental, gobernanza a prueba de auditorías, integraciones
+  SAP/CargoWise/EDI y costos CPG.
+phrases:
+- id: dhl-tl-4-1
+  text: Using master data controls, we keep track of assets and leave no stone unturned.
+  translation: Usando controles de datos maestros, rastreamos sin dejar cabos sueltos.
+  visual_hint: 🗂️🔎
+  cloze:
+  - 12
+  - 13
+  glossary:
+  - word: stone unturned
+    meaning: cabo suelto
+  common: true
+  kind: idiom
+  apply_sentence: Auditors leave no ____ during checks.
+  apply_answer: stone unturned
+  apply_translation: Los auditores no dejan cabos sueltos.
+- id: dhl-tl-4-2
+  text: With audit-proof records, a new leader can hit the ground running.
+  translation: Con registros a prueba de auditorías, un líder rinde de inmediato.
+  visual_hint: 🏛️⚡
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: ground running
+    meaning: rendir de inmediato
+  common: true
+  kind: idiom
+  apply_sentence: Good onboarding helps hires hit the ____.
+  apply_answer: ground running
+  apply_translation: Un buen onboarding ayuda a rendir de inmediato.
+- id: dhl-tl-4-3
+  text: As a first responder on EDI issues, I run reviews to iron out the kinks.
+  translation: Como primer respondiente en EDI, lidero revisiones para pulir fallas.
+  visual_hint: 🔌🛠️
+  cloze:
+  - 11
+  - 12
+  glossary:
+  - word: iron out
+    meaning: pulir
+  common: true
+  kind: idiom
+  apply_sentence: Post-mortems help us ____ the kinks.
+  apply_answer: iron out
+  apply_translation: Los post-mortem ayudan a pulir fallas.
+- id: dhl-tl-4-4
+  text: I drilled down into CPG supply data to cut down on fulfillment costs.
+  translation: Profundicé en datos CPG para reducir costos de despacho.
+  visual_hint: 📦📉
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: drilled down
+    meaning: profundicé
+  common: true
+  kind: idiom
+  apply_sentence: Analysts ____ into logs to find savings.
+  apply_answer: drilled down
+  apply_translation: Los analistas profundizaron en logs para ahorrar.
+- id: dhl-tl-4-5
+  text: Digital planning let us shift resources on the fly and ramp up support.
+  translation: La planeación digital permitió reasignar sobre la marcha y escalar
+    soporte.
+  visual_hint: 🎛️📈
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: on the fly
+    meaning: sobre la marcha
+  common: true
+  kind: idiom
+  apply_sentence: Dashboards let us reassign tasks ____.
+  apply_answer: on the fly
+  apply_translation: Los tableros permiten reasignar sobre la marcha.
+roleplay:
+  ai_role: DHL Master Data & Systems Integration Manager
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Módulo 4: Integraciones
+    EDI, Master Data y Cadena de Suministro.'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - Using master data controls, we keep track of assets and leave no stone unturned.
+    - With audit-proof records, a new leader can hit the ground running.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - As a first responder on EDI issues, I run reviews to iron out the kinks.
+    - I drilled down into CPG supply data to cut down on fulfillment costs.

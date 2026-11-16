@@ -1,0 +1,98 @@
+id: a1-cv-pl-3-talento-iso-calidad
+title: HR Payroll, ISO Audits & Time-Motion Studies
+title_es: Talento Humano, Nómina (NGSOFT), ISO y Estudios de Tiempos (Tecnicolor)
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: Diplomado en Talento Humano, administración de nómina en NGSOFT, coordinación
+  de cuadrillas, auditorías ISO y estudios de tiempos y movimientos en Tecnicolor.
+phrases:
+- id: cv-pl-3-talento-iso-calidad-1
+  text: I check payroll in NGSOFT.
+  translation: Reviso la nómina en NGSOFT.
+  visual_hint: 📋⏱️
+  cloze:
+  - 2
+  glossary:
+  - word: payroll
+    meaning: nómina
+  common: true
+  kind: phrase
+  apply_sentence: I check ____ in NGSOFT.
+  apply_answer: payroll
+  apply_translation: Reviso la nómina en NGSOFT.
+- id: cv-pl-3-talento-iso-calidad-2
+  text: How many crews work today?
+  translation: ¿Cuántas cuadrillas trabajan hoy?
+  visual_hint: 📋⏱️
+  cloze:
+  - 2
+  glossary:
+  - word: crews
+    meaning: cuadrillas
+  common: true
+  kind: phrase
+  apply_sentence: How many ____ work today?
+  apply_answer: crews
+  apply_translation: ¿Cuántas cuadrillas trabajan hoy?
+- id: cv-pl-3-talento-iso-calidad-3
+  text: We pass strict ISO audits.
+  translation: Pasamos auditorías ISO estrictas.
+  visual_hint: 📋⏱️
+  cloze:
+  - 4
+  glossary:
+  - word: audits
+    meaning: auditorías
+  common: true
+  kind: phrase
+  apply_sentence: We pass strict ISO ____.
+  apply_answer: audits
+  apply_translation: Pasamos auditorías ISO estrictas.
+- id: cv-pl-3-talento-iso-calidad-4
+  text: I measure task times in factories.
+  translation: Mido tiempos de tarea en plantas.
+  visual_hint: 📋⏱️
+  cloze:
+  - 3
+  glossary:
+  - word: times
+    meaning: tiempos
+  common: true
+  kind: phrase
+  apply_sentence: I measure task ____ daily.
+  apply_answer: times
+  apply_translation: Mido tiempos de tarea a diario.
+- id: cv-pl-3-talento-iso-calidad-5
+  text: Can we reduce factory waste?
+  translation: ¿Podemos reducir el desperdicio en planta?
+  visual_hint: 📋⏱️
+  cloze:
+  - 4
+  glossary:
+  - word: waste
+    meaning: desperdicio
+  common: true
+  kind: phrase
+  apply_sentence: Can we reduce factory ____?
+  apply_answer: waste
+  apply_translation: ¿Podemos reducir desperdicio en planta?
+roleplay:
+  ai_role: HR Operations & Quality Assurance Director
+  user_role: Process & People Operations Specialist
+  setting: 'Práctica básica A1 sobre: Talento Humano, Nómina (NGSOFT), ISO y Estudios
+    de Tiempos (Tecnicolor).'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - I check payroll in NGSOFT.
+    - How many crews work today?
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - We pass strict ISO audits.
+    - I measure task times in factories.

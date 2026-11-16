@@ -1,0 +1,115 @@
+id: c1-cv-tech-1-adk-cloud
+title: AI Agents (Google ADK), Cloud & Kubernetes
+title_es: Agentes IA (Google ADK), Cloud y Kubernetes
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: Certificaciones en Google ADK (Sept. 2026), Google Cloud Core Infrastructure,
+  Kubernetes Engine y SOPs asistidos por IA local.
+phrases:
+- id: cv-tech-1-adk-cloud-1
+  text: Building on Industrial Engineering, I engineer AI agents with Google ADK to
+    stay ahead of the curve.
+  translation: Sobre Ingeniería Industrial, desarrollo agentes con Google ADK para
+    ir a la vanguardia.
+  visual_hint: 🤖☁️
+  cloze:
+  - 12
+  - 13
+  glossary:
+  - word: stay ahead
+    meaning: ir a la vanguardia
+  common: true
+  kind: idiom
+  apply_sentence: ADK skills help teams ____ of the curve.
+  apply_answer: stay ahead
+  apply_translation: Habilidades ADK mantienen a la vanguardia.
+- id: cv-tech-1-adk-cloud-2
+  text: Certifications in Google Cloud and Kubernetes underpin scalable, fault-tolerant
+    automation.
+  translation: Certificaciones en Google Cloud y Kubernetes sustentan automatización
+    escalable y tolerante a fallos.
+  visual_hint: 🤖☁️
+  cloze:
+  - 6
+  glossary:
+  - word: underpin
+    meaning: sustentan
+  common: true
+  kind: idiom
+  apply_sentence: Cloud skills ____ reliable pipelines.
+  apply_answer: underpin
+  apply_translation: Habilidades Cloud sustentan pipelines fiables.
+- id: cv-tech-1-adk-cloud-3
+  text: Local AI-assisted SOPs streamline documentation while keeping sensitive operational
+    data private.
+  translation: SOPs con IA local agilizan documentación manteniendo privados los datos
+    sensibles.
+  visual_hint: 🤖☁️
+  cloze:
+  - 3
+  glossary:
+  - word: streamline
+    meaning: agilizan
+  common: true
+  kind: idiom
+  apply_sentence: Local AI tools ____ SOP creation.
+  apply_answer: streamline
+  apply_translation: Herramientas IA agilizan crear SOPs.
+- id: cv-tech-1-adk-cloud-4
+  text: Every agentic workflow embeds guardrails and thresholds as a fail-safe operational
+    safety net.
+  translation: Todo flujo agéntico integra guardrails y umbrales como red de seguridad
+    infalible.
+  visual_hint: 🤖☁️
+  cloze:
+  - 11
+  - 12
+  glossary:
+  - word: safety net
+    meaning: red de seguridad
+  common: true
+  kind: idiom
+  apply_sentence: Strict guardrails form a ____.
+  apply_answer: safety net
+  apply_translation: Guardrails forman una red de seguridad.
+- id: cv-tech-1-adk-cloud-5
+  text: Pairing cloud infrastructure with process governance lets us roll out automation
+    smoothly.
+  translation: Unir infraestructura cloud con gobernanza permite desplegar automatización
+    fluidamente.
+  visual_hint: 🤖☁️
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: roll out
+    meaning: desplegar
+  common: true
+  kind: idiom
+  apply_sentence: Governance helps ____ new agents.
+  apply_answer: roll out
+  apply_translation: Gobernanza ayuda a desplegar agentes.
+roleplay:
+  ai_role: Principal Cloud & AI Architecture Lead
+  user_role: Agentic Automation Engineer
+  setting: Entrevista técnica sobre cómo aplicas Google ADK, Cloud Infrastructure,
+    GKE y agentes de IA a la automatización de operaciones.
+  turns:
+  - speaker: ai
+    text: Tell me about your recent certification in Google Agent Development Kit
+      (ADK) and Cloud Infrastructure.
+  - speaker: user
+    goal: Conecta tu base de Ingeniería Industrial con Google Cloud, Kubernetes Engine
+      y ADK para automatizar procesos.
+    suggested_lines:
+    - I built on my Industrial Engineering foundation with certifications in Google
+      Cloud Core Infrastructure, Kubernetes Engine, and Google ADK.
+    - This lets me design scalable agentic workflows and local AI-assisted SOPs that
+      cut manual support effort.
+  - speaker: ai
+    text: How do you keep AI agents reliable and safe in production?
+  - speaker: user
+    goal: Menciona guardrails, thresholds y validación antes de desplegar.
+    suggested_lines:
+    - I embed strict guardrails, clear thresholds, and sandbox testing so every agentic
+      pipeline runs with a reliable safety net.

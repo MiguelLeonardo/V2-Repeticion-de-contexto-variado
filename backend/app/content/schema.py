@@ -158,3 +158,13 @@ TOPIC_MODULES: dict[str, dict[str, str]] = {
     },
 }
 
+PRIVATE_TOPIC_MODULES: dict[str, dict[str, str]] = {
+    "cv-dhl-gsc-tl": {
+        "title_es": "CV & Liderazgo (DHL / 4PL / Tech)",
+        "title_en": "Executive CV, 4PL Control Tower & Tech",
+        "icon": "🚀",
+        "description_es": "Presentación ejecutiva, Torre de Control 4PL, KPIs, EDI, proyectos UAT, IA, SQL y datos.",
+    },
+}
+
+

@@ -1,0 +1,183 @@
+id: c1-cv-dhl-tl-4-edi-master-data
+title: 'Module 4: EDI Integrations, Master Data & Supply Chain'
+title_es: 'Módulo 4: Integraciones EDI, Master Data y Cadena de Suministro'
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: Control documental y trazabilidad en Master Data, gobernanza a prueba
+  de auditorías, troubleshooting de integraciones SAP/CargoWise/EDI y analítica de
+  costos CPG.
+phrases:
+- id: dhl-tl-4-1
+  text: In large-scale logistics and fleet operations, I have used real-time tracking
+    and master data controls to keep track of assets and leave no stone unturned regarding
+    regulatory compliance and documentation.
+  translation: En operaciones logísticas y de flota a gran escala, he usado rastreo
+    en tiempo real y controles de datos maestros para hacer seguimiento (keep track
+    of) a activos y no dejar ningún cabo suelto (leave no stone unturned) en cumplimiento
+    normativo y documentación.
+  visual_hint: 🗂️🔎
+  cloze:
+  - 16
+  - 17
+  - 18
+  - 21
+  - 22
+  - 23
+  glossary:
+  - word: keep track of
+    meaning: rastrear o hacer seguimiento
+  - word: leave no stone unturned
+    meaning: no dejar ningún cabo suelto en control y calidad
+  common: true
+  kind: idiom
+  apply_sentence: Business Support analysts use centralized databases to ____ master
+    data changes and leave no stone unturned during monthly audits.
+  apply_answer: keep track of
+  apply_translation: Los analistas de Business Support usan bases de datos centralizadas
+    para rastrear cambios en datos maestros y no dejar cabos sueltos en las auditorías
+    mensuales.
+- id: dhl-tl-4-2
+  text: By managing vendors and operational records under audit-proof standards aligned
+    with national institutions, I mitigate risks and hit the ground running in complex,
+    decentralized environments.
+  translation: Al gestionar proveedores y registros operativos bajo estándares a prueba
+    de auditorías (audit-proof) alineados con instituciones nacionales, mitigo riesgos
+    y empiezo a rendir de inmediato (hit the ground running) en entornos complejos
+    y descentralizados.
+  visual_hint: 🏛️⚡
+  cloze:
+  - 7
+  - 17
+  - 18
+  - 19
+  - 20
+  glossary:
+  - word: audit-proof
+    meaning: a prueba de auditorías
+  - word: hit the ground running
+    meaning: empezar a rendir de inmediato o adaptarse con agilidad
+  common: true
+  kind: idiom
+  apply_sentence: With ____ SOPs and clear governance, a new Team Leader at DHL GSC
+    can hit the ground running with global stakeholders.
+  apply_answer: audit-proof
+  apply_translation: Con SOPs a prueba de auditorías y una gobernanza clara, un nuevo
+    Team Leader en DHL GSC puede empezar a rendir de inmediato con stakeholders globales.
+- id: dhl-tl-4-3
+  text: Backed by SAP, CargoWise, and EDI-style system integrations, I act as an operational
+    first responder, leading post-mortem reviews to update support playbooks and iron
+    out the kinks.
+  translation: Con respaldo en integraciones SAP, CargoWise y tipo EDI, actúo como
+    primer respondiente operativo (first responder), liderando revisiones post-mortem
+    para actualizar playbooks de soporte y pulir fallas (iron out the kinks).
+  visual_hint: 🔌🛠️
+  cloze:
+  - 13
+  - 14
+  - 23
+  - 24
+  - 25
+  - 26
+  glossary:
+  - word: first responder
+    meaning: primer respondiente
+  - word: iron out the kinks
+    meaning: pulir fallas o eliminar fricciones
+  common: true
+  kind: idiom
+  apply_sentence: When troubleshooting EDI integrations between systems, support leads
+    act as ____ to iron out the kinks in data transmission.
+  apply_answer: first responders
+  apply_translation: Al diagnosticar integraciones EDI entre sistemas, los líderes
+    de soporte actúan como primeros respondientes para pulir fallas en la transmisión
+    de datos.
+- id: dhl-tl-4-4
+  text: As a CPG Operations Analyst, I drilled down into supply traceability data
+    and monitored service KPIs to cut down on operational costs and accelerate fulfillment
+    turnaround.
+  translation: Como Analista de Operaciones CPG, profundicé en (drilled down into)
+    datos de trazabilidad de suministro y monitoreé KPIs de servicio para reducir
+    (cut down on) costos operativos y acelerar la respuesta de despacho.
+  visual_hint: 📦📉
+  cloze:
+  - 6
+  - 7
+  - 8
+  - 17
+  - 18
+  - 19
+  glossary:
+  - word: drill down into
+    meaning: profundizar en el detalle
+  - word: cut down on
+    meaning: reducir el gasto o uso de
+  common: true
+  kind: idiom
+  apply_sentence: Data analysts ____ process logs to identify inefficiencies and cut
+    down on manual rework across shared services.
+  apply_answer: drill down into
+  apply_translation: Los analistas de datos profundizan en los registros de procesos
+    para identificar ineficiencias y reducir el retrabajo manual en servicios compartidos.
+- id: dhl-tl-4-5
+  text: I integrated digital planning tools that allowed our operations team to adjust
+    resource allocation on the fly and ramp up support capacity whenever demand spiked.
+  translation: Integré herramientas digitales de planeación que permitieron a nuestro
+    equipo operativo ajustar la asignación de recursos sobre la marcha (on the fly)
+    y escalar (ramp up) la capacidad de soporte cuando la demanda aumentaba.
+  visual_hint: 🎛️📈
+  cloze:
+  - 14
+  - 15
+  - 16
+  - 18
+  - 19
+  glossary:
+  - word: on the fly
+    meaning: sobre la marcha o en tiempo real
+  - word: ramp up
+    meaning: escalar o aumentar capacidad
+  common: true
+  kind: idiom
+  apply_sentence: Capacity dashboards let Team Leaders reassign support specialists
+    ____ and ramp up coverage for urgent regional projects.
+  apply_answer: on the fly
+  apply_translation: Los tableros de capacidad permiten a los Team Leaders reasignar
+    especialistas de soporte sobre la marcha y ampliar la cobertura para proyectos
+    regionales urgentes.
+roleplay:
+  ai_role: DHL Master Data & Systems Integration Manager
+  user_role: Team Leader (Business Support) Candidate
+  setting: Evaluación técnica sobre gobernanza de datos maestros, cumplimiento a prueba
+    de auditorías e integraciones de sistemas (SAP, CargoWise, EDI).
+  turns:
+  - speaker: ai
+    text: How do you ensure data accuracy, documentation rigor, and audit-proof governance
+      in complex, decentralized environments?
+  - speaker: user
+    goal: Explica cómo rastreas activos ('keep track of') sin dejar cabos sueltos
+      ('leave no stone unturned') bajo estándares 'audit-proof' para rendir de inmediato
+      ('hit the ground running').
+    suggested_lines:
+    - In large-scale logistics and fleet operations, I have used real-time tracking
+      and master data controls to keep track of assets and leave no stone unturned
+      regarding regulatory compliance and documentation.
+    - By managing vendors and operational records under audit-proof standards aligned
+      with national institutions, I mitigate risks and hit the ground running in complex,
+      decentralized environments.
+  - speaker: ai
+    text: When troubleshooting SAP, CargoWise, or EDI integrations, or when analyzing
+      supply data, what is your methodology?
+  - speaker: user
+    goal: Menciona tu rol como 'first responder' para pulir fallas ('iron out the
+      kinks'), profundizar en datos ('drilled down into') para reducir costos ('cut
+      down on') y ajustar capacidad 'on the fly' / 'ramp up'.
+    suggested_lines:
+    - Backed by SAP, CargoWise, and EDI-style system integrations, I act as an operational
+      first responder, leading post-mortem reviews to update support playbooks and
+      iron out the kinks.
+    - As a CPG Operations Analyst, I drilled down into supply traceability data and
+      monitored service KPIs to cut down on operational costs and accelerate fulfillment
+      turnaround.
+    - I integrated digital planning tools that allowed our operations team to adjust
+      resource allocation on the fly and ramp up support capacity whenever demand
+      spiked.

@@ -1,0 +1,98 @@
+id: a1-cv-dhl-tl-3-automatizacion-kpis
+title: 'Module 3: Automation, Playbooks & KPIs'
+title_es: 'Módulo 3: Automatización, Playbooks Operativos y Control de KPIs'
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: Análisis de causa raíz, playbooks con thresholds y guardrails, y KPIs
+  de productividad, servicio y calidad.
+phrases:
+- id: dhl-tl-3-1
+  text: What is the real problem here?
+  translation: ¿Cuál es el problema real aquí?
+  visual_hint: 🔍⏱️
+  cloze:
+  - 4
+  glossary:
+  - word: problem
+    meaning: problema
+  common: true
+  kind: phrase
+  apply_sentence: What is the real ____ here?
+  apply_answer: problem
+  apply_translation: ¿Cuál es el problema real aquí?
+- id: dhl-tl-3-2
+  text: There is a fast alert on screen.
+  translation: Hay una alerta rápida en pantalla.
+  visual_hint: 🛡️🔔
+  cloze:
+  - 4
+  glossary:
+  - word: alert
+    meaning: alerta
+  common: true
+  kind: phrase
+  apply_sentence: There is an ____ on screen.
+  apply_answer: alert
+  apply_translation: Hay una alerta en pantalla.
+- id: dhl-tl-3-3
+  text: We check time and cost daily.
+  translation: Revisamos tiempo y costo a diario.
+  visual_hint: 👁️📊
+  cloze:
+  - 4
+  glossary:
+  - word: cost
+    meaning: costo
+  common: true
+  kind: phrase
+  apply_sentence: We check time and ____ daily.
+  apply_answer: cost
+  apply_translation: Revisamos tiempo y costo a diario.
+- id: dhl-tl-3-4
+  text: Clients get answers on time.
+  translation: Los clientes reciben respuestas a tiempo.
+  visual_hint: ⭐🎯
+  cloze:
+  - 3
+  glossary:
+  - word: on time
+    meaning: a tiempo
+  common: true
+  kind: phrase
+  apply_sentence: Clients get answers ____.
+  apply_answer: on time
+  apply_translation: Los clientes reciben respuestas a tiempo.
+- id: dhl-tl-3-5
+  text: Please follow every rule carefully.
+  translation: Por favor sigue cada regla con cuidado.
+  visual_hint: 📘✅
+  cloze:
+  - 3
+  glossary:
+  - word: rule
+    meaning: regla
+  common: true
+  kind: phrase
+  apply_sentence: Please follow every ____.
+  apply_answer: rule
+  apply_translation: Por favor sigue cada regla.
+roleplay:
+  ai_role: DHL GSC Analytics & Quality Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Práctica básica A1 sobre: Módulo 3: Automatización, Playbooks Operativos
+    y Control de KPIs.'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - What is the real problem here?
+    - There is a fast alert on screen.
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - We check time and cost daily.
+    - Clients get answers on time.

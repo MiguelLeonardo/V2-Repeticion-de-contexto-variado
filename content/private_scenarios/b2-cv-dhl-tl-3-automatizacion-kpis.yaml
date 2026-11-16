@@ -1,0 +1,106 @@
+id: b2-cv-dhl-tl-3-automatizacion-kpis
+title: 'Module 3: Automation, Playbooks & KPIs'
+title_es: 'Módulo 3: Automatización, Playbooks Operativos y Control de KPIs'
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: Análisis de causa raíz, playbooks con thresholds y guardrails, y KPIs
+  de productividad, servicio y calidad.
+phrases:
+- id: dhl-tl-3-1
+  text: Using BI root cause analysis, I get to the bottom of bottlenecks in real-time.
+  translation: Usando RCA en BI, llego al fondo de cuellos de botella en tiempo real.
+  visual_hint: 🔍⏱️
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: bottom of
+    meaning: fondo de
+  common: true
+  kind: idiom
+  apply_sentence: Analysts must get to the ____ delays.
+  apply_answer: bottom of
+  apply_translation: Los analistas deben llegar al fondo de los retrasos.
+- id: dhl-tl-3-2
+  text: Documented thresholds trigger alerts, giving our n8n pipelines a strong safety
+    net.
+  translation: Umbrales documentados disparan alertas dando red de seguridad a n8n.
+  visual_hint: 🛡️🔔
+  cloze:
+  - 10
+  - 11
+  glossary:
+  - word: safety net
+    meaning: red de seguridad
+  common: true
+  kind: idiom
+  apply_sentence: Strict guardrails act as a ____.
+  apply_answer: safety net
+  apply_translation: Guardrails estrictos actúan como red de seguridad.
+- id: dhl-tl-3-3
+  text: I keep a close eye on cycle times, leaving no room for operational waste.
+  translation: Vigilo de cerca tiempos de ciclo sin dejar margen al desperdicio.
+  visual_hint: 👁️📊
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: close eye
+    meaning: ojo cercano / vigilar
+  common: true
+  kind: idiom
+  apply_sentence: Leaders keep a ____ on unit costs.
+  apply_answer: close eye
+  apply_translation: Los líderes vigilan de cerca los costos unitarios.
+- id: dhl-tl-3-4
+  text: We deliver support on the dot to nip stakeholder dissatisfaction in the bud.
+  translation: Entregamos soporte puntualmente para frenar insatisfacción de raíz.
+  visual_hint: ⭐🎯
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: on the dot
+    meaning: puntualmente
+  common: true
+  kind: idiom
+  apply_sentence: Schedule reviews to start ____.
+  apply_answer: on the dot
+  apply_translation: Programa revisiones para iniciar puntualmente.
+- id: dhl-tl-3-5
+  text: I slash ticket turnaround time while ensuring processes run strictly by the
+    book.
+  translation: Reduzco el tiempo de respuesta asegurando que todo corra bajo norma.
+  visual_hint: 📘✅
+  cloze:
+  - 10
+  - 11
+  glossary:
+  - word: by the book
+    meaning: bajo norma
+  common: true
+  kind: idiom
+  apply_sentence: Audits require running workflows ____.
+  apply_answer: by the book
+  apply_translation: Las auditorías exigen correr flujos bajo norma.
+roleplay:
+  ai_role: DHL GSC Analytics & Quality Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Módulo 3: Automatización,
+    Playbooks Operativos y Control de KPIs.'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - Using BI root cause analysis, I get to the bottom of bottlenecks in real-time.
+    - Documented thresholds trigger alerts, giving our n8n pipelines a strong safety
+      net.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - I keep a close eye on cycle times, leaving no room for operational waste.
+    - We deliver support on the dot to nip stakeholder dissatisfaction in the bud.

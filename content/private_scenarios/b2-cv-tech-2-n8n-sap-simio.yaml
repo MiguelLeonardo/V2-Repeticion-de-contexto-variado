@@ -1,0 +1,101 @@
+id: b2-cv-tech-2-n8n-sap-simio
+title: n8n Automation, SAP ERP, SIMIO & Git
+title_es: Automatización n8n, SAP ERP, SIMIO y Git/GitHub
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: Integraciones con n8n para liberar órdenes congeladas, control de fraude
+  en tarjetas, SAP ERP, simulación SIMIO, CMS y control de versiones Git.
+phrases:
+- id: cv-tech-2-n8n-sap-simio-1
+  text: Rolling out n8n integrations stopped frozen orders from bottling up.
+  translation: Desplegar integraciones n8n evitó que órdenes congeladas se atascaran.
+  visual_hint: ⚡🔧
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: bottling up
+    meaning: atascarse
+  common: true
+  kind: idiom
+  apply_sentence: Automation keeps queues from ____.
+  apply_answer: bottling up
+  apply_translation: La automatización evita atascos.
+- id: cv-tech-2-n8n-sap-simio-2
+  text: Tightening extra-budget controls on courier cards cracked down on fraud.
+  translation: Ajustar controles de presupuesto en tarjetas frenó el fraude.
+  visual_hint: ⚡🔧
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: cracked down
+    meaning: frenó drásticamente
+  common: true
+  kind: idiom
+  apply_sentence: Financial rules ____ on misuse.
+  apply_answer: cracked down
+  apply_translation: Reglas financieras frenaron abusos.
+- id: cv-tech-2-n8n-sap-simio-3
+  text: Backed by SAP ERP knowledge, I resolve system glitches quickly.
+  translation: Con respaldo en SAP ERP, resuelvo fallas de sistema rápido.
+  visual_hint: ⚡🔧
+  cloze:
+  - 8
+  glossary:
+  - word: glitches
+    meaning: fallas
+  common: true
+  kind: idiom
+  apply_sentence: Integrations must handle sync ____.
+  apply_answer: glitches
+  apply_translation: Integraciones deben resolver fallas.
+- id: cv-tech-2-n8n-sap-simio-4
+  text: SIMIO simulations let us test the waters before modifying workflows.
+  translation: Simulaciones SIMIO permiten probar antes de modificar flujos.
+  visual_hint: ⚡🔧
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: test the waters
+    meaning: probar escenarios
+  common: true
+  kind: idiom
+  apply_sentence: Simulations let us ____ safely.
+  apply_answer: test the waters
+  apply_translation: Simulaciones permiten probar sin riesgo.
+- id: cv-tech-2-n8n-sap-simio-5
+  text: Governing SOPs in Git and GitHub ensures full change traceability.
+  translation: Gobernar SOPs en Git y GitHub asegura trazabilidad de cambios.
+  visual_hint: ⚡🔧
+  cloze:
+  - 9
+  glossary:
+  - word: traceability
+    meaning: trazabilidad
+  common: true
+  kind: idiom
+  apply_sentence: Git commits give full ____.
+  apply_answer: traceability
+  apply_translation: Commits en Git dan trazabilidad.
+roleplay:
+  ai_role: Systems Automation & ERP Lead
+  user_role: Automation & Process Specialist
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Automatización
+    n8n, SAP ERP, SIMIO y Git/GitHub.'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - Rolling out n8n integrations stopped frozen orders from bottling up.
+    - Tightening extra-budget controls on courier cards cracked down on fraud.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - Backed by SAP ERP knowledge, I resolve system glitches quickly.
+    - SIMIO simulations let us test the waters before modifying workflows.

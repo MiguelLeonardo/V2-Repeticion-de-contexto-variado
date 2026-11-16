@@ -1,0 +1,172 @@
+id: c1-cv-dhl-tl-5-proyectos-uat-handover
+title: 'Module 5: Project Implementation, UAT & Operational Handover'
+title_es: 'Módulo 5: Implementación de Proyectos, UAT y Handover Operativo'
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: Ejecución de proyectos end-to-end (WBS, Ruta Crítica), control EVM (SPI/CPI),
+  coordinación UAT y handover a operaciones, forecasting de capacidad y cierre formal.
+phrases:
+- id: dhl-tl-5-1
+  text: I oversee end-to-end project execution—from requirements gathering to deployment—using
+    Work Breakdown Structures and Critical Path optimization in Asana and Notion to
+    map out milestones and prevent bottlenecks.
+  translation: Superviso la ejecución de proyectos de punta a punta —desde levantamiento
+    de requisitos hasta despliegue— usando WBS y optimización de Ruta Crítica en Asana
+    y Notion para trazar hitos (map out) y prevenir cuellos de botella (bottlenecks).
+  visual_hint: 🗺️🚧
+  cloze:
+  - 21
+  - 22
+  - 26
+  glossary:
+  - word: map out
+    meaning: trazar o planificar detalladamente
+  - word: bottlenecks
+    meaning: cuellos de botella
+  common: true
+  kind: idiom
+  apply_sentence: Before starting UAT on a new reporting solution, project leads ____
+    every dependency to prevent deployment bottlenecks.
+  apply_answer: map out
+  apply_translation: Antes de iniciar UAT en una nueva solución de reportes, los líderes
+    de proyecto trazan cada dependencia para prevenir cuellos de botella en el despliegue.
+- id: dhl-tl-5-2
+  text: Using Earned Value Management, SPI, and CPI metrics, I monitor post-implementation
+    performance to nip scope or schedule deviations in the bud and ensure every project
+    stays within budget.
+  translation: Usando Gestión del Valor Ganado y métricas SPI/CPI, monitoreo el desempeño
+    post-implementación para cortar de raíz a tiempo (nip in the bud) desviaciones
+    de alcance o cronograma y asegurar que cada proyecto se mantenga dentro del presupuesto
+    (stays within budget).
+  visual_hint: ✂️💵
+  cloze:
+  - 25
+  - 26
+  - 27
+  glossary:
+  - word: nip in the bud
+    meaning: cortar de raíz a tiempo
+  - word: stay within budget
+    meaning: mantenerse dentro del presupuesto
+  common: true
+  kind: idiom
+  apply_sentence: Close post-implementation monitoring allows Team Leaders to nip
+    adoption issues in the bud and ____.
+  apply_answer: stay within budget
+  apply_translation: Un seguimiento estrecho post-implementación permite a los Team
+    Leaders cortar de raíz problemas de adopción y mantenerse dentro del presupuesto.
+- id: dhl-tl-5-3
+  text: I coordinate Gantt schedules, testing, and AI-assisted SOP documentation to
+    keep everyone on track, ensuring end-to-end project transitions conclude with
+    a formal handover to operations.
+  translation: Coordino cronogramas Gantt, pruebas y documentación SOP asistida por
+    IA para mantener a todos encarrilados (keep everyone on track), asegurando que
+    las transiciones de proyectos de punta a punta (end-to-end) concluyan con un handover
+    formal a operaciones.
+  visual_hint: 📅🔄
+  cloze:
+  - 10
+  - 11
+  - 12
+  - 13
+  - 15
+  glossary:
+  - word: keep everyone on track
+    meaning: mantener a todos encarrilados
+  - word: end-to-end
+    meaning: de punta a punta
+  common: true
+  kind: idiom
+  apply_sentence: Coordinating UAT sign-offs and governance documentation ____ during
+    an end-to-end process transition.
+  apply_answer: keeps everyone on track
+  apply_translation: Coordinar aprobaciones UAT y documentación de gobernanza mantiene
+    a todos encarrilados durante una transición de proceso de punta a punta.
+- id: dhl-tl-5-4
+  text: At El Carutal, I directed supply and labor forecasting schedules so operations
+    could staff up accurately and meet demand without idle capacity or service delays.
+  translation: En El Carutal dirigí cronogramas de pronóstico de suministros y mano
+    de obra para que operaciones pudiera dimensionar personal (staff up) con precisión
+    y satisfacer la demanda (meet demand) sin capacidad ociosa ni retrasos.
+  visual_hint: 👷📈
+  cloze:
+  - 13
+  - 14
+  - 17
+  - 18
+  glossary:
+  - word: staff up
+    meaning: contratar o asignar personal suficiente
+  - word: meet demand
+    meaning: satisfacer la demanda
+  common: true
+  kind: idiom
+  apply_sentence: Accurate workload forecasting helps Shared Services centers ____
+    appropriately to meet global hiring and support demand.
+  apply_answer: staff up
+  apply_translation: Un pronóstico preciso de carga laboral ayuda a los centros de
+    Servicios Compartidos a dimensionar su personal adecuadamente para satisfacer
+    la demanda global.
+- id: dhl-tl-5-5
+  text: I governed ERP inventory cycles, enforced quality assurance by signing off
+    on critical deliverables, and led executive reporting for corporate clients to
+    smooth over operational friction.
+  translation: Goberné ciclos de inventario en ERP, aseguré calidad aprobando formalmente
+    (signing off on) entregables críticos y lideré reportes ejecutivos para clientes
+    corporativos para suavizar (smooth over) fricciones operativas.
+  visual_hint: ✍️🤝
+  cloze:
+  - 9
+  - 10
+  - 11
+  - 22
+  - 23
+  glossary:
+  - word: sign off on
+    meaning: aprobar formalmente o dar el visto bueno
+  - word: smooth over
+    meaning: suavizar o resolver contratiempos
+  common: true
+  kind: idiom
+  apply_sentence: Stakeholders must formally ____ UAT results before project closure,
+    helping Team Leaders smooth over transition risks.
+  apply_answer: sign off on
+  apply_translation: Los stakeholders deben aprobar formalmente los resultados de
+    UAT antes del cierre del proyecto, ayudando a los Team Leaders a suavizar riesgos
+    de transición.
+roleplay:
+  ai_role: DHL PMO & Transition Governance Director
+  user_role: Team Leader (Business Support) Candidate
+  setting: Entrevista sobre ejecución de proyectos end-to-end, pruebas UAT, control
+    presupuestario y transición formal hacia operaciones.
+  turns:
+  - speaker: ai
+    text: How do you manage end-to-end project execution from requirements gathering
+      to deployment, and how do you monitor post-implementation health?
+  - speaker: user
+    goal: Explica cómo trazas hitos ('map out') evitando 'bottlenecks', y cómo cortas
+      desviaciones a tiempo ('nip ... in the bud') manteniendo el presupuesto ('stays
+      within budget').
+    suggested_lines:
+    - I oversee end-to-end project execution—from requirements gathering to deployment—using
+      Work Breakdown Structures and Critical Path optimization in Asana and Notion
+      to map out milestones and prevent bottlenecks.
+    - Using Earned Value Management, SPI, and CPI metrics, I monitor post-implementation
+      performance to nip scope or schedule deviations in the bud and ensure every
+      project stays within budget.
+  - speaker: ai
+    text: How do you coordinate UAT, documentation, and formal handover to operations
+      while forecasting team capacity?
+  - speaker: user
+    goal: Menciona mantener a todos encarrilados ('keep everyone on track') en transiciones
+      'end-to-end', dimensionar personal ('staff up') para 'meet demand', y lograr
+      aprobaciones formales ('signing off on') suavizando fricciones ('smooth over').
+    suggested_lines:
+    - I coordinate Gantt schedules, testing, and AI-assisted SOP documentation to
+      keep everyone on track, ensuring end-to-end project transitions conclude with
+      a formal handover to operations.
+    - At El Carutal, I directed supply and labor forecasting schedules so operations
+      could staff up accurately and meet demand without idle capacity or service delays.
+    - I governed ERP inventory cycles, enforced quality assurance by signing off on
+      critical deliverables, and led executive reporting for corporate clients to
+      smooth over operational friction.

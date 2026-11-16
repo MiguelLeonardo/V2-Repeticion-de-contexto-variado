@@ -1,0 +1,125 @@
+id: c2-cv-dhl-tl-4-edi-master-data
+title: 'Module 4: EDI, Master Data & Supply Chain'
+title_es: 'Módulo 4: Integraciones EDI, Master Data y Cadena de Suministro'
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: Master Data, control documental, gobernanza a prueba de auditorías, integraciones
+  SAP/CargoWise/EDI y costos CPG.
+phrases:
+- id: dhl-tl-4-1
+  text: By instituting real-time master data controls, we leave no stone unturned
+    on compliance.
+  translation: Al instituir controles en tiempo real, no dejamos ningún cabo suelto.
+  visual_hint: 🗂️🔎
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: keep track
+    meaning: rastrear / cabo suelto
+  - word: stone unturned
+    meaning: rastrear / cabo suelto
+  common: true
+  kind: idiom
+  apply_sentence: Strict audits ____ of every change and leave no stone unturned.
+  apply_answer: keep track
+  apply_translation: Auditorías estrictas rastrean todo sin cabos sueltos.
+- id: dhl-tl-4-2
+  text: Governed under audit-proof standards, I consistently hit the ground running
+    in global hubs.
+  translation: Gobernado bajo estándares a prueba de auditorías, rindo de inmediato
+    en hubs globales.
+  visual_hint: 🏛️⚡
+  cloze:
+  - 2
+  - 8
+  glossary:
+  - word: audit-proof
+    meaning: a prueba de auditorías / rendir ya
+  - word: ground running
+    meaning: a prueba de auditorías / rendir ya
+  common: true
+  kind: idiom
+  apply_sentence: With ____ SOPs, teams hit the ground running.
+  apply_answer: audit-proof
+  apply_translation: Con SOPs a prueba de auditorías, los equipos rinden ya.
+- id: dhl-tl-4-3
+  text: Serving as operational first responder on EDI glitches, I lead post-mortems
+    to iron out the kinks.
+  translation: Como primer respondiente en fallas EDI, lidero post-mortems para pulirlas.
+  visual_hint: 🔌🛠️
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: first responder
+    meaning: primer respondiente / pulir fallas
+  - word: iron out the kinks
+    meaning: primer respondiente / pulir fallas
+  common: true
+  kind: idiom
+  apply_sentence: Every ____ aims to iron out the kinks permanently.
+  apply_answer: first responder
+  apply_translation: Todo primer respondiente busca pulir fallas definitivamente.
+- id: dhl-tl-4-4
+  text: Scarcely had I drilled down into CPG traceability than we cut down on distribution
+    costs.
+  translation: Apenas profundicé en trazabilidad CPG, redujimos los costos de distribución.
+  visual_hint: 📦📉
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: drilled down
+    meaning: profundicé / redujimos
+  - word: cut down on
+    meaning: profundicé / redujimos
+  common: true
+  kind: idiom
+  apply_sentence: Deep analytics ____ waste and cut down on cost.
+  apply_answer: drill down into
+  apply_translation: La analítica profunda indaga y reduce costos.
+- id: dhl-tl-4-5
+  text: Digital planning empowered us to reallocate staff on the fly and ramp up seamlessly.
+  translation: La planeación digital nos permitió reasignar sobre la marcha y escalar
+    sin fisuras.
+  visual_hint: 🎛️📈
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: on the fly
+    meaning: sobre la marcha / escalar
+  - word: ramp up
+    meaning: sobre la marcha / escalar
+  common: true
+  kind: idiom
+  apply_sentence: Agile teams adapt ____ to ramp up coverage.
+  apply_answer: on the fly
+  apply_translation: Equipos ágiles se adaptan sobre la marcha para escalar.
+roleplay:
+  ai_role: DHL Master Data & Systems Integration Manager
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Módulo 4: Integraciones EDI, Master Data y Cadena de Suministro.'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - By instituting real-time master data controls, we leave no stone unturned on
+      compliance.
+    - Governed under audit-proof standards, I consistently hit the ground running
+      in global hubs.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - Serving as operational first responder on EDI glitches, I lead post-mortems
+      to iron out the kinks.
+    - Scarcely had I drilled down into CPG traceability than we cut down on distribution
+      costs.

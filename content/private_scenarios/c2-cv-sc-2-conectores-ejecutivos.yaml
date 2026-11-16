@@ -1,0 +1,117 @@
+id: c2-cv-sc-2-conectores-ejecutivos
+title: Executive Connectors in Operational Context
+title_es: Conectores Ejecutivos en Contexto Operativo (CV)
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: Práctica enfocada de conectores de causa, contraste, propósito e inversión
+  aplicados a logros reales en Rappi, El Carutal y Topografía Satelital.
+phrases:
+- id: cv-sc-2-conectores-ejecutivos-1
+  text: Not only did n8n eliminate backlog bottlenecks, but it also elevated SLA compliance
+    across the board.
+  translation: No solo n8n eliminó bloqueos, sino que elevó el SLA en todas las áreas.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Not only
+    meaning: no solo / sino también
+  - word: but also
+    meaning: no solo / sino también
+  common: true
+  kind: idiom
+  apply_sentence: ____ did EVM guard budget, but it also curbed scope creep.
+  apply_answer: Not only
+  apply_translation: No solo cuidó presupuesto, sino que frenó desviaciones.
+- id: cv-sc-2-conectores-ejecutivos-2
+  text: Inasmuch as master data underpins every KPI, leaving no stone unturned is
+    non-negotiable.
+  translation: En la medida en que los datos maestros sustentan cada KPI, no dejar
+    cabos sueltos no se negocia.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Inasmuch as
+    meaning: en la medida en que
+  common: true
+  kind: idiom
+  apply_sentence: ____ SLAs hinge on speed, n8n is vital.
+  apply_answer: Inasmuch as
+  apply_translation: En la medida en que SLAs dependen de rapidez, n8n es vital.
+- id: cv-sc-2-conectores-ejecutivos-3
+  text: Albeit demanding during peak hours, our Control Tower model consistently moved
+    the needle.
+  translation: Aunque exigente en horas pico, nuestra Torre de Control generó impacto
+    real constante.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: Albeit
+    meaning: aunque / si bien
+  common: true
+  kind: idiom
+  apply_sentence: The rollout was rapid, ____ strictly audit-proof.
+  apply_answer: albeit
+  apply_translation: El despliegue fue rápido, aunque a prueba de auditorías.
+- id: cv-sc-2-conectores-ejecutivos-4
+  text: By contrast, teams lacking real-time exception alerts are forever putting
+    out fires.
+  translation: Por el contrario, equipos sin alertas en tiempo real viven apagando
+    incendios.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: By contrast
+    meaning: por el contrario
+  common: true
+  kind: idiom
+  apply_sentence: Automation prevents backlogs; ____, manual triage stalls.
+  apply_answer: by contrast
+  apply_translation: Automatizar evita atrasos; por el contrario, lo manual atasca.
+- id: cv-sc-2-conectores-ejecutivos-5
+  text: Hence, bridging Industrial Engineering with AI agents keeps DHL Business Support
+    ahead of the curve.
+  translation: Por ende, unir Ingeniería Industrial con agentes IA mantiene a DHL
+    a la vanguardia.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: Hence
+    meaning: por ende / por consiguiente
+  common: true
+  kind: idiom
+  apply_sentence: Data drives clarity; ____, storytelling drives alignment.
+  apply_answer: hence
+  apply_translation: Datos dan claridad; por ende, storytelling alinea.
+roleplay:
+  ai_role: Executive Communication & Interview Coach
+  user_role: Team Leader Candidate
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Conectores Ejecutivos en Contexto Operativo (CV).'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - Not only did n8n eliminate backlog bottlenecks, but it also elevated SLA compliance
+      across the board.
+    - Inasmuch as master data underpins every KPI, leaving no stone unturned is non-negotiable.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - Albeit demanding during peak hours, our Control Tower model consistently moved
+      the needle.
+    - By contrast, teams lacking real-time exception alerts are forever putting out
+      fires.

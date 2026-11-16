@@ -1,0 +1,100 @@
+id: a2-cv-pl-1-obras-evm
+title: Construction Projects, Critical Path & EVM
+title_es: Proyectos Constructivos, Ruta Crítica (CPM) y EVM
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en Topografía Satelital de Colombia: EDT (WBS), Ruta Crítica
+  (CPM), Control Financiero EVM (SPI/CPI), Gantt, Asana, Notion y Workday.'
+phrases:
+- id: cv-pl-1-obras-evm-1
+  text: I planned civil works using clear project steps.
+  translation: Planeé obras civiles usando pasos claros.
+  visual_hint: 🏗️📐
+  cloze:
+  - 1
+  glossary:
+  - word: planned
+    meaning: planeé
+  common: true
+  kind: phrase
+  apply_sentence: I ____ civil works in Asana.
+  apply_answer: planned
+  apply_translation: Planeé obras civiles en Asana.
+- id: cv-pl-1-obras-evm-2
+  text: We found the fastest path to finish on time.
+  translation: Hallamos la ruta más rápida para terminar a tiempo.
+  visual_hint: 🏗️📐
+  cloze:
+  - 3
+  glossary:
+  - word: fastest
+    meaning: más rápida
+  common: true
+  kind: phrase
+  apply_sentence: We found the ____ path.
+  apply_answer: fastest
+  apply_translation: Hallamos la ruta más rápida.
+- id: cv-pl-1-obras-evm-3
+  text: Could you check our SPI and CPI numbers?
+  translation: ¿Podrías revisar nuestras cifras SPI y CPI?
+  visual_hint: 🏗️📐
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could you
+    meaning: podrías
+  common: true
+  kind: phrase
+  apply_sentence: ____ check our SPI numbers?
+  apply_answer: Could you
+  apply_translation: ¿Podrías revisar nuestras cifras SPI?
+- id: cv-pl-1-obras-evm-4
+  text: Local AI helped us write simple team guides.
+  translation: La IA local nos ayudó a escribir guías simples.
+  visual_hint: 🏗️📐
+  cloze:
+  - 2
+  glossary:
+  - word: helped
+    meaning: ayudó
+  common: true
+  kind: phrase
+  apply_sentence: Local AI ____ write our guides.
+  apply_answer: helped
+  apply_translation: La IA local ayudó a escribir guías.
+- id: cv-pl-1-obras-evm-5
+  text: There are automated flows for site supplies.
+  translation: Hay flujos automáticos para suministros de obra.
+  visual_hint: 🏗️📐
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: There are
+    meaning: hay (plural)
+  common: true
+  kind: phrase
+  apply_sentence: ____ automated flows for supplies.
+  apply_answer: There are
+  apply_translation: Hay flujos automáticos para suministros.
+roleplay:
+  ai_role: PMO & Construction Operations Director
+  user_role: Project & Product Manager (Topografía Satelital)
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Proyectos
+    Constructivos, Ruta Crítica (CPM) y EVM.'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - I planned civil works using clear project steps.
+    - Could you check our SPI and CPI numbers?
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - We found the fastest path to finish on time.
+    - Local AI helped us write simple team guides.

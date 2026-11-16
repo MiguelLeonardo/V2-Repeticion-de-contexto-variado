@@ -1,0 +1,102 @@
+id: b1-cv-sc-1-storytelling-networking
+title: Product Storytelling, Storytimes & Soft Skills
+title_es: Storytelling de Producto, Storytimes y Habilidades Blandas
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: Storytelling de producto y operaciones, relatos prácticos del día a día,
+  formación en Universidad de Ibagué, escucha activa y mindset sistémico.
+phrases:
+- id: cv-sc-1-storytelling-networking-1
+  text: I create practical storytimes about physical and digital product execution.
+  translation: Creo storytimes prácticos sobre ejecución de productos físicos y digitales.
+  visual_hint: 🎙️💡
+  cloze:
+  - 2
+  glossary:
+  - word: practical
+    meaning: prácticos
+  common: true
+  kind: idiom
+  apply_sentence: Storytimes share ____ operational lessons.
+  apply_answer: practical
+  apply_translation: Storytimes comparten lecciones prácticas.
+- id: cv-sc-1-storytelling-networking-2
+  text: Using assertive communication and active listening helps align global stakeholders.
+  translation: Usar comunicación asertiva y escucha activa alinea a stakeholders.
+  visual_hint: 🎙️💡
+  cloze:
+  - 1
+  glossary:
+  - word: assertive
+    meaning: asertiva
+  common: true
+  kind: idiom
+  apply_sentence: Leaders practice ____ communication daily.
+  apply_answer: assertive
+  apply_translation: Líderes practican comunicación asertiva.
+- id: cv-sc-1-storytelling-networking-3
+  text: My Industrial Engineering degree from Universidad de Ibagué gave me systemic
+    thinking.
+  translation: Mi título de Universidad de Ibagué me dio pensamiento sistémico.
+  visual_hint: 🎙️💡
+  cloze:
+  - 10
+  glossary:
+  - word: systemic
+    meaning: sistémico
+  common: true
+  kind: idiom
+  apply_sentence: Engineers apply ____ problem-solving.
+  apply_answer: systemic
+  apply_translation: Ingenieros aplican enfoque sistémico.
+- id: cv-sc-1-storytelling-networking-4
+  text: I combine attention to detail with a strong focus on results.
+  translation: Combino atención al detalle con fuerte enfoque en resultados.
+  visual_hint: 🎙️💡
+  cloze:
+  - 8
+  glossary:
+  - word: focus
+    meaning: enfoque
+  common: true
+  kind: idiom
+  apply_sentence: Success needs a ____ on results.
+  apply_answer: focus
+  apply_translation: El éxito exige enfoque en resultados.
+- id: cv-sc-1-storytelling-networking-5
+  text: Negotiating supplies requires understanding both cost and operational needs.
+  translation: Negociar suministros requiere entender costos y necesidades operativas.
+  visual_hint: 🎙️💡
+  cloze:
+  - 2
+  glossary:
+  - word: requires
+    meaning: requiere
+  common: true
+  kind: idiom
+  apply_sentence: Good negotiation ____ clear data.
+  apply_answer: requires
+  apply_translation: Negociar bien requiere datos claros.
+roleplay:
+  ai_role: Executive Leadership Coach & Tech Peer
+  user_role: Industrial Engineer & Operations Storyteller
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Storytelling de
+    Producto, Storytimes y Habilidades Blandas.'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - I create practical storytimes about physical and digital product execution.
+    - Using assertive communication and active listening helps align global stakeholders.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - My Industrial Engineering degree from Universidad de Ibagué gave me systemic
+      thinking.
+    - I combine attention to detail with a strong focus on results.

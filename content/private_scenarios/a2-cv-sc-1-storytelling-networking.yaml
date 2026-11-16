@@ -1,0 +1,99 @@
+id: a2-cv-sc-1-storytelling-networking
+title: Product Storytelling, Storytimes & Soft Skills
+title_es: Storytelling de Producto, Storytimes y Habilidades Blandas
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: Storytelling de producto y operaciones, relatos prácticos del día a día,
+  formación en Universidad de Ibagué, escucha activa y mindset sistémico.
+phrases:
+- id: cv-sc-1-storytelling-networking-1
+  text: I shared daily stories about how products work.
+  translation: Compartí historias diarias sobre cómo operan productos.
+  visual_hint: 🎙️💡
+  cloze:
+  - 1
+  glossary:
+  - word: shared
+    meaning: compartí
+  common: true
+  kind: phrase
+  apply_sentence: I ____ practical operation stories.
+  apply_answer: shared
+  apply_translation: Compartí historias prácticas.
+- id: cv-sc-1-storytelling-networking-2
+  text: Active listening helped me solve team problems.
+  translation: La escucha activa me ayudó a resolver problemas.
+  visual_hint: 🎙️💡
+  cloze:
+  - 2
+  glossary:
+  - word: helped
+    meaning: ayudó
+  common: true
+  kind: phrase
+  apply_sentence: Active listening ____ solve problems.
+  apply_answer: helped
+  apply_translation: La escucha activa ayudó a resolver.
+- id: cv-sc-1-storytelling-networking-3
+  text: I graduated from Universidad de Ibagué in 2020.
+  translation: Me gradué de la Universidad de Ibagué en 2020.
+  visual_hint: 🎙️💡
+  cloze:
+  - 1
+  glossary:
+  - word: graduated
+    meaning: gradué
+  common: true
+  kind: phrase
+  apply_sentence: I ____ in twenty twenty.
+  apply_answer: graduated
+  apply_translation: Me gradué en 2020.
+- id: cv-sc-1-storytelling-networking-4
+  text: Could we talk about better supply prices?
+  translation: ¿Podríamos hablar sobre mejores precios de suministro?
+  visual_hint: 🎙️💡
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could we
+    meaning: podríamos
+  common: true
+  kind: phrase
+  apply_sentence: ____ talk about supply prices?
+  apply_answer: Could we
+  apply_translation: ¿Podríamos hablar de precios?
+- id: cv-sc-1-storytelling-networking-5
+  text: I saw how all teams in a company connect.
+  translation: Vi cómo se conectan todos los equipos.
+  visual_hint: 🎙️💡
+  cloze:
+  - 1
+  glossary:
+  - word: saw
+    meaning: vi
+  common: true
+  kind: phrase
+  apply_sentence: I ____ how teams connect.
+  apply_answer: saw
+  apply_translation: Vi cómo se conectan equipos.
+roleplay:
+  ai_role: Executive Leadership Coach & Tech Peer
+  user_role: Industrial Engineer & Operations Storyteller
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Storytelling
+    de Producto, Storytimes y Habilidades Blandas.'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - I shared daily stories about how products work.
+    - I graduated from Universidad de Ibagué in 2020.
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - Active listening helped me solve team problems.
+    - Could we talk about better supply prices?

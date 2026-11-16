@@ -1,0 +1,100 @@
+id: b2-cv-sc-2-conectores-ejecutivos
+title: Executive Connectors in Operational Context
+title_es: Conectores Ejecutivos en Contexto Operativo (CV)
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: Práctica enfocada de conectores de causa, contraste, propósito e inversión
+  aplicados a logros reales en Rappi, El Carutal y Topografía Satelital.
+phrases:
+- id: cv-sc-2-conectores-ejecutivos-1
+  text: Despite sudden holiday surges, our carrier playbooks sustained high OTIF.
+  translation: Pese a picos festivos repentinos, nuestros playbooks mantuvieron OTIF
+    alto.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: Despite
+    meaning: a pesar de
+  common: true
+  kind: idiom
+  apply_sentence: ____ tight deadlines, UAT finished early.
+  apply_answer: Despite
+  apply_translation: Pese a plazos ajustados, UAT cerró antes.
+- id: cv-sc-2-conectores-ejecutivos-2
+  text: Manual tracking used to bottleneck queues, whereas n8n resolves tickets instantly.
+  translation: El rastreo manual atascaba colas, mientras que n8n resuelve al instante.
+  visual_hint: 🧩🔗
+  cloze:
+  - 6
+  glossary:
+  - word: whereas
+    meaning: mientras que
+  common: true
+  kind: idiom
+  apply_sentence: Live flows alert fast, ____ batch runs nightly.
+  apply_answer: whereas
+  apply_translation: Flujos en vivo alertan ya, mientras batch corre de noche.
+- id: cv-sc-2-conectores-ejecutivos-3
+  text: Moreover, combining Workday with automated alerts improved inventory accuracy.
+  translation: Además, combinar Workday con alertas automáticas mejoró la precisión.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: Moreover
+    meaning: además
+  common: true
+  kind: idiom
+  apply_sentence: EVM controls cost; ____, it flags delays.
+  apply_answer: moreover
+  apply_translation: EVM controla costos; además, alerta retrasos.
+- id: cv-sc-2-conectores-ejecutivos-4
+  text: As a result of time-and-motion studies, Tecnicolor cut manufacturing waste.
+  translation: Como resultado de estudios de tiempos, Tecnicolor redujo desperdicios.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: As a result
+    meaning: como resultado
+  common: true
+  kind: idiom
+  apply_sentence: ____ of strict audits, fraud dropped.
+  apply_answer: As a result
+  apply_translation: Como resultado de auditorías, bajó fraude.
+- id: cv-sc-2-conectores-ejecutivos-5
+  text: Unless we monitor aging queues daily, turnaround times will inevitably slip.
+  translation: A menos que vigilemos colas diarias, el tiempo de respuesta caerá.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: Unless
+    meaning: a menos que
+  common: true
+  kind: idiom
+  apply_sentence: ____ guardrails trigger, errors spread.
+  apply_answer: Unless
+  apply_translation: A menos que guardrails disparen, errores crecen.
+roleplay:
+  ai_role: Executive Communication & Interview Coach
+  user_role: Team Leader Candidate
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Conectores
+    Ejecutivos en Contexto Operativo (CV).'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - Despite sudden holiday surges, our carrier playbooks sustained high OTIF.
+    - Manual tracking used to bottleneck queues, whereas n8n resolves tickets instantly.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - Moreover, combining Workday with automated alerts improved inventory accuracy.
+    - As a result of time-and-motion studies, Tecnicolor cut manufacturing waste.

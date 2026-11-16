@@ -1,0 +1,100 @@
+id: b1-cv-pl-2-suministro-flota
+title: Timber Supply Chain, Fleet & Peak Logistics
+title_es: Cadena de Suministro (El Carutal) y Flota en Horas Pico (Rappi)
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en El Carutal y Rappi: canales maderables, previsión de
+  mano de obra, inventarios ERP, coordinación de transportistas, días festivos y flota.'
+phrases:
+- id: cv-pl-2-suministro-flota-1
+  text: I directed supply strategies for timber channels and plant fulfillment.
+  translation: Dirigí estrategias de suministro maderable y abastecimiento de planta.
+  visual_hint: 🚚🌲
+  cloze:
+  - 9
+  glossary:
+  - word: fulfillment
+    meaning: abastecimiento / cumplimiento
+  common: true
+  kind: idiom
+  apply_sentence: Supply planning ensures smooth plant ____.
+  apply_answer: fulfillment
+  apply_translation: Planear suministros asegura abastecimiento fluido.
+- id: cv-pl-2-suministro-flota-2
+  text: We forecasted labor needs to match factory manufacturing loads.
+  translation: Pronosticamos necesidades laborales para cubrir la carga de fabricación.
+  visual_hint: 🚚🌲
+  cloze:
+  - 1
+  glossary:
+  - word: forecasted
+    meaning: pronosticamos
+  common: true
+  kind: idiom
+  apply_sentence: Teams ____ staffing for busy weeks.
+  apply_answer: forecasted
+  apply_translation: Equipos pronosticaron personal para semanas pico.
+- id: cv-pl-2-suministro-flota-3
+  text: I led quality checks for incoming materials and outbound deliveries.
+  translation: Lideré controles de calidad para abastecimiento y entregas.
+  visual_hint: 🚚🌲
+  cloze:
+  - 8
+  glossary:
+  - word: outbound
+    meaning: salidas / despachos
+  common: true
+  kind: idiom
+  apply_sentence: We verify all ____ shipments.
+  apply_answer: outbound
+  apply_translation: Verificamos todos los despachos salientes.
+- id: cv-pl-2-suministro-flota-4
+  text: By creating holiday playbooks, we improved delivery times at Rappi.
+  translation: Creando playbooks de festivos, mejoramos tiempos de entrega en Rappi.
+  visual_hint: 🚚🌲
+  cloze:
+  - 3
+  glossary:
+  - word: playbooks
+    meaning: playbooks / guías
+  common: true
+  kind: idiom
+  apply_sentence: Logistics ____ guide peak-day operations.
+  apply_answer: playbooks
+  apply_translation: Playbooks logísticos guían operaciones en festivos.
+- id: cv-pl-2-suministro-flota-5
+  text: I coordinated carriers and supported corporate accounts with executive reports.
+  translation: Coordiné transportistas y apoyé clientes corporativos con reportes.
+  visual_hint: 🚚🌲
+  cloze:
+  - 2
+  glossary:
+  - word: carriers
+    meaning: transportistas
+  common: true
+  kind: idiom
+  apply_sentence: Dispatchers align ____ every morning.
+  apply_answer: carriers
+  apply_translation: Despachadores alinean transportistas cada mañana.
+roleplay:
+  ai_role: VP of Logistics & Fleet Operations
+  user_role: Logistics Manager Candidate
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Cadena de Suministro
+    (El Carutal) y Flota en Horas Pico (Rappi).'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - I directed supply strategies for timber channels and plant fulfillment.
+    - We forecasted labor needs to match factory manufacturing loads.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - I led quality checks for incoming materials and outbound deliveries.
+    - By creating holiday playbooks, we improved delivery times at Rappi.

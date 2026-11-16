@@ -1,0 +1,99 @@
+id: a2-cv-tech-2-n8n-sap-simio
+title: n8n Automation, SAP ERP, SIMIO & Git
+title_es: Automatización n8n, SAP ERP, SIMIO y Git/GitHub
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: Integraciones con n8n para liberar órdenes congeladas, control de fraude
+  en tarjetas, SAP ERP, simulación SIMIO, CMS y control de versiones Git.
+phrases:
+- id: cv-tech-2-n8n-sap-simio-1
+  text: I built n8n flows to fix frozen orders.
+  translation: Creé flujos n8n para arreglar órdenes congeladas.
+  visual_hint: ⚡🔧
+  cloze:
+  - 1
+  glossary:
+  - word: built
+    meaning: creé / construí
+  common: true
+  kind: phrase
+  apply_sentence: I ____ n8n flows at Rappi.
+  apply_answer: built
+  apply_translation: Creé flujos n8n en Rappi.
+- id: cv-tech-2-n8n-sap-simio-2
+  text: We checked courier cards to stop fraud.
+  translation: Revisamos tarjetas de repartidores para frenar fraude.
+  visual_hint: ⚡🔧
+  cloze:
+  - 1
+  glossary:
+  - word: checked
+    meaning: revisamos
+  common: true
+  kind: phrase
+  apply_sentence: We ____ courier cards daily.
+  apply_answer: checked
+  apply_translation: Revisamos tarjetas diariamente.
+- id: cv-tech-2-n8n-sap-simio-3
+  text: Could you verify this order in SAP ERP?
+  translation: ¿Podrías verificar este pedido en SAP ERP?
+  visual_hint: ⚡🔧
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could you
+    meaning: podrías
+  common: true
+  kind: phrase
+  apply_sentence: ____ verify this in SAP?
+  apply_answer: Could you
+  apply_translation: ¿Podrías verificar esto en SAP?
+- id: cv-tech-2-n8n-sap-simio-4
+  text: SIMIO showed how queues acted before launch.
+  translation: SIMIO mostró cómo actuaron colas antes de lanzar.
+  visual_hint: ⚡🔧
+  cloze:
+  - 1
+  glossary:
+  - word: showed
+    meaning: mostró
+  common: true
+  kind: phrase
+  apply_sentence: SIMIO ____ how queues acted.
+  apply_answer: showed
+  apply_translation: SIMIO mostró cómo actuaron colas.
+- id: cv-tech-2-n8n-sap-simio-5
+  text: Git and GitHub kept our team files safe.
+  translation: Git y GitHub mantuvieron seguros los archivos.
+  visual_hint: ⚡🔧
+  cloze:
+  - 3
+  glossary:
+  - word: kept
+    meaning: mantuvieron
+  common: true
+  kind: phrase
+  apply_sentence: GitHub ____ all files safe.
+  apply_answer: kept
+  apply_translation: GitHub mantuvo archivos seguros.
+roleplay:
+  ai_role: Systems Automation & ERP Lead
+  user_role: Automation & Process Specialist
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Automatización
+    n8n, SAP ERP, SIMIO y Git/GitHub.'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - I built n8n flows to fix frozen orders.
+    - Could you verify this order in SAP ERP?
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - We checked courier cards to stop fraud.
+    - SIMIO showed how queues acted before launch.

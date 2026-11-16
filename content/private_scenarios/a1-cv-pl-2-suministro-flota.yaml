@@ -1,0 +1,98 @@
+id: a1-cv-pl-2-suministro-flota
+title: Timber Supply Chain, Fleet & Peak Logistics
+title_es: Cadena de Suministro (El Carutal) y Flota en Horas Pico (Rappi)
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en El Carutal y Rappi: canales maderables, previsión de
+  mano de obra, inventarios ERP, coordinación de transportistas, días festivos y flota.'
+phrases:
+- id: cv-pl-2-suministro-flota-1
+  text: I plan wood supply routes.
+  translation: Planeo rutas de suministro de madera.
+  visual_hint: 🚚🌲
+  cloze:
+  - 4
+  glossary:
+  - word: routes
+    meaning: rutas
+  common: true
+  kind: phrase
+  apply_sentence: I plan wood supply ____.
+  apply_answer: routes
+  apply_translation: Planeo rutas de suministro.
+- id: cv-pl-2-suministro-flota-2
+  text: When does the factory shift start?
+  translation: ¿Cuándo empieza el turno de planta?
+  visual_hint: 🚚🌲
+  cloze:
+  - 4
+  glossary:
+  - word: shift
+    meaning: turno
+  common: true
+  kind: phrase
+  apply_sentence: When does the ____ start?
+  apply_answer: shift
+  apply_translation: ¿Cuándo empieza el turno?
+- id: cv-pl-2-suministro-flota-3
+  text: I call truck drivers every morning.
+  translation: Llamo a los conductores cada mañana.
+  visual_hint: 🚚🌲
+  cloze:
+  - 3
+  glossary:
+  - word: drivers
+    meaning: conductores
+  common: true
+  kind: phrase
+  apply_sentence: I call truck ____ daily.
+  apply_answer: drivers
+  apply_translation: Llamo a conductores a diario.
+- id: cv-pl-2-suministro-flota-4
+  text: There are extra orders on holidays.
+  translation: Hay pedidos extra en festivos.
+  visual_hint: 🚚🌲
+  cloze:
+  - 3
+  glossary:
+  - word: orders
+    meaning: pedidos
+  common: true
+  kind: phrase
+  apply_sentence: There are extra ____ today.
+  apply_answer: orders
+  apply_translation: Hay pedidos extra hoy.
+- id: cv-pl-2-suministro-flota-5
+  text: We check every client delivery.
+  translation: Revisamos cada entrega al cliente.
+  visual_hint: 🚚🌲
+  cloze:
+  - 4
+  glossary:
+  - word: delivery
+    meaning: entrega
+  common: true
+  kind: phrase
+  apply_sentence: We check every ____.
+  apply_answer: delivery
+  apply_translation: Revisamos cada entrega.
+roleplay:
+  ai_role: VP of Logistics & Fleet Operations
+  user_role: Logistics Manager Candidate
+  setting: 'Práctica básica A1 sobre: Cadena de Suministro (El Carutal) y Flota en
+    Horas Pico (Rappi).'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - I plan wood supply routes.
+    - When does the factory shift start?
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - I call truck drivers every morning.
+    - There are extra orders on holidays.

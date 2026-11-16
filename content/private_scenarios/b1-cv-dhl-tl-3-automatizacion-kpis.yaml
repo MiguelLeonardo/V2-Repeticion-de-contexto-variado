@@ -1,0 +1,100 @@
+id: b1-cv-dhl-tl-3-automatizacion-kpis
+title: 'Module 3: Automation, Playbooks & KPIs'
+title_es: 'Módulo 3: Automatización, Playbooks Operativos y Control de KPIs'
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: Análisis de causa raíz, playbooks con thresholds y guardrails, y KPIs
+  de productividad, servicio y calidad.
+phrases:
+- id: dhl-tl-3-1
+  text: I use BI tools to find the root cause in real-time workflows.
+  translation: Uso herramientas BI para hallar la causa raíz en tiempo real.
+  visual_hint: 🔍⏱️
+  cloze:
+  - 10
+  glossary:
+  - word: real-time
+    meaning: tiempo real
+  common: true
+  kind: idiom
+  apply_sentence: Managers monitor live queues in ____.
+  apply_answer: real-time
+  apply_translation: Los gerentes monitorean colas en tiempo real.
+- id: dhl-tl-3-2
+  text: Our playbooks set clear limits that trigger alerts as a safety net.
+  translation: Nuestros playbooks fijan límites que activan alertas como salvaguarda.
+  visual_hint: 🛡️🔔
+  cloze:
+  - 6
+  glossary:
+  - word: trigger
+    meaning: activar / disparar
+  common: true
+  kind: idiom
+  apply_sentence: Validation rules ____ immediate warnings.
+  apply_answer: trigger
+  apply_translation: Las reglas de validación disparan avisos inmediatos.
+- id: dhl-tl-3-3
+  text: I monitor cost per task closely so there is no wasted time.
+  translation: Monitoreo de cerca el costo por tarea sin desperdiciar tiempo.
+  visual_hint: 👁️📊
+  cloze:
+  - 5
+  glossary:
+  - word: closely
+    meaning: de cerca
+  common: true
+  kind: idiom
+  apply_sentence: We track cycle time ____.
+  apply_answer: closely
+  apply_translation: Seguimos de cerca el tiempo de ciclo.
+- id: dhl-tl-3-4
+  text: We track OTIF and CSAT to stop user dissatisfaction early.
+  translation: Medimos OTIF y CSAT para frenar la insatisfacción a tiempo.
+  visual_hint: ⭐🎯
+  cloze:
+  - 9
+  glossary:
+  - word: early
+    meaning: temprano / a tiempo
+  common: true
+  kind: idiom
+  apply_sentence: Good metrics catch issues ____.
+  apply_answer: early
+  apply_translation: Buenas métricas detectan problemas a tiempo.
+- id: dhl-tl-3-5
+  text: We reduce resolution time while running every step by the rules.
+  translation: Reducimos el tiempo de resolución ejecutando todo según la norma.
+  visual_hint: 📘✅
+  cloze:
+  - 2
+  glossary:
+  - word: resolution
+    meaning: resolución
+  common: true
+  kind: idiom
+  apply_sentence: Daily tracking lowers ticket ____ time.
+  apply_answer: resolution
+  apply_translation: El seguimiento diario baja el tiempo de resolución.
+roleplay:
+  ai_role: DHL GSC Analytics & Quality Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Módulo 3: Automatización,
+    Playbooks Operativos y Control de KPIs.'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - I use BI tools to find the root cause in real-time workflows.
+    - Our playbooks set clear limits that trigger alerts as a safety net.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - I monitor cost per task closely so there is no wasted time.
+    - We track OTIF and CSAT to stop user dissatisfaction early.

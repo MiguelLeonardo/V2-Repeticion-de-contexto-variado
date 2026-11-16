@@ -1,0 +1,99 @@
+id: a2-cv-pl-3-talento-iso-calidad
+title: HR Payroll, ISO Audits & Time-Motion Studies
+title_es: Talento Humano, Nómina (NGSOFT), ISO y Estudios de Tiempos (Tecnicolor)
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: Diplomado en Talento Humano, administración de nómina en NGSOFT, coordinación
+  de cuadrillas, auditorías ISO y estudios de tiempos y movimientos en Tecnicolor.
+phrases:
+- id: cv-pl-3-talento-iso-calidad-1
+  text: I handled crew schedules and NGSOFT payroll.
+  translation: Manejé horarios de cuadrillas y nómina NGSOFT.
+  visual_hint: 📋⏱️
+  cloze:
+  - 1
+  glossary:
+  - word: handled
+    meaning: manejé
+  common: true
+  kind: phrase
+  apply_sentence: I ____ payroll in NGSOFT.
+  apply_answer: handled
+  apply_translation: Manejé nómina en NGSOFT.
+- id: cv-pl-3-talento-iso-calidad-2
+  text: I took a diploma to support teams better.
+  translation: Tomé un diplomado para apoyar mejor al equipo.
+  visual_hint: 📋⏱️
+  cloze:
+  - 1
+  glossary:
+  - word: took
+    meaning: tomé
+  common: true
+  kind: phrase
+  apply_sentence: I ____ a Talent Management course.
+  apply_answer: took
+  apply_translation: Tomé un curso de Talento Humano.
+- id: cv-pl-3-talento-iso-calidad-3
+  text: At Tecnicolor, I checked quality and timed tasks.
+  translation: En Tecnicolor revisé calidad y medí tiempos.
+  visual_hint: 📋⏱️
+  cloze:
+  - 4
+  glossary:
+  - word: quality
+    meaning: calidad
+  common: true
+  kind: phrase
+  apply_sentence: I checked product ____ daily.
+  apply_answer: quality
+  apply_translation: Revisé calidad del producto a diario.
+- id: cv-pl-3-talento-iso-calidad-4
+  text: Time studies showed where workers lost minutes.
+  translation: Estudios de tiempos mostraron dónde se perdían minutos.
+  visual_hint: 📋⏱️
+  cloze:
+  - 2
+  glossary:
+  - word: showed
+    meaning: mostraron
+  common: true
+  kind: phrase
+  apply_sentence: Time studies ____ slow steps.
+  apply_answer: showed
+  apply_translation: Estudios mostraron pasos lentos.
+- id: cv-pl-3-talento-iso-calidad-5
+  text: Could we standardize steps to lower costs?
+  translation: ¿Podríamos estandarizar pasos para bajar costos?
+  visual_hint: 📋⏱️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could we
+    meaning: podríamos
+  common: true
+  kind: phrase
+  apply_sentence: ____ standardize steps today?
+  apply_answer: Could we
+  apply_translation: ¿Podríamos estandarizar pasos hoy?
+roleplay:
+  ai_role: HR Operations & Quality Assurance Director
+  user_role: Process & People Operations Specialist
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Talento
+    Humano, Nómina (NGSOFT), ISO y Estudios de Tiempos (Tecnicolor).'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - I handled crew schedules and NGSOFT payroll.
+    - At Tecnicolor, I checked quality and timed tasks.
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - I took a diploma to support teams better.
+    - Time studies showed where workers lost minutes.

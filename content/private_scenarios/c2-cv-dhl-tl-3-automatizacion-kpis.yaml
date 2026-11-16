@@ -1,0 +1,125 @@
+id: c2-cv-dhl-tl-3-automatizacion-kpis
+title: 'Module 3: Automation, Playbooks & KPIs'
+title_es: 'Módulo 3: Automatización, Playbooks Operativos y Control de KPIs'
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: Análisis de causa raíz, playbooks con thresholds y guardrails, y KPIs
+  de productividad, servicio y calidad.
+phrases:
+- id: dhl-tl-3-1
+  text: Only by getting to the bottom of bottlenecks in real-time can we govern live
+    and non-live flows.
+  translation: Solo llegando al fondo en tiempo real gobernamos flujos live y non-live.
+  visual_hint: 🔍⏱️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: getting to the bottom
+    meaning: llegar al fondo / tiempo real
+  - word: real-time
+    meaning: llegar al fondo / tiempo real
+  common: true
+  kind: idiom
+  apply_sentence: RCA lets us ____ of issues in real-time.
+  apply_answer: get to the bottom
+  apply_translation: El RCA permite llegar al fondo en tiempo real.
+- id: dhl-tl-3-2
+  text: Every playbook embeds strict thresholds that trigger alerts, furnishing a
+    fail-safe safety net.
+  translation: Cada playbook integra umbrales que disparan alertas brindando una red
+    de seguridad.
+  visual_hint: 🛡️🔔
+  cloze:
+  - 6
+  - 11
+  glossary:
+  - word: trigger
+    meaning: disparar / red de seguridad
+  - word: safety net
+    meaning: disparar / red de seguridad
+  common: true
+  kind: idiom
+  apply_sentence: Guardrails ____ warnings and provide a safety net.
+  apply_answer: trigger
+  apply_translation: Los guardrails disparan avisos y dan red de seguridad.
+- id: dhl-tl-3-3
+  text: Keeping a close eye on unit costs and cycle times leaves no room for waste.
+  translation: Vigilar de cerca costos unitarios y tiempos de ciclo no deja margen
+    al desperdicio.
+  visual_hint: 👁️📊
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: keep a close eye
+    meaning: vigilar de cerca / sin desperdicio
+  - word: no room for waste
+    meaning: vigilar de cerca / sin desperdicio
+  common: true
+  kind: idiom
+  apply_sentence: Disciplined capacity tracking leaves ____.
+  apply_answer: no room for waste
+  apply_translation: El control de capacidad no deja margen al desperdicio.
+- id: dhl-tl-3-4
+  text: Delivering on the dot enables teams to nip candidate or stakeholder dissatisfaction
+    in the bud.
+  translation: Entregar puntualmente permite frenar de raíz cualquier insatisfacción.
+  visual_hint: ⭐🎯
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: on the dot
+    meaning: puntualmente / de raíz
+  - word: in the bud
+    meaning: puntualmente / de raíz
+  common: true
+  kind: idiom
+  apply_sentence: Proactive checks nip dissatisfaction ____.
+  apply_answer: in the bud
+  apply_translation: Controles proactivos frenan la insatisfacción de raíz.
+- id: dhl-tl-3-5
+  text: We drastically curtailed turnaround time without ever failing to execute strictly
+    by the book.
+  translation: Redujimos drásticamente el tiempo de respuesta sin dejar de cumplir
+    la norma.
+  visual_hint: 📘✅
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: turnaround time
+    meaning: tiempo de respuesta / bajo norma
+  - word: by the book
+    meaning: tiempo de respuesta / bajo norma
+  common: true
+  kind: idiom
+  apply_sentence: Compliance means keeping ____ low and acting by the book.
+  apply_answer: turnaround time
+  apply_translation: Cumplir implica bajar el tiempo de respuesta bajo norma.
+roleplay:
+  ai_role: DHL GSC Analytics & Quality Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Módulo 3: Automatización, Playbooks Operativos y Control de KPIs.'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - Only by getting to the bottom of bottlenecks in real-time can we govern live
+      and non-live flows.
+    - Every playbook embeds strict thresholds that trigger alerts, furnishing a fail-safe
+      safety net.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - Keeping a close eye on unit costs and cycle times leaves no room for waste.
+    - Delivering on the dot enables teams to nip candidate or stakeholder dissatisfaction
+      in the bud.

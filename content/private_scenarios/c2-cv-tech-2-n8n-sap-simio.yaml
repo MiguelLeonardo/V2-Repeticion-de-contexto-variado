@@ -1,0 +1,121 @@
+id: c2-cv-tech-2-n8n-sap-simio
+title: n8n Automation, SAP ERP, SIMIO & Git
+title_es: Automatización n8n, SAP ERP, SIMIO y Git/GitHub
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: Integraciones con n8n para liberar órdenes congeladas, control de fraude
+  en tarjetas, SAP ERP, simulación SIMIO, CMS y control de versiones Git.
+phrases:
+- id: cv-tech-2-n8n-sap-simio-1
+  text: No sooner had we rolled out n8n release flows than frozen-order backlogs vanished.
+  translation: Apenas desplegamos flujos n8n, desaparecieron los atrasos de órdenes
+    congeladas.
+  visual_hint: ⚡🔧
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: rolled out
+    meaning: desplegamos / desaparecieron
+  - word: vanished
+    meaning: desplegamos / desaparecieron
+  common: true
+  kind: idiom
+  apply_sentence: Once we ____ n8n flows, queues cleared.
+  apply_answer: rolled out
+  apply_translation: Una vez desplegamos n8n, colas limpiaron.
+- id: cv-tech-2-n8n-sap-simio-2
+  text: By recalibrating extra-budget guardrails on courier cards, we cracked down
+    on fraud decisively.
+  translation: Recalibrando guardrails de presupuesto en tarjetas, combatimos el fraude
+    decisivamente.
+  visual_hint: ⚡🔧
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: cracked down on
+    meaning: combatimos
+  common: true
+  kind: idiom
+  apply_sentence: Targeted audits ____ anomalous spending.
+  apply_answer: cracked down on
+  apply_translation: Auditorías combatieron gastos anómalos.
+- id: cv-tech-2-n8n-sap-simio-3
+  text: Acting as first responder across SAP ERP pipelines, I iron out systemic kinks
+    permanently.
+  translation: Como primer respondiente en SAP ERP, pulo fallas sistémicas definitivamente.
+  visual_hint: ⚡🔧
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: first responder
+    meaning: primer respondiente / fallas
+  - word: kinks
+    meaning: primer respondiente / fallas
+  common: true
+  kind: idiom
+  apply_sentence: Every ____ irons out systemic kinks.
+  apply_answer: first responder
+  apply_translation: Todo primer respondiente pule fallas.
+- id: cv-tech-2-n8n-sap-simio-4
+  text: SIMIO discrete-event modeling lets us test the waters prior to re-engineering
+    processes under the hood.
+  translation: El modelado SIMIO permite probar escenarios antes de rediseñar procesos
+    por dentro.
+  visual_hint: ⚡🔧
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: test the waters
+    meaning: probar / por dentro
+  - word: under the hood
+    meaning: probar / por dentro
+  common: true
+  kind: idiom
+  apply_sentence: Digital twins ____ before changes under the hood.
+  apply_answer: test the waters
+  apply_translation: Gemelos digitales prueban antes de cambiar.
+- id: cv-tech-2-n8n-sap-simio-5
+  text: Enforcing Git, GitHub, and CMS discipline guarantees audit-proof continuity
+    across every release.
+  translation: Aplicar disciplina Git, GitHub y CMS garantiza continuidad a prueba
+    de auditorías.
+  visual_hint: ⚡🔧
+  cloze:
+  - 7
+  glossary:
+  - word: audit-proof
+    meaning: a prueba de auditorías
+  common: true
+  kind: idiom
+  apply_sentence: Versioned playbooks ensure ____ continuity.
+  apply_answer: audit-proof
+  apply_translation: Playbooks versionados garantizan continuidad.
+roleplay:
+  ai_role: Systems Automation & ERP Lead
+  user_role: Automation & Process Specialist
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Automatización n8n, SAP ERP, SIMIO y Git/GitHub.'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - No sooner had we rolled out n8n release flows than frozen-order backlogs vanished.
+    - By recalibrating extra-budget guardrails on courier cards, we cracked down on
+      fraud decisively.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - Acting as first responder across SAP ERP pipelines, I iron out systemic kinks
+      permanently.
+    - SIMIO discrete-event modeling lets us test the waters prior to re-engineering
+      processes under the hood.

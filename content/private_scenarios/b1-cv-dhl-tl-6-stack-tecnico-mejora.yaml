@@ -1,0 +1,100 @@
+id: b1-cv-dhl-tl-6-stack-tecnico-mejora
+title: 'Module 6: Tech Stack & Continuous Improvement'
+title_es: 'Módulo 6: Stack Técnico (Excel, Power BI, SQL) y Mejora Continua'
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: Ingeniería Industrial, Google Cloud/ADK, Excel/Power BI/SQL/Python, ETL,
+  SIMIO, ISO, Git y estudios de tiempos.
+phrases:
+- id: dhl-tl-6-1
+  text: I combined Industrial Engineering with Cloud and ADK to stay updated.
+  translation: Combiné Ingeniería Industrial con Cloud y ADK para estar al día.
+  visual_hint: 🎓☁️
+  cloze:
+  - 10
+  glossary:
+  - word: updated
+    meaning: actualizado
+  common: true
+  kind: idiom
+  apply_sentence: Certifications keep leaders ____.
+  apply_answer: updated
+  apply_translation: Las certificaciones mantienen actualizados a los líderes.
+- id: dhl-tl-6-2
+  text: I use Excel, Power BI, and SQL to find patterns in data.
+  translation: Uso Excel, Power BI y SQL para hallar patrones en datos.
+  visual_hint: 💻📊
+  cloze:
+  - 9
+  glossary:
+  - word: patterns
+    meaning: patrones
+  common: true
+  kind: idiom
+  apply_sentence: Dashboards reveal hidden ____.
+  apply_answer: patterns
+  apply_translation: Los tableros revelan patrones ocultos.
+- id: dhl-tl-6-3
+  text: I create scalable ETL pipelines from zero to process numbers.
+  translation: Creo pipelines ETL escalables desde cero para procesar cifras.
+  visual_hint: 🏗️🧮
+  cloze:
+  - 2
+  glossary:
+  - word: scalable
+    meaning: escalables
+  common: true
+  kind: idiom
+  apply_sentence: Stakeholders need ____ reporting models.
+  apply_answer: scalable
+  apply_translation: Los stakeholders necesitan reportes escalables.
+- id: dhl-tl-6-4
+  text: I run SIMIO simulations before changing systems, and track ISO with Git.
+  translation: Corro simulaciones SIMIO antes de cambiar sistemas y sigo ISO con Git.
+  visual_hint: 🧪🔧
+  cloze:
+  - 3
+  glossary:
+  - word: simulations
+    meaning: simulaciones
+  common: true
+  kind: idiom
+  apply_sentence: Process ____ reduce launch risks.
+  apply_answer: simulations
+  apply_translation: Las simulaciones de procesos reducen riesgos.
+- id: dhl-tl-6-5
+  text: Early in my career, I handled payroll, ISO audits, and time studies.
+  translation: Al inicio manejé nómina, auditorías ISO y estudios de tiempos.
+  visual_hint: 🎩⏱️
+  cloze:
+  - 6
+  glossary:
+  - word: payroll
+    meaning: nómina
+  common: true
+  kind: idiom
+  apply_sentence: HR teams manage ____ systems.
+  apply_answer: payroll
+  apply_translation: Los equipos de RRHH gestionan sistemas de nómina.
+roleplay:
+  ai_role: DHL BI, Reporting & Process Excellence Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Módulo 6: Stack
+    Técnico (Excel, Power BI, SQL) y Mejora Continua.'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - I combined Industrial Engineering with Cloud and ADK to stay updated.
+    - I use Excel, Power BI, and SQL to find patterns in data.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - I create scalable ETL pipelines from zero to process numbers.
+    - I run SIMIO simulations before changing systems, and track ISO with Git.

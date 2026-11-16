@@ -1,0 +1,100 @@
+id: b1-cv-tech-1-adk-cloud
+title: AI Agents (Google ADK), Cloud & Kubernetes
+title_es: Agentes IA (Google ADK), Cloud y Kubernetes
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: Certificaciones en Google ADK (Sept. 2026), Google Cloud Core Infrastructure,
+  Kubernetes Engine y SOPs asistidos por IA local.
+phrases:
+- id: cv-tech-1-adk-cloud-1
+  text: I design AI agents using Google's Agent Development Kit.
+  translation: Diseño agentes IA usando el Agent Development Kit de Google.
+  visual_hint: 🤖☁️
+  cloze:
+  - 1
+  glossary:
+  - word: design
+    meaning: diseño
+  common: true
+  kind: idiom
+  apply_sentence: Engineers ____ agents with ADK.
+  apply_answer: design
+  apply_translation: Ingenieros diseñan agentes con ADK.
+- id: cv-tech-1-adk-cloud-2
+  text: My Google Cloud and Kubernetes training supports scalable systems.
+  translation: Mi formación en Cloud y Kubernetes respalda sistemas escalables.
+  visual_hint: 🤖☁️
+  cloze:
+  - 7
+  glossary:
+  - word: scalable
+    meaning: escalables
+  common: true
+  kind: idiom
+  apply_sentence: Cloud architecture enables ____ tools.
+  apply_answer: scalable
+  apply_translation: La arquitectura Cloud permite herramientas escalables.
+- id: cv-tech-1-adk-cloud-3
+  text: We use local AI to generate and update operational SOPs.
+  translation: Usamos IA local para generar y actualizar SOPs operativos.
+  visual_hint: 🤖☁️
+  cloze:
+  - 5
+  glossary:
+  - word: generate
+    meaning: generar
+  common: true
+  kind: idiom
+  apply_sentence: Local models ____ SOP drafts fast.
+  apply_answer: generate
+  apply_translation: Modelos locales generan borradores SOP.
+- id: cv-tech-1-adk-cloud-4
+  text: Agentic automation removes repetitive steps from daily workflows.
+  translation: La automatización agéntica quita pasos repetitivos de flujos diarios.
+  visual_hint: 🤖☁️
+  cloze:
+  - 3
+  glossary:
+  - word: repetitive
+    meaning: repetitivos
+  common: true
+  kind: idiom
+  apply_sentence: Agents handle ____ tasks automatically.
+  apply_answer: repetitive
+  apply_translation: Agentes manejan tareas repetitivas.
+- id: cv-tech-1-adk-cloud-5
+  text: Clear guardrails prevent agents from making unauthorized changes.
+  translation: Guardrails claros evitan que agentes hagan cambios sin permiso.
+  visual_hint: 🤖☁️
+  cloze:
+  - 2
+  glossary:
+  - word: prevent
+    meaning: evitan
+  common: true
+  kind: idiom
+  apply_sentence: Strict rules ____ unexpected errors.
+  apply_answer: prevent
+  apply_translation: Reglas estrictas evitan errores.
+roleplay:
+  ai_role: Principal Cloud & AI Architecture Lead
+  user_role: Agentic Automation Engineer
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Agentes IA (Google
+    ADK), Cloud y Kubernetes.'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - I design AI agents using Google's Agent Development Kit.
+    - My Google Cloud and Kubernetes training supports scalable systems.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - We use local AI to generate and update operational SOPs.
+    - Agentic automation removes repetitive steps from daily workflows.

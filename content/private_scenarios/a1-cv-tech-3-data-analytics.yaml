@@ -1,0 +1,98 @@
+id: a1-cv-tech-3-data-analytics
+title: 'Data Analytics: Python, SQL, Power BI & ETL'
+title_es: 'Analítica de Datos: Python, SQL, Power BI, Excel y ETL'
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: 'Stack analítico avanzado: Python, SQL (Avanzado), Power BI, MS Excel
+  (Avanzado), Data Insights Models, ETL y análisis cuantitativo CPGS.'
+phrases:
+- id: cv-tech-3-data-analytics-1
+  text: I write clean Python scripts.
+  translation: Escribo scripts limpios en Python.
+  visual_hint: 📊🐍
+  cloze:
+  - 3
+  glossary:
+  - word: Python
+    meaning: Python
+  common: true
+  kind: phrase
+  apply_sentence: I write clean ____ scripts.
+  apply_answer: Python
+  apply_translation: Escribo scripts limpios en Python.
+- id: cv-tech-3-data-analytics-2
+  text: Can SQL find these numbers?
+  translation: ¿Puede SQL hallar estas cifras?
+  visual_hint: 📊🐍
+  cloze:
+  - 1
+  glossary:
+  - word: SQL
+    meaning: SQL
+  common: true
+  kind: phrase
+  apply_sentence: Can ____ find these numbers?
+  apply_answer: SQL
+  apply_translation: ¿Puede SQL hallar estas cifras?
+- id: cv-tech-3-data-analytics-3
+  text: There are clear charts in Power BI.
+  translation: Hay gráficos claros en Power BI.
+  visual_hint: 📊🐍
+  cloze:
+  - 3
+  glossary:
+  - word: charts
+    meaning: gráficos
+  common: true
+  kind: phrase
+  apply_sentence: There are clear ____ here.
+  apply_answer: charts
+  apply_translation: Hay gráficos claros aquí.
+- id: cv-tech-3-data-analytics-4
+  text: I update Excel KPIs every day.
+  translation: Actualizo KPIs en Excel cada día.
+  visual_hint: 📊🐍
+  cloze:
+  - 2
+  glossary:
+  - word: Excel
+    meaning: Excel
+  common: true
+  kind: phrase
+  apply_sentence: I update ____ KPIs daily.
+  apply_answer: Excel
+  apply_translation: Actualizo KPIs en Excel a diario.
+- id: cv-tech-3-data-analytics-5
+  text: Clean data helps our team.
+  translation: Datos limpios ayudan al equipo.
+  visual_hint: 📊🐍
+  cloze:
+  - 0
+  glossary:
+  - word: Clean
+    meaning: limpios
+  common: true
+  kind: phrase
+  apply_sentence: ____ data helps our team.
+  apply_answer: Clean
+  apply_translation: Datos limpios ayudan al equipo.
+roleplay:
+  ai_role: Head of Business Intelligence & Data
+  user_role: Data-Driven Operations Lead
+  setting: 'Práctica básica A1 sobre: Analítica de Datos: Python, SQL, Power BI, Excel
+    y ETL.'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - I write clean Python scripts.
+    - Can SQL find these numbers?
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - There are clear charts in Power BI.
+    - I update Excel KPIs every day.

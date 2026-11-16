@@ -1,0 +1,98 @@
+id: a1-cv-sc-2-conectores-ejecutivos
+title: Executive Connectors in Operational Context
+title_es: Conectores Ejecutivos en Contexto Operativo (CV)
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: Práctica enfocada de conectores de causa, contraste, propósito e inversión
+  aplicados a logros reales en Rappi, El Carutal y Topografía Satelital.
+phrases:
+- id: cv-sc-2-conectores-ejecutivos-1
+  text: I check data and fix errors.
+  translation: Reviso datos y corrijo errores.
+  visual_hint: 🧩🔗
+  cloze:
+  - 3
+  glossary:
+  - word: and
+    meaning: y
+  common: true
+  kind: phrase
+  apply_sentence: I check data ____ fix errors.
+  apply_answer: and
+  apply_translation: Reviso datos y corrijo errores.
+- id: cv-sc-2-conectores-ejecutivos-2
+  text: Orders rise, so we add staff.
+  translation: Los pedidos suben, así que sumamos personal.
+  visual_hint: 🧩🔗
+  cloze:
+  - 2
+  glossary:
+  - word: so
+    meaning: así que
+  common: true
+  kind: phrase
+  apply_sentence: Orders rise, ____ we add staff.
+  apply_answer: so
+  apply_translation: Pedidos suben, así que sumamos personal.
+- id: cv-sc-2-conectores-ejecutivos-3
+  text: Work is busy, but we deliver.
+  translation: Hay trabajo, pero entregamos a tiempo.
+  visual_hint: 🧩🔗
+  cloze:
+  - 3
+  glossary:
+  - word: but
+    meaning: pero
+  common: true
+  kind: phrase
+  apply_sentence: Work is busy, ____ we deliver.
+  apply_answer: but
+  apply_translation: Hay trabajo, pero entregamos.
+- id: cv-sc-2-conectores-ejecutivos-4
+  text: We use bots to save time.
+  translation: Usamos bots para ahorrar tiempo.
+  visual_hint: 🧩🔗
+  cloze:
+  - 3
+  glossary:
+  - word: to
+    meaning: para
+  common: true
+  kind: phrase
+  apply_sentence: We use bots ____ save time.
+  apply_answer: to
+  apply_translation: Usamos bots para ahorrar tiempo.
+- id: cv-sc-2-conectores-ejecutivos-5
+  text: I lead teams because I care.
+  translation: Lidero equipos porque me importa.
+  visual_hint: 🧩🔗
+  cloze:
+  - 3
+  glossary:
+  - word: because
+    meaning: porque
+  common: true
+  kind: phrase
+  apply_sentence: I lead teams ____ I care.
+  apply_answer: because
+  apply_translation: Lidero equipos porque me importa.
+roleplay:
+  ai_role: Executive Communication & Interview Coach
+  user_role: Team Leader Candidate
+  setting: 'Práctica básica A1 sobre: Conectores Ejecutivos en Contexto Operativo
+    (CV).'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - I check data and fix errors.
+    - Orders rise, so we add staff.
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - Work is busy, but we deliver.
+    - We use bots to save time.

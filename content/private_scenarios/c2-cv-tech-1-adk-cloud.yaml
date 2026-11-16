@@ -1,0 +1,121 @@
+id: c2-cv-tech-1-adk-cloud
+title: AI Agents (Google ADK), Cloud & Kubernetes
+title_es: Agentes IA (Google ADK), Cloud y Kubernetes
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: Certificaciones en Google ADK (Sept. 2026), Google Cloud Core Infrastructure,
+  Kubernetes Engine y SOPs asistidos por IA local.
+phrases:
+- id: cv-tech-1-adk-cloud-1
+  text: By synthesizing Industrial Engineering with Google ADK and Kubernetes, I stay
+    effortlessly ahead of the curve.
+  translation: Sintetizando Ingeniería Industrial con Google ADK y Kubernetes, me
+    mantengo a la vanguardia.
+  visual_hint: 🤖☁️
+  cloze:
+  - 12
+  - 13
+  glossary:
+  - word: ahead of the curve
+    meaning: a la vanguardia
+  common: true
+  kind: idiom
+  apply_sentence: Continuous mastery keeps leaders ____.
+  apply_answer: ahead of the curve
+  apply_translation: Dominio continuo mantiene a la vanguardia.
+- id: cv-tech-1-adk-cloud-2
+  text: Not only do local AI SOPs accelerate documentation, but they also safeguard
+    confidential data.
+  translation: No solo los SOPs de IA local aceleran la documentación, sino que resguardan
+    datos.
+  visual_hint: 🤖☁️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Not only
+    meaning: no solo / resguardan
+  - word: safeguard
+    meaning: no solo / resguardan
+  common: true
+  kind: idiom
+  apply_sentence: ____ do local models save time, but they also safeguard privacy.
+  apply_answer: Not only
+  apply_translation: No solo ahorran tiempo, sino que cuidan privacidad.
+- id: cv-tech-1-adk-cloud-3
+  text: Were agentic pipelines deployed without strict guardrails, operational risks
+    would proliferate.
+  translation: Si se desplegaran pipelines agénticos sin guardrails estrictos, proliferarían
+    riesgos.
+  visual_hint: 🤖☁️
+  cloze:
+  - 6
+  - 10
+  glossary:
+  - word: guardrails
+    meaning: guardrails / proliferarían
+  - word: proliferate
+    meaning: guardrails / proliferarían
+  common: true
+  kind: idiom
+  apply_sentence: Without ____, automation errors proliferate.
+  apply_answer: guardrails
+  apply_translation: Sin guardrails, los errores proliferan.
+- id: cv-tech-1-adk-cloud-4
+  text: Architecting cloud-native workflows on GKE ensures scalability under peak
+    operational load.
+  translation: Diseñar flujos cloud-native en GKE asegura escalabilidad bajo carga
+    pico.
+  visual_hint: 🤖☁️
+  cloze:
+  - 6
+  glossary:
+  - word: scalability
+    meaning: escalabilidad
+  common: true
+  kind: idiom
+  apply_sentence: Kubernetes guarantees ____ at peak load.
+  apply_answer: scalability
+  apply_translation: Kubernetes garantiza escalabilidad en picos.
+- id: cv-tech-1-adk-cloud-5
+  text: Through disciplined ADK engineering, we turn experimental AI into audit-proof
+    production assets.
+  translation: Con ingeniería ADK disciplinada, convertimos IA experimental en activos
+    a prueba de auditorías.
+  visual_hint: 🤖☁️
+  cloze:
+  - 9
+  glossary:
+  - word: audit-proof
+    meaning: a prueba de auditorías
+  common: true
+  kind: idiom
+  apply_sentence: Governance makes AI ____.
+  apply_answer: audit-proof
+  apply_translation: La gobernanza hace la IA a prueba de auditorías.
+roleplay:
+  ai_role: Principal Cloud & AI Architecture Lead
+  user_role: Agentic Automation Engineer
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Agentes IA (Google ADK), Cloud y Kubernetes.'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - By synthesizing Industrial Engineering with Google ADK and Kubernetes, I stay
+      effortlessly ahead of the curve.
+    - Not only do local AI SOPs accelerate documentation, but they also safeguard
+      confidential data.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - Were agentic pipelines deployed without strict guardrails, operational risks
+      would proliferate.
+    - Architecting cloud-native workflows on GKE ensures scalability under peak operational
+      load.

@@ -1,0 +1,99 @@
+id: a2-cv-dhl-tl-4-edi-master-data
+title: 'Module 4: EDI, Master Data & Supply Chain'
+title_es: 'Módulo 4: Integraciones EDI, Master Data y Cadena de Suministro'
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: Master Data, control documental, gobernanza a prueba de auditorías, integraciones
+  SAP/CargoWise/EDI y costos CPG.
+phrases:
+- id: dhl-tl-4-1
+  text: We used live tracking to check every file.
+  translation: Usamos rastreo en vivo para revisar cada archivo.
+  visual_hint: 🗂️🔎
+  cloze:
+  - 3
+  glossary:
+  - word: tracking
+    meaning: rastreo
+  common: true
+  kind: phrase
+  apply_sentence: We used live ____ yesterday.
+  apply_answer: tracking
+  apply_translation: Usamos rastreo en vivo ayer.
+- id: dhl-tl-4-2
+  text: I checked vendor files before the audit started.
+  translation: Revisé archivos de proveedores antes de la auditoría.
+  visual_hint: 🏛️⚡
+  cloze:
+  - 2
+  glossary:
+  - word: vendor
+    meaning: proveedor
+  common: true
+  kind: phrase
+  apply_sentence: I checked ____ files last week.
+  apply_answer: vendor
+  apply_translation: Revisé archivos de proveedores la semana pasada.
+- id: dhl-tl-4-3
+  text: Could you check the SAP and EDI logs?
+  translation: ¿Podrías revisar los registros de SAP y EDI?
+  visual_hint: 🔌🛠️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could you
+    meaning: podrías
+  common: true
+  kind: phrase
+  apply_sentence: ____ check the SAP logs?
+  apply_answer: Could you
+  apply_translation: ¿Podrías revisar los registros SAP?
+- id: dhl-tl-4-4
+  text: I studied supply costs to save money.
+  translation: Estudié costos de suministro para ahorrar dinero.
+  visual_hint: 📦📉
+  cloze:
+  - 1
+  glossary:
+  - word: studied
+    meaning: estudié
+  common: true
+  kind: phrase
+  apply_sentence: I ____ supply costs at Rappi.
+  apply_answer: studied
+  apply_translation: Estudié costos de suministro en Rappi.
+- id: dhl-tl-4-5
+  text: Digital tools helped us move staff quickly.
+  translation: Herramientas digitales ayudaron a mover personal rápido.
+  visual_hint: 🎛️📈
+  cloze:
+  - 2
+  glossary:
+  - word: helped
+    meaning: ayudaron
+  common: true
+  kind: phrase
+  apply_sentence: Digital tools ____ our operations team.
+  apply_answer: helped
+  apply_translation: Herramientas digitales ayudaron a operaciones.
+roleplay:
+  ai_role: DHL Master Data & Systems Integration Manager
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Módulo
+    4: Integraciones EDI, Master Data y Cadena de Suministro.'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - We used live tracking to check every file.
+    - Could you check the SAP and EDI logs?
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - I checked vendor files before the audit started.
+    - I studied supply costs to save money.

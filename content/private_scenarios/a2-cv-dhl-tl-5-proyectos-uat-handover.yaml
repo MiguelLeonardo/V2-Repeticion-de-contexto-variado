@@ -1,0 +1,99 @@
+id: a2-cv-dhl-tl-5-proyectos-uat-handover
+title: 'Module 5: Projects, UAT & Handover'
+title_es: 'Módulo 5: Implementación de Proyectos, UAT y Handover Operativo'
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: Ciclo de vida de proyectos, WBS y Ruta Crítica, EVM (SPI/CPI), coordinación
+  UAT, handover y forecasting.
+phrases:
+- id: dhl-tl-5-1
+  text: We used Asana and Notion to plan every step.
+  translation: Usamos Asana y Notion para planear cada paso.
+  visual_hint: 🗺️🚧
+  cloze:
+  - 1
+  glossary:
+  - word: used
+    meaning: usamos
+  common: true
+  kind: phrase
+  apply_sentence: We ____ Asana for our project.
+  apply_answer: used
+  apply_translation: Usamos Asana para nuestro proyecto.
+- id: dhl-tl-5-2
+  text: Could we check the SPI and CPI budget numbers?
+  translation: ¿Podríamos revisar las cifras SPI y CPI?
+  visual_hint: ✂️💵
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could we
+    meaning: podríamos
+  common: true
+  kind: phrase
+  apply_sentence: ____ check the budget numbers?
+  apply_answer: Could we
+  apply_translation: ¿Podríamos revisar las cifras de presupuesto?
+- id: dhl-tl-5-3
+  text: I tested new reports before the team used them.
+  translation: Probé nuevos reportes antes de que el equipo los usara.
+  visual_hint: 📅🔄
+  cloze:
+  - 1
+  glossary:
+  - word: tested
+    meaning: probé
+  common: true
+  kind: phrase
+  apply_sentence: I ____ the reports before launch.
+  apply_answer: tested
+  apply_translation: Probé los reportes antes del lanzamiento.
+- id: dhl-tl-5-4
+  text: I planned worker shifts so the plant stayed ready.
+  translation: Planeé turnos para que la planta siguiera lista.
+  visual_hint: 👷📈
+  cloze:
+  - 1
+  glossary:
+  - word: planned
+    meaning: planeé
+  common: true
+  kind: phrase
+  apply_sentence: I ____ shifts at El Carutal.
+  apply_answer: planned
+  apply_translation: Planeé turnos en El Carutal.
+- id: dhl-tl-5-5
+  text: We sent clear reports to our corporate clients.
+  translation: Enviamos reportes claros a clientes corporativos.
+  visual_hint: ✍️🤝
+  cloze:
+  - 1
+  glossary:
+  - word: sent
+    meaning: enviamos
+  common: true
+  kind: phrase
+  apply_sentence: We ____ weekly reports to clients.
+  apply_answer: sent
+  apply_translation: Enviamos reportes semanales a clientes.
+roleplay:
+  ai_role: DHL PMO & Transition Governance Director
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Módulo
+    5: Implementación de Proyectos, UAT y Handover Operativo.'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - We used Asana and Notion to plan every step.
+    - I tested new reports before the team used them.
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - Could we check the SPI and CPI budget numbers?
+    - I planned worker shifts so the plant stayed ready.

@@ -1,0 +1,116 @@
+id: c1-cv-sc-1-storytelling-networking
+title: Product Storytelling, Storytimes & Soft Skills
+title_es: Storytelling de Producto, Storytimes y Habilidades Blandas
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: Storytelling de producto y operaciones, relatos prácticos del día a día,
+  formación en Universidad de Ibagué, escucha activa y mindset sistémico.
+phrases:
+- id: cv-sc-1-storytelling-networking-1
+  text: Crafting operational storytimes bridges physical execution and digital product
+    narratives effortlessly.
+  translation: Crear storytimes operativos une ejecución física y narrativas de producto
+    sin esfuerzo.
+  visual_hint: 🎙️💡
+  cloze:
+  - 3
+  glossary:
+  - word: bridges
+    meaning: une
+  common: true
+  kind: idiom
+  apply_sentence: Storytelling ____ data and human context.
+  apply_answer: bridges
+  apply_translation: El storytelling une datos y contexto.
+- id: cv-sc-1-storytelling-networking-2
+  text: Active listening and assertive communication allow me to iron out stakeholder
+    friction diplomatically.
+  translation: Escucha activa y comunicación asertiva me permiten pulir fricciones
+    diplomáticamente.
+  visual_hint: 🎙️💡
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: iron out
+    meaning: pulir
+  common: true
+  kind: idiom
+  apply_sentence: Diplomacy helps ____ team tension.
+  apply_answer: iron out
+  apply_translation: La diplomacia pule tensiones.
+- id: cv-sc-1-storytelling-networking-3
+  text: Rooted in Industrial Engineering at Universidad de Ibagué, my systemic mindset
+    sees the big picture.
+  translation: Arraigado en Ingeniería Industrial en Ibagué, mi mindset sistémico
+    ve el panorama general.
+  visual_hint: 🎙️💡
+  cloze:
+  - 13
+  - 14
+  glossary:
+  - word: big picture
+    meaning: panorama general
+  common: true
+  kind: idiom
+  apply_sentence: Systemic leaders keep the ____ clear.
+  apply_answer: big picture
+  apply_translation: Líderes sistémicos aclaran el panorama.
+- id: cv-sc-1-storytelling-networking-4
+  text: Negotiating supply contracts requires balancing attention to detail with bottom-line
+    profitability.
+  translation: Negociar suministros requiere equilibrar atención al detalle con rentabilidad
+    neta.
+  visual_hint: 🎙️💡
+  cloze:
+  - 10
+  glossary:
+  - word: profitability
+    meaning: rentabilidad
+  common: true
+  kind: idiom
+  apply_sentence: Smart deals protect ____.
+  apply_answer: profitability
+  apply_translation: Buenos tratos protegen rentabilidad.
+- id: cv-sc-1-storytelling-networking-5
+  text: Staying results-oriented without losing empathy keeps cross-functional teams
+    motivated and accountable.
+  translation: Seguir orientado a resultados con empatía mantiene equipos motivados
+    y responsables.
+  visual_hint: 🎙️💡
+  cloze:
+  - 10
+  glossary:
+  - word: accountable
+    meaning: responsables
+  common: true
+  kind: idiom
+  apply_sentence: Empathy plus clarity holds teams ____.
+  apply_answer: accountable
+  apply_translation: Empatía y claridad hacen responsables.
+roleplay:
+  ai_role: Executive Leadership Coach & Tech Peer
+  user_role: Industrial Engineer & Operations Storyteller
+  setting: Charla de networking y entrevista de habilidades blandas sobre storytelling
+    operacional, escucha activa, negociación y mindset sistémico.
+  turns:
+  - speaker: ai
+    text: I heard you create product and operations 'Storytimes'. How does storytelling
+      help in technical and logistics leadership?
+  - speaker: user
+    goal: Explica cómo conviertes relatos del día a día operacional en narrativas
+      claras usando escucha activa y mindset sistémico.
+    suggested_lines:
+    - I create practical narratives and storytimes about physical and digital operations
+      so non-technical stakeholders grasp the big picture quickly.
+    - Pairing active listening with a systemic mindset helps me negotiate supplies,
+      align teams, and drive results assertively.
+  - speaker: ai
+    text: How do you describe your background from Universidad de Ibagué in casual
+      networking?
+  - speaker: user
+    goal: Presenta tu carrera de Ingeniería Industrial (2020) y tu enfoque orientado
+      a resultados y detalle.
+    suggested_lines:
+    - I graduated in Industrial Engineering from Universidad de Ibagué in 2020 and
+      built a career blending data, automation, and people-first operations.

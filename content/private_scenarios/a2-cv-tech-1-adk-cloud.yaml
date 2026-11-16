@@ -1,0 +1,99 @@
+id: a2-cv-tech-1-adk-cloud
+title: AI Agents (Google ADK), Cloud & Kubernetes
+title_es: Agentes IA (Google ADK), Cloud y Kubernetes
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: Certificaciones en Google ADK (Sept. 2026), Google Cloud Core Infrastructure,
+  Kubernetes Engine y SOPs asistidos por IA local.
+phrases:
+- id: cv-tech-1-adk-cloud-1
+  text: I earned a Google certificate in AI Agents.
+  translation: Obtuve un certificado de Google en Agentes IA.
+  visual_hint: 🤖☁️
+  cloze:
+  - 1
+  glossary:
+  - word: earned
+    meaning: obtuve
+  common: true
+  kind: phrase
+  apply_sentence: I ____ an ADK certificate.
+  apply_answer: earned
+  apply_translation: Obtuve un certificado ADK.
+- id: cv-tech-1-adk-cloud-2
+  text: I studied core infrastructure on Google Cloud.
+  translation: Estudié infraestructura base en Google Cloud.
+  visual_hint: 🤖☁️
+  cloze:
+  - 1
+  glossary:
+  - word: studied
+    meaning: estudié
+  common: true
+  kind: phrase
+  apply_sentence: I ____ Google Cloud infrastructure.
+  apply_answer: studied
+  apply_translation: Estudié infraestructura en Google Cloud.
+- id: cv-tech-1-adk-cloud-3
+  text: Kubernetes manages containers when traffic grows.
+  translation: Kubernetes gestiona contenedores cuando crece el tráfico.
+  visual_hint: 🤖☁️
+  cloze:
+  - 2
+  glossary:
+  - word: containers
+    meaning: contenedores
+  common: true
+  kind: phrase
+  apply_sentence: GKE manages app ____ smoothly.
+  apply_answer: containers
+  apply_translation: GKE gestiona contenedores fluidamente.
+- id: cv-tech-1-adk-cloud-4
+  text: Local AI helped us write clear procedures.
+  translation: La IA local nos ayudó a escribir procedimientos.
+  visual_hint: 🤖☁️
+  cloze:
+  - 2
+  glossary:
+  - word: helped
+    meaning: ayudó
+  common: true
+  kind: phrase
+  apply_sentence: Local AI ____ draft procedures.
+  apply_answer: helped
+  apply_translation: La IA local ayudó a redactar.
+- id: cv-tech-1-adk-cloud-5
+  text: Could we add safety rules to this agent?
+  translation: ¿Podríamos agregar reglas de seguridad al agente?
+  visual_hint: 🤖☁️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could we
+    meaning: podríamos
+  common: true
+  kind: phrase
+  apply_sentence: ____ add safety rules here?
+  apply_answer: Could we
+  apply_translation: ¿Podríamos agregar reglas de seguridad?
+roleplay:
+  ai_role: Principal Cloud & AI Architecture Lead
+  user_role: Agentic Automation Engineer
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Agentes
+    IA (Google ADK), Cloud y Kubernetes.'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - I earned a Google certificate in AI Agents.
+    - Kubernetes manages containers when traffic grows.
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - I studied core infrastructure on Google Cloud.
+    - Local AI helped us write clear procedures.

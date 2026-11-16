@@ -1,0 +1,123 @@
+id: c2-cv-tech-3-data-analytics
+title: 'Data Analytics: Python, SQL, Power BI & ETL'
+title_es: 'Analítica de Datos: Python, SQL, Power BI, Excel y ETL'
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: 'Stack analítico avanzado: Python, SQL (Avanzado), Power BI, MS Excel
+  (Avanzado), Data Insights Models, ETL y análisis cuantitativo CPGS.'
+phrases:
+- id: cv-tech-3-data-analytics-1
+  text: Sifting through multi-million-row datasets via Python and SQL lets me connect
+    the dots effortlessly.
+  translation: Filtrar datos de millones de filas con Python y SQL conecta patrones
+    sin esfuerzo.
+  visual_hint: 📊🐍
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Sifting through
+    meaning: filtrar / conectar patrones
+  - word: connect the dots
+    meaning: filtrar / conectar patrones
+  common: true
+  kind: idiom
+  apply_sentence: BI pipelines ____ noise to connect the dots.
+  apply_answer: sift through
+  apply_translation: Pipelines BI filtran ruido para conectar puntos.
+- id: cv-tech-3-data-analytics-2
+  text: Engineered from the ground up, our ETL architecture crunches the numbers with
+    zero manual intervention.
+  translation: Diseñada desde cero, nuestra arquitectura ETL procesa cifras sin intervención
+    manual.
+  visual_hint: 📊🐍
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: from the ground up
+    meaning: desde cero / procesa cifras
+  - word: crunches the numbers
+    meaning: desde cero / procesa cifras
+  common: true
+  kind: idiom
+  apply_sentence: Pipelines built ____ crunch the numbers reliably.
+  apply_answer: from the ground up
+  apply_translation: Pipelines desde cero procesan con fiabilidad.
+- id: cv-tech-3-data-analytics-3
+  text: No sooner had we drilled down into CPG distribution logs than cost leaks became
+    unmistakable.
+  translation: Apenas profundizamos en registros CPG, las fugas de costo se volvieron
+    evidentes.
+  visual_hint: 📊🐍
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: drilled down into
+    meaning: profundizamos en
+  common: true
+  kind: idiom
+  apply_sentence: Analysts ____ logs to expose leaks.
+  apply_answer: drilled down into
+  apply_translation: Analistas profundizaron para hallar fugas.
+- id: cv-tech-3-data-analytics-4
+  text: Seldom do static spreadsheets move the needle; only live Power BI insight
+    models drive action.
+  translation: Rara vez hojas estáticas generan impacto; solo modelos vivos en Power
+    BI impulsan acción.
+  visual_hint: 📊🐍
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: move the needle
+    meaning: impacto real
+  common: true
+  kind: idiom
+  apply_sentence: Dynamic models consistently ____.
+  apply_answer: move the needle
+  apply_translation: Modelos dinámicos generan impacto real.
+- id: cv-tech-3-data-analytics-5
+  text: By embedding data-driven insights into daily standups, teams stay ahead of
+    the curve on SLAs.
+  translation: Integrando hallazgos basados en datos en dailies, equipos van a la
+    vanguardia en SLAs.
+  visual_hint: 📊🐍
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: ahead of the curve
+    meaning: a la vanguardia
+  common: true
+  kind: idiom
+  apply_sentence: Predictive KPIs keep ops ____.
+  apply_answer: ahead of the curve
+  apply_translation: KPIs predictivos mantienen a la vanguardia.
+roleplay:
+  ai_role: Head of Business Intelligence & Data
+  user_role: Data-Driven Operations Lead
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Analítica de Datos: Python, SQL, Power BI, Excel y ETL.'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - Sifting through multi-million-row datasets via Python and SQL lets me connect
+      the dots effortlessly.
+    - Engineered from the ground up, our ETL architecture crunches the numbers with
+      zero manual intervention.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - No sooner had we drilled down into CPG distribution logs than cost leaks became
+      unmistakable.
+    - Seldom do static spreadsheets move the needle; only live Power BI insight models
+      drive action.

@@ -1,0 +1,102 @@
+id: b1-cv-sc-2-conectores-ejecutivos
+title: Executive Connectors in Operational Context
+title_es: Conectores Ejecutivos en Contexto Operativo (CV)
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: Práctica enfocada de conectores de causa, contraste, propósito e inversión
+  aplicados a logros reales en Rappi, El Carutal y Topografía Satelital.
+phrases:
+- id: cv-sc-2-conectores-ejecutivos-1
+  text: We rolled out n8n flows in order to eliminate frozen orders.
+  translation: Desplegamos flujos n8n para eliminar órdenes congeladas.
+  visual_hint: 🧩🔗
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: in order to
+    meaning: para / con el fin de
+  common: true
+  kind: idiom
+  apply_sentence: We track CPI ____ protect budgets.
+  apply_answer: in order to
+  apply_translation: Seguimos CPI para proteger presupuestos.
+- id: cv-sc-2-conectores-ejecutivos-2
+  text: Since we standardized SOPs, onboarding new analysts became much faster.
+  translation: Dado que estandarizamos SOPs, entrenar analistas fue más rápido.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: Since
+    meaning: dado que / ya que
+  common: true
+  kind: idiom
+  apply_sentence: ____ we automated ETL, reports run daily.
+  apply_answer: Since
+  apply_translation: Dado que automatizamos ETL, corren diario.
+- id: cv-sc-2-conectores-ejecutivos-3
+  text: Even though peak hours were intense, cancellations dropped steadily.
+  translation: Aunque las horas pico fueron intensas, cancelaciones bajaron.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Even though
+    meaning: aunque
+  common: true
+  kind: idiom
+  apply_sentence: ____ traffic spiked, SLAs held firm.
+  apply_answer: Even though
+  apply_translation: Aunque el tráfico subió, SLAs resistieron.
+- id: cv-sc-2-conectores-ejecutivos-4
+  text: However, raw spreadsheets alone cannot replace executive Power BI insights.
+  translation: Sin embargo, hojas crudas solas no reemplazan hallazgos Power BI.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: However
+    meaning: sin embargo
+  common: true
+  kind: idiom
+  apply_sentence: Data is abundant; ____, clarity is rare.
+  apply_answer: however
+  apply_translation: Hay muchos datos; sin embargo, falta claridad.
+- id: cv-sc-2-conectores-ejecutivos-5
+  text: Therefore, I combine SQL analytics with structured stakeholder storytelling.
+  translation: Por lo tanto, combino analítica SQL con storytelling estructurado.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: Therefore
+    meaning: por lo tanto
+  common: true
+  kind: idiom
+  apply_sentence: KPIs slipped; ____, we ran RCA.
+  apply_answer: therefore
+  apply_translation: KPIs cayeron; por tanto, hicimos RCA.
+roleplay:
+  ai_role: Executive Communication & Interview Coach
+  user_role: Team Leader Candidate
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Conectores Ejecutivos
+    en Contexto Operativo (CV).'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - We rolled out n8n flows in order to eliminate frozen orders.
+    - Since we standardized SOPs, onboarding new analysts became much faster.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - Even though peak hours were intense, cancellations dropped steadily.
+    - However, raw spreadsheets alone cannot replace executive Power BI insights.

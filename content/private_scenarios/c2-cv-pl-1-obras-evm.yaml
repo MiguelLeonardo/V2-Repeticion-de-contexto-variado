@@ -1,0 +1,129 @@
+id: c2-cv-pl-1-obras-evm
+title: Construction Projects, Critical Path & EVM
+title_es: Proyectos Constructivos, Ruta Crítica (CPM) y EVM
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en Topografía Satelital de Colombia: EDT (WBS), Ruta Crítica
+  (CPM), Control Financiero EVM (SPI/CPI), Gantt, Asana, Notion y Workday.'
+phrases:
+- id: cv-pl-1-obras-evm-1
+  text: Not only did I structure civil builds via WBS in Asana, but I also compressed
+    timelines via Critical Path optimization.
+  translation: No solo estructuré obras vía EDT en Asana, sino que comprimí plazos
+    con Ruta Crítica.
+  visual_hint: 🏗️📐
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Not only
+    meaning: no solo / Ruta Crítica
+  - word: Critical Path
+    meaning: no solo / Ruta Crítica
+  common: true
+  kind: idiom
+  apply_sentence: ____ did WBS clarify scope, but it also exposed Critical Path risks.
+  apply_answer: Not only
+  apply_translation: No solo el EDT aclaró el alcance, sino que expuso riesgos.
+- id: cv-pl-1-obras-evm-2
+  text: Seldom do capital projects stay within budget unless SPI and CPI variances
+    are acted upon promptly.
+  translation: Rara vez los proyectos mantienen presupuesto salvo que se actúe pronto
+    sobre SPI y CPI.
+  visual_hint: 🏗️📐
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: within budget
+    meaning: en presupuesto / variaciones
+  - word: variances
+    meaning: en presupuesto / variaciones
+  common: true
+  kind: idiom
+  apply_sentence: EVM governance keeps ____ under tight control.
+  apply_answer: variances
+  apply_translation: La gobernanza EVM controla estrechamente las variaciones.
+- id: cv-pl-1-obras-evm-3
+  text: By marrying Gantt deviation tracking with local AI SOPs, we eliminated ambiguity
+    across site crews.
+  translation: Al unir control Gantt con SOPs de IA local, eliminamos ambigüedad en
+    cuadrillas.
+  visual_hint: 🏗️📐
+  cloze:
+  - 10
+  - 11
+  glossary:
+  - word: eliminated
+    meaning: eliminamos ambigüedad
+  - word: ambiguity
+    meaning: eliminamos ambigüedad
+  common: true
+  kind: idiom
+  apply_sentence: Standardized AI playbooks ____ across operations.
+  apply_answer: eliminated ambiguity
+  apply_translation: Playbooks IA estandarizados eliminaron ambigüedad.
+- id: cv-pl-1-obras-evm-4
+  text: Were supply chain traceability in Workday neglected, inventory bottlenecks
+    would inevitably compound.
+  translation: Si se descuidara la trazabilidad en Workday, los cuellos de botella
+    crecerían.
+  visual_hint: 🏗️📐
+  cloze:
+  - 3
+  - 8
+  glossary:
+  - word: traceability
+    meaning: trazabilidad / cuellos de botella
+  - word: bottlenecks
+    meaning: trazabilidad / cuellos de botella
+  common: true
+  kind: idiom
+  apply_sentence: Automated Workday controls prevent ____.
+  apply_answer: bottlenecks
+  apply_translation: Controles automáticos en Workday evitan cuellos de botella.
+- id: cv-pl-1-obras-evm-5
+  text: Through rigorous Earned Value governance, we nip schedule slippage in the
+    bud before it escalates.
+  translation: Con gobernanza EVM rigurosa, cortamos retrasos de raíz antes de que
+    escalen.
+  visual_hint: 🏗️📐
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: in the bud
+    meaning: de raíz / escale
+  - word: escalates
+    meaning: de raíz / escale
+  common: true
+  kind: idiom
+  apply_sentence: Prompt action nips slippage ____.
+  apply_answer: in the bud
+  apply_translation: La acción pronta corta retrasos de raíz.
+roleplay:
+  ai_role: PMO & Construction Operations Director
+  user_role: Project & Product Manager (Topografía Satelital)
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Proyectos Constructivos, Ruta Crítica (CPM) y EVM.'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - Not only did I structure civil builds via WBS in Asana, but I also compressed
+      timelines via Critical Path optimization.
+    - Seldom do capital projects stay within budget unless SPI and CPI variances are
+      acted upon promptly.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - By marrying Gantt deviation tracking with local AI SOPs, we eliminated ambiguity
+      across site crews.
+    - Were supply chain traceability in Workday neglected, inventory bottlenecks would
+      inevitably compound.

@@ -1,0 +1,99 @@
+id: a2-cv-dhl-tl-2-torre-control-4pl
+title: 'Module 2: 4PL Control Tower & Support'
+title_es: 'Módulo 2: Operaciones en Torre de Control 4PL y Soporte'
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: Torre de control 4PL, manejo de escalaciones, prevención de churn y fraude,
+  picos de demanda y n8n.
+phrases:
+- id: dhl-tl-2-1
+  text: Our Control Tower connected drivers and warehouses.
+  translation: Nuestra Torre de Control conectó conductores y almacenes.
+  visual_hint: 🗼🔗
+  cloze:
+  - 3
+  glossary:
+  - word: connected
+    meaning: conectó
+  common: true
+  kind: phrase
+  apply_sentence: Our hub ____ drivers and warehouses.
+  apply_answer: connected
+  apply_translation: Nuestro hub conectó conductores y almacenes.
+- id: dhl-tl-2-2
+  text: We used clear steps when a problem happened.
+  translation: Usamos pasos claros cuando ocurría un problema.
+  visual_hint: 🧯🚀
+  cloze:
+  - 3
+  glossary:
+  - word: steps
+    meaning: pasos
+  common: true
+  kind: phrase
+  apply_sentence: We followed clear ____ in emergencies.
+  apply_answer: steps
+  apply_translation: Seguimos pasos claros en emergencias.
+- id: dhl-tl-2-3
+  text: I fixed app errors so clients stayed happy.
+  translation: Arreglé errores de la app para que clientes siguieran felices.
+  visual_hint: 🛡️📉
+  cloze:
+  - 3
+  glossary:
+  - word: errors
+    meaning: errores
+  common: true
+  kind: phrase
+  apply_sentence: I fixed app ____ for clients.
+  apply_answer: errors
+  apply_translation: Arreglé errores de la app para clientes.
+- id: dhl-tl-2-4
+  text: We added extra staff before busy holidays.
+  translation: Sumamos personal extra antes de festivos concurridos.
+  visual_hint: ⏱️📈
+  cloze:
+  - 1
+  glossary:
+  - word: added
+    meaning: sumamos / agregamos
+  common: true
+  kind: phrase
+  apply_sentence: We ____ extra staff last December.
+  apply_answer: added
+  apply_translation: Sumamos personal extra en diciembre.
+- id: dhl-tl-2-5
+  text: Could we use n8n to clear old tickets?
+  translation: ¿Podríamos usar n8n para limpiar tickets viejos?
+  visual_hint: 🤖⚡
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could we
+    meaning: podríamos
+  common: true
+  kind: phrase
+  apply_sentence: ____ use n8n for old tickets?
+  apply_answer: Could we
+  apply_translation: ¿Podríamos usar n8n para tickets viejos?
+roleplay:
+  ai_role: DHL GSC Service Delivery Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Módulo
+    2: Operaciones en Torre de Control 4PL y Soporte.'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - Our Control Tower connected drivers and warehouses.
+    - I fixed app errors so clients stayed happy.
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - We used clear steps when a problem happened.
+    - We added extra staff before busy holidays.

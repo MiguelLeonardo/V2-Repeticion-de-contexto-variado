@@ -7,7 +7,8 @@ from typing import Literal
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 ROOT_DIR = Path(__file__).resolve().parents[3]
-DEV_JWT_SECRET = "local-dev-only-secret-change-me-0123456789"  # noqa: S105 - rejected outside local/test
+DEV_JWT_SECRET = "local-dev-only-secret-change-me-0123456789"  # noqa: S105 # nosec B105
+
 
 
 class Settings(BaseSettings):

@@ -1,0 +1,98 @@
+id: a1-cv-dhl-tl-5-proyectos-uat-handover
+title: 'Module 5: Projects, UAT & Handover'
+title_es: 'Módulo 5: Implementación de Proyectos, UAT y Handover Operativo'
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: Ciclo de vida de proyectos, WBS y Ruta Crítica, EVM (SPI/CPI), coordinación
+  UAT, handover y forecasting.
+phrases:
+- id: dhl-tl-5-1
+  text: I have a clear project plan.
+  translation: Tengo un plan de proyecto claro.
+  visual_hint: 🗺️🚧
+  cloze:
+  - 5
+  glossary:
+  - word: plan
+    meaning: plan
+  common: true
+  kind: phrase
+  apply_sentence: I have a clear ____.
+  apply_answer: plan
+  apply_translation: Tengo un plan claro.
+- id: dhl-tl-5-2
+  text: There is enough budget for this.
+  translation: Hay suficiente presupuesto para esto.
+  visual_hint: ✂️💵
+  cloze:
+  - 3
+  glossary:
+  - word: budget
+    meaning: presupuesto
+  common: true
+  kind: phrase
+  apply_sentence: There is enough ____ here.
+  apply_answer: budget
+  apply_translation: Hay suficiente presupuesto aquí.
+- id: dhl-tl-5-3
+  text: Can we test this tool today?
+  translation: ¿Podemos probar esta herramienta hoy?
+  visual_hint: 📅🔄
+  cloze:
+  - 2
+  glossary:
+  - word: test
+    meaning: probar
+  common: true
+  kind: phrase
+  apply_sentence: Can we ____ this tool today?
+  apply_answer: test
+  apply_translation: ¿Podemos probar esta herramienta hoy?
+- id: dhl-tl-5-4
+  text: We need ten workers on Monday.
+  translation: Necesitamos diez trabajadores el lunes.
+  visual_hint: 👷📈
+  cloze:
+  - 3
+  glossary:
+  - word: workers
+    meaning: trabajadores
+  common: true
+  kind: phrase
+  apply_sentence: We need ten ____ on Monday.
+  apply_answer: workers
+  apply_translation: Necesitamos diez trabajadores el lunes.
+- id: dhl-tl-5-5
+  text: Please sign the final report.
+  translation: Por favor firma el reporte final.
+  visual_hint: ✍️🤝
+  cloze:
+  - 1
+  glossary:
+  - word: sign
+    meaning: firmar
+  common: true
+  kind: phrase
+  apply_sentence: Please ____ the final report.
+  apply_answer: sign
+  apply_translation: Por favor firma el reporte final.
+roleplay:
+  ai_role: DHL PMO & Transition Governance Director
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Práctica básica A1 sobre: Módulo 5: Implementación de Proyectos, UAT y
+    Handover Operativo.'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - I have a clear project plan.
+    - There is enough budget for this.
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - Can we test this tool today?
+    - We need ten workers on Monday.

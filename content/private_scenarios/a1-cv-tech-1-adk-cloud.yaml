@@ -1,0 +1,97 @@
+id: a1-cv-tech-1-adk-cloud
+title: AI Agents (Google ADK), Cloud & Kubernetes
+title_es: Agentes IA (Google ADK), Cloud y Kubernetes
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: Certificaciones en Google ADK (Sept. 2026), Google Cloud Core Infrastructure,
+  Kubernetes Engine y SOPs asistidos por IA local.
+phrases:
+- id: cv-tech-1-adk-cloud-1
+  text: I build smart AI agents.
+  translation: Construyo agentes de IA inteligentes.
+  visual_hint: 🤖☁️
+  cloze:
+  - 4
+  glossary:
+  - word: agents
+    meaning: agentes
+  common: true
+  kind: phrase
+  apply_sentence: I build smart AI ____.
+  apply_answer: agents
+  apply_translation: Construyo agentes de IA.
+- id: cv-tech-1-adk-cloud-2
+  text: Our apps run on Google Cloud.
+  translation: Nuestras apps corren en Google Cloud.
+  visual_hint: 🤖☁️
+  cloze:
+  - 5
+  glossary:
+  - word: Cloud
+    meaning: nube
+  common: true
+  kind: phrase
+  apply_sentence: Our apps run on ____.
+  apply_answer: Cloud
+  apply_translation: Nuestras apps corren en la nube.
+- id: cv-tech-1-adk-cloud-3
+  text: Can Kubernetes scale this app?
+  translation: ¿Puede Kubernetes escalar esta app?
+  visual_hint: 🤖☁️
+  cloze:
+  - 2
+  glossary:
+  - word: scale
+    meaning: escalar
+  common: true
+  kind: phrase
+  apply_sentence: Can Kubernetes ____ this app?
+  apply_answer: scale
+  apply_translation: ¿Puede Kubernetes escalar esta app?
+- id: cv-tech-1-adk-cloud-4
+  text: There is a clear AI guide.
+  translation: Hay una guía clara de IA.
+  visual_hint: 🤖☁️
+  cloze:
+  - 5
+  glossary:
+  - word: guide
+    meaning: guía
+  common: true
+  kind: phrase
+  apply_sentence: There is a clear ____ here.
+  apply_answer: guide
+  apply_translation: Hay una guía clara aquí.
+- id: cv-tech-1-adk-cloud-5
+  text: Rules keep AI tools safe.
+  translation: Las reglas mantienen segura la IA.
+  visual_hint: 🤖☁️
+  cloze:
+  - 4
+  glossary:
+  - word: safe
+    meaning: segura
+  common: true
+  kind: phrase
+  apply_sentence: Rules keep AI tools ____.
+  apply_answer: safe
+  apply_translation: Las reglas mantienen segura la IA.
+roleplay:
+  ai_role: Principal Cloud & AI Architecture Lead
+  user_role: Agentic Automation Engineer
+  setting: 'Práctica básica A1 sobre: Agentes IA (Google ADK), Cloud y Kubernetes.'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - I build smart AI agents.
+    - Our apps run on Google Cloud.
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - Can Kubernetes scale this app?
+    - There is a clear AI guide.

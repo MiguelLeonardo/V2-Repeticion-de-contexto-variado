@@ -1,0 +1,104 @@
+id: b2-cv-dhl-tl-5-proyectos-uat-handover
+title: 'Module 5: Projects, UAT & Handover'
+title_es: 'Módulo 5: Implementación de Proyectos, UAT y Handover Operativo'
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: Ciclo de vida de proyectos, WBS y Ruta Crítica, EVM (SPI/CPI), coordinación
+  UAT, handover y forecasting.
+phrases:
+- id: dhl-tl-5-1
+  text: Using Critical Path optimization, I map out milestones to prevent bottlenecks.
+  translation: Usando Ruta Crítica, trazo hitos para prevenir cuellos de botella.
+  visual_hint: 🗺️🚧
+  cloze:
+  - 10
+  glossary:
+  - word: bottlenecks
+    meaning: cuellos de botella
+  common: true
+  kind: idiom
+  apply_sentence: Early mapping removes deployment ____.
+  apply_answer: bottlenecks
+  apply_translation: Trazar temprano elimina cuellos de botella.
+- id: dhl-tl-5-2
+  text: With SPI and CPI tracking, we nip deviations in the bud and stay within budget.
+  translation: Con seguimiento SPI y CPI, cortamos desviaciones de raíz y cuidamos
+    el presupuesto.
+  visual_hint: ✂️💵
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: in the bud
+    meaning: de raíz
+  common: true
+  kind: idiom
+  apply_sentence: Weekly audits nip risks ____.
+  apply_answer: in the bud
+  apply_translation: Auditorías semanales cortan riesgos de raíz.
+- id: dhl-tl-5-3
+  text: I coordinate UAT and SOPs to keep everyone on track through end-to-end handover.
+  translation: Coordino UAT y SOPs para mantener a todos encarrilados hasta el handover.
+  visual_hint: 📅🔄
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: on track
+    meaning: encarrilados
+  common: true
+  kind: idiom
+  apply_sentence: Clear timelines keep teams ____.
+  apply_answer: on track
+  apply_translation: Plazos claros mantienen encarrilados a los equipos.
+- id: dhl-tl-5-4
+  text: At El Carutal, labor forecasting helped us staff up accurately to meet demand.
+  translation: En El Carutal, el pronóstico ayudó a dimensionar personal y cumplir
+    demanda.
+  visual_hint: 👷📈
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: staff up
+    meaning: dimensionar personal
+  common: true
+  kind: idiom
+  apply_sentence: Centers ____ ahead of peak quarters.
+  apply_answer: staff up
+  apply_translation: Los centros dimensionan personal antes de picos.
+- id: dhl-tl-5-5
+  text: I enforced QA by signing off on deliverables to smooth over client friction.
+  translation: Aseguré calidad aprobando entregables para suavizar fricciones.
+  visual_hint: ✍️🤝
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: sign off
+    meaning: aprobar formalmente
+  common: true
+  kind: idiom
+  apply_sentence: Stakeholders ____ on UAT before launch.
+  apply_answer: sign off
+  apply_translation: Los stakeholders aprueban UAT antes de lanzar.
+roleplay:
+  ai_role: DHL PMO & Transition Governance Director
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Módulo 5: Implementación
+    de Proyectos, UAT y Handover Operativo.'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - Using Critical Path optimization, I map out milestones to prevent bottlenecks.
+    - With SPI and CPI tracking, we nip deviations in the bud and stay within budget.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - I coordinate UAT and SOPs to keep everyone on track through end-to-end handover.
+    - At El Carutal, labor forecasting helped us staff up accurately to meet demand.

@@ -1,0 +1,100 @@
+id: a2-cv-dhl-tl-3-automatizacion-kpis
+title: 'Module 3: Automation, Playbooks & KPIs'
+title_es: 'Módulo 3: Automatización, Playbooks Operativos y Control de KPIs'
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: Análisis de causa raíz, playbooks con thresholds y guardrails, y KPIs
+  de productividad, servicio y calidad.
+phrases:
+- id: dhl-tl-3-1
+  text: We checked live data to find why delays happened.
+  translation: Revisamos datos en vivo para hallar por qué hubo retrasos.
+  visual_hint: 🔍⏱️
+  cloze:
+  - 7
+  glossary:
+  - word: delays
+    meaning: retrasos
+  common: true
+  kind: phrase
+  apply_sentence: Live data showed why ____ happened.
+  apply_answer: delays
+  apply_translation: Datos en vivo mostraron por qué hubo retrasos.
+- id: dhl-tl-3-2
+  text: There are clear rules that send fast alerts.
+  translation: Hay reglas claras que envían alertas rápidas.
+  visual_hint: 🛡️🔔
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: There are
+    meaning: hay (plural)
+  common: true
+  kind: phrase
+  apply_sentence: ____ clear rules for alerts.
+  apply_answer: There are
+  apply_translation: Hay reglas claras para alertas.
+- id: dhl-tl-3-3
+  text: I watched cycle time so we saved money.
+  translation: Vigilé el tiempo de ciclo para ahorrar dinero.
+  visual_hint: 👁️📊
+  cloze:
+  - 6
+  glossary:
+  - word: saved
+    meaning: ahorramos
+  common: true
+  kind: phrase
+  apply_sentence: Good planning ____ company money.
+  apply_answer: saved
+  apply_translation: Buena planeación ahorró dinero.
+- id: dhl-tl-3-4
+  text: Could you check our CSAT score today?
+  translation: ¿Podrías revisar nuestro puntaje CSAT hoy?
+  visual_hint: ⭐🎯
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could you
+    meaning: podrías
+  common: true
+  kind: phrase
+  apply_sentence: ____ check our CSAT score?
+  apply_answer: Could you
+  apply_translation: ¿Podrías revisar nuestro CSAT?
+- id: dhl-tl-3-5
+  text: We closed old tickets faster and followed every rule.
+  translation: Cerramos tickets viejos más rápido siguiendo cada regla.
+  visual_hint: 📘✅
+  cloze:
+  - 1
+  glossary:
+  - word: closed
+    meaning: cerramos
+  common: true
+  kind: phrase
+  apply_sentence: We ____ old tickets faster yesterday.
+  apply_answer: closed
+  apply_translation: Cerramos tickets viejos más rápido ayer.
+roleplay:
+  ai_role: DHL GSC Analytics & Quality Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Módulo
+    3: Automatización, Playbooks Operativos y Control de KPIs.'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - We checked live data to find why delays happened.
+    - I watched cycle time so we saved money.
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - There are clear rules that send fast alerts.
+    - Could you check our CSAT score today?

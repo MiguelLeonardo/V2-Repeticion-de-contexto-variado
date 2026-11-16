@@ -1,0 +1,97 @@
+id: a1-cv-tech-2-n8n-sap-simio
+title: n8n Automation, SAP ERP, SIMIO & Git
+title_es: Automatización n8n, SAP ERP, SIMIO y Git/GitHub
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: Integraciones con n8n para liberar órdenes congeladas, control de fraude
+  en tarjetas, SAP ERP, simulación SIMIO, CMS y control de versiones Git.
+phrases:
+- id: cv-tech-2-n8n-sap-simio-1
+  text: n8n connects our daily apps.
+  translation: n8n conecta nuestras apps diarias.
+  visual_hint: ⚡🔧
+  cloze:
+  - 1
+  glossary:
+  - word: connects
+    meaning: conecta
+  common: true
+  kind: phrase
+  apply_sentence: n8n ____ our daily apps.
+  apply_answer: connects
+  apply_translation: n8n conecta nuestras apps diarias.
+- id: cv-tech-2-n8n-sap-simio-2
+  text: Where are our SAP files?
+  translation: ¿Dónde están nuestros archivos SAP?
+  visual_hint: ⚡🔧
+  cloze:
+  - 4
+  glossary:
+  - word: files
+    meaning: archivos
+  common: true
+  kind: phrase
+  apply_sentence: Where are our SAP ____?
+  apply_answer: files
+  apply_translation: ¿Dónde están los archivos SAP?
+- id: cv-tech-2-n8n-sap-simio-3
+  text: Can SIMIO test this new plan?
+  translation: ¿Puede SIMIO probar este nuevo plan?
+  visual_hint: ⚡🔧
+  cloze:
+  - 2
+  glossary:
+  - word: test
+    meaning: probar
+  common: true
+  kind: phrase
+  apply_sentence: Can SIMIO ____ this plan?
+  apply_answer: test
+  apply_translation: ¿Puede SIMIO probar este plan?
+- id: cv-tech-2-n8n-sap-simio-4
+  text: Git saves every file version.
+  translation: Git guarda cada versión de archivo.
+  visual_hint: ⚡🔧
+  cloze:
+  - 4
+  glossary:
+  - word: version
+    meaning: versión
+  common: true
+  kind: phrase
+  apply_sentence: Git saves every file ____.
+  apply_answer: version
+  apply_translation: Git guarda cada versión.
+- id: cv-tech-2-n8n-sap-simio-5
+  text: There is a CMS for guides.
+  translation: Hay un CMS para las guías.
+  visual_hint: ⚡🔧
+  cloze:
+  - 3
+  glossary:
+  - word: CMS
+    meaning: CMS
+  common: true
+  kind: phrase
+  apply_sentence: There is a ____ for guides.
+  apply_answer: CMS
+  apply_translation: Hay un CMS para guías.
+roleplay:
+  ai_role: Systems Automation & ERP Lead
+  user_role: Automation & Process Specialist
+  setting: 'Práctica básica A1 sobre: Automatización n8n, SAP ERP, SIMIO y Git/GitHub.'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - n8n connects our daily apps.
+    - Where are our SAP files?
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - Can SIMIO test this new plan?
+    - Git saves every file version.

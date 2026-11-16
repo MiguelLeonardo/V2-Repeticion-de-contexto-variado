@@ -1,0 +1,101 @@
+id: b2-cv-pl-3-talento-iso-calidad
+title: HR Payroll, ISO Audits & Time-Motion Studies
+title_es: Talento Humano, Nómina (NGSOFT), ISO y Estudios de Tiempos (Tecnicolor)
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: Diplomado en Talento Humano, administración de nómina en NGSOFT, coordinación
+  de cuadrillas, auditorías ISO y estudios de tiempos y movimientos en Tecnicolor.
+phrases:
+- id: cv-pl-3-talento-iso-calidad-1
+  text: Managing NGSOFT payroll and crew coordination built my operational discipline.
+  translation: Gestionar nómina en NGSOFT y cuadrillas forjó mi disciplina operativa.
+  visual_hint: 📋⏱️
+  cloze:
+  - 9
+  glossary:
+  - word: discipline
+    meaning: disciplina
+  common: true
+  kind: idiom
+  apply_sentence: Payroll accuracy demands strict ____.
+  apply_answer: discipline
+  apply_translation: La nómina exige disciplina estricta.
+- id: cv-pl-3-talento-iso-calidad-2
+  text: Participating in ISO audits gave me an audit-proof compliance mindset.
+  translation: Participar en auditorías ISO me dio mentalidad a prueba de auditorías.
+  visual_hint: 📋⏱️
+  cloze:
+  - 3
+  glossary:
+  - word: audit-proof
+    meaning: a prueba de auditorías
+  common: true
+  kind: idiom
+  apply_sentence: ISO standards ensure ____ records.
+  apply_answer: audit-proof
+  apply_translation: Normas ISO aseguran registros a prueba de auditorías.
+- id: cv-pl-3-talento-iso-calidad-3
+  text: Combining Industrial Engineering with Talent Management balances data and
+    people.
+  translation: Combinar Ingeniería Industrial con Talento Humano equilibra datos y
+    personas.
+  visual_hint: 📋⏱️
+  cloze:
+  - 6
+  glossary:
+  - word: balances
+    meaning: equilibra
+  common: true
+  kind: idiom
+  apply_sentence: Good leadership ____ metrics and empathy.
+  apply_answer: balances
+  apply_translation: Buen liderazgo equilibra métricas y empatía.
+- id: cv-pl-3-talento-iso-calidad-4
+  text: At Tecnicolor, time-and-motion studies exposed costly manufacturing waste.
+  translation: En Tecnicolor, estudios de tiempos expusieron desperdicios costosos.
+  visual_hint: 📋⏱️
+  cloze:
+  - 4
+  glossary:
+  - word: exposed
+    meaning: expusieron
+  common: true
+  kind: idiom
+  apply_sentence: Data reviews ____ workflow inefficiencies.
+  apply_answer: exposed
+  apply_translation: Revisiones expusieron ineficiencias.
+- id: cv-pl-3-talento-iso-calidad-5
+  text: By standardizing shop-floor workflows, we cut waste by the book.
+  translation: Al estandarizar flujos en planta, redujimos desperdicio según la norma.
+  visual_hint: 📋⏱️
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: by the book
+    meaning: según la norma
+  common: true
+  kind: idiom
+  apply_sentence: Quality teams standardize ____.
+  apply_answer: by the book
+  apply_translation: Equipos de calidad estandarizan bajo norma.
+roleplay:
+  ai_role: HR Operations & Quality Assurance Director
+  user_role: Process & People Operations Specialist
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Talento Humano,
+    Nómina (NGSOFT), ISO y Estudios de Tiempos (Tecnicolor).'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - Managing NGSOFT payroll and crew coordination built my operational discipline.
+    - Participating in ISO audits gave me an audit-proof compliance mindset.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - Combining Industrial Engineering with Talent Management balances data and people.
+    - At Tecnicolor, time-and-motion studies exposed costly manufacturing waste.

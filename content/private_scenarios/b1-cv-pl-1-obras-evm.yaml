@@ -1,0 +1,100 @@
+id: b1-cv-pl-1-obras-evm
+title: Construction Projects, Critical Path & EVM
+title_es: Proyectos Constructivos, Ruta Crítica (CPM) y EVM
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en Topografía Satelital de Colombia: EDT (WBS), Ruta Crítica
+  (CPM), Control Financiero EVM (SPI/CPI), Gantt, Asana, Notion y Workday.'
+phrases:
+- id: cv-pl-1-obras-evm-1
+  text: I organize civil projects in Asana using Work Breakdown Structures.
+  translation: Organizo proyectos civiles en Asana usando estructuras EDT.
+  visual_hint: 🏗️📐
+  cloze:
+  - 9
+  glossary:
+  - word: structures
+    meaning: estructuras
+  common: true
+  kind: idiom
+  apply_sentence: Teams split tasks with Work Breakdown ____.
+  apply_answer: structures
+  apply_translation: Equipos dividen tareas con estructuras EDT.
+- id: cv-pl-1-obras-evm-2
+  text: We optimize the Critical Path so tasks finish without delays.
+  translation: Optimizamos la Ruta Crítica para terminar sin retrasos.
+  visual_hint: 🏗️📐
+  cloze:
+  - 9
+  glossary:
+  - word: delays
+    meaning: retrasos
+  common: true
+  kind: idiom
+  apply_sentence: Critical Path planning prevents ____.
+  apply_answer: delays
+  apply_translation: Planear la Ruta Crítica evita retrasos.
+- id: cv-pl-1-obras-evm-3
+  text: I apply Earned Value Management to control project costs.
+  translation: Aplico Gestión del Valor Ganado para controlar costos.
+  visual_hint: 🏗️📐
+  cloze:
+  - 6
+  glossary:
+  - word: control
+    meaning: controlar
+  common: true
+  kind: idiom
+  apply_sentence: SPI and CPI help ____ costs.
+  apply_answer: control
+  apply_translation: SPI y CPI ayudan a controlar costos.
+- id: cv-pl-1-obras-evm-4
+  text: Technical teams follow Gantt boards and AI-assisted SOPs.
+  translation: Equipos técnicos siguen tableros Gantt y SOPs con IA.
+  visual_hint: 🏗️📐
+  cloze:
+  - 2
+  glossary:
+  - word: follow
+    meaning: siguen
+  common: true
+  kind: idiom
+  apply_sentence: Crews ____ Gantt schedules on site.
+  apply_answer: follow
+  apply_translation: Las cuadrillas siguen cronogramas Gantt.
+- id: cv-pl-1-obras-evm-5
+  text: I supervise supply chains and inventory through Workday.
+  translation: Superviso cadena de suministro e inventarios mediante Workday.
+  visual_hint: 🏗️📐
+  cloze:
+  - 1
+  glossary:
+  - word: supervise
+    meaning: superviso
+  common: true
+  kind: idiom
+  apply_sentence: Managers ____ stock in Workday.
+  apply_answer: supervise
+  apply_translation: Gerentes supervisan inventario en Workday.
+roleplay:
+  ai_role: PMO & Construction Operations Director
+  user_role: Project & Product Manager (Topografía Satelital)
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Proyectos Constructivos,
+    Ruta Crítica (CPM) y EVM.'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - I organize civil projects in Asana using Work Breakdown Structures.
+    - We optimize the Critical Path so tasks finish without delays.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - I apply Earned Value Management to control project costs.
+    - Technical teams follow Gantt boards and AI-assisted SOPs.

@@ -85,6 +85,10 @@ def test_catalog(client, auth):
     ex_id = common[0]["id"]
     assert client.get(f"/v1/exercises/{ex_id}", headers=auth).status_code == 200
     assert client.get("/v1/exercises/bad.id.x", headers=auth).status_code == 404
+    private_scens = client.get("/v1/scenarios?topic=cv-dhl-gsc-tl", headers=auth).json()
+    assert len(private_scens) == 84
+    assert client.get(f"/v1/scenarios/{private_scens[0]['id']}", headers=auth).status_code == 200
+    assert len(client.get("/v1/scenarios", headers=auth).json()) == 384
 
 
 def test_translate_and_bookmark_phrase(client, auth):

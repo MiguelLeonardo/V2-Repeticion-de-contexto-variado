@@ -1,0 +1,180 @@
+id: c1-cv-dhl-tl-3-automatizacion-kpis
+title: 'Module 3: Automation, Playbooks & KPI Control'
+title_es: 'Módulo 3: Automatización, Playbooks Operativos y Control de KPIs'
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: Análisis de causa raíz (RCA), gobernanza de playbooks con thresholds
+  y guardrails, y dominio de KPIs de productividad, servicio, experiencia y calidad.
+phrases:
+- id: dhl-tl-3-1
+  text: Using business intelligence methodologies for root cause analysis, I get to
+    the bottom of process bottlenecks and govern both real-time live workflows and
+    scheduled non-live reporting.
+  translation: Usando metodologías de BI para análisis de causa raíz, llego al fondo
+    (get to the bottom of) de los cuellos de botella y gobierno tanto flujos en vivo
+    en tiempo real (real-time) como reportes programados non-live.
+  visual_hint: 🔍⏱️
+  cloze:
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 19
+  glossary:
+  - word: get to the bottom of
+    meaning: llegar al fondo o hallar la causa raíz
+  - word: real-time
+    meaning: en tiempo real
+  common: true
+  kind: idiom
+  apply_sentence: BI exception dashboards allow team leaders to ____ aging requisitions
+    and SLA breaches in real-time.
+  apply_answer: get to the bottom of
+  apply_translation: Los tableros de excepciones en BI permiten a los Team Leaders
+    llegar al fondo de requisiciones antiguas e incumplimientos de SLA en tiempo real.
+- id: dhl-tl-3-2
+  text: I standardize operations into documented playbooks with clear benchmarks and
+    thresholds that trigger automated alerts, building scalable n8n and agentic pipelines
+    with strict guardrails as a safety net.
+  translation: Estandarizo operaciones en playbooks documentados con umbrales claros
+    que disparan (trigger) alertas automatizadas, construyendo pipelines escalables
+    en n8n y agénticos con guardrails estrictos como red de seguridad (safety net).
+  visual_hint: 🛡️🔔
+  cloze:
+  - 12
+  - 26
+  - 27
+  glossary:
+  - word: trigger
+    meaning: disparar o activar
+  - word: safety net
+    meaning: red de seguridad o salvaguarda
+  common: true
+  kind: idiom
+  apply_sentence: In master data management, validation rules ____ immediate error
+    flags and act as a safety net against corrupted records.
+  apply_answer: trigger
+  apply_translation: En la gestión de datos maestros, las reglas de validación disparan
+    alertas inmediatas de error y actúan como red de seguridad contra registros corruptos.
+- id: dhl-tl-3-3
+  text: To maximize team productivity, I keep a close eye on unit cost per transaction,
+    cycle time, and output per specialist, ensuring we balance workloads and leave
+    no room for waste.
+  translation: Para maximizar la productividad del equipo, vigilo de cerca (keep a
+    close eye on) el costo unitario por transacción, tiempo de ciclo y productividad
+    por especialista, equilibrando cargas sin dejar margen para el desperdicio (leave
+    no room for waste).
+  visual_hint: 👁️📊
+  cloze:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 25
+  glossary:
+  - word: keep a close eye on
+    meaning: vigilar de cerca
+  - word: leave no room for waste
+    meaning: no dejar margen para el desperdicio o ineficiencia
+  common: true
+  kind: idiom
+  apply_sentence: Shared services leaders ____ ticket cycle times and team capacity
+    to leave no room for waste.
+  apply_answer: keep a close eye on
+  apply_translation: Los líderes de servicios compartidos vigilan de cerca los tiempos
+    de ciclo de tickets y la capacidad del equipo para no dejar margen al desperdicio.
+- id: dhl-tl-3-4
+  text: On the service front, I track On-Time Delivery, OTIF, CSAT, and NPS, categorizing
+    friction early so we deliver support on the dot and nip stakeholder or candidate
+    dissatisfaction in the bud.
+  translation: En el frente de servicio, monitoreo On-Time Delivery, OTIF, CSAT y
+    NPS, categorizando la fricción a tiempo para entregar soporte puntualmente (on
+    the dot) y frenar de raíz la insatisfacción (nip dissatisfaction in the bud).
+  visual_hint: ⭐🎯
+  cloze:
+  - 19
+  - 20
+  - 21
+  glossary:
+  - word: on the dot
+    meaning: puntualmente o exactamente a tiempo
+  - word: nip dissatisfaction in the bud
+    meaning: frenar la insatisfacción desde la raíz
+  common: true
+  kind: idiom
+  apply_sentence: Coordinating interviews and resolving support requests ____ helps
+    HR Business Support teams nip poor candidate experience in the bud.
+  apply_answer: on the dot
+  apply_translation: Coordinar entrevistas y resolver solicitudes puntualmente ayuda
+    a los equipos de HR Business Support a frenar de raíz una mala experiencia del
+    candidato.
+- id: dhl-tl-3-5
+  text: For operational quality, I monitor incident rates, aging queues, and slash
+    turnaround time for ticket resolution while ensuring every process runs strictly
+    by the book for full compliance.
+  translation: Para calidad operativa, monitoreo tasas de incidentes, colas envejecidas
+    y reduzco drásticamente el tiempo de resolución (turnaround time) asegurando que
+    cada proceso corra estrictamente bajo norma (by the book) para cumplimiento total.
+  visual_hint: 📘✅
+  cloze:
+  - 11
+  - 12
+  - 22
+  - 23
+  - 24
+  glossary:
+  - word: turnaround time
+    meaning: tiempo de resolución o respuesta
+  - word: by the book
+    meaning: cumpliendo estrictamente la norma
+  common: true
+  kind: idiom
+  apply_sentence: Tracking aging requisitions daily keeps ____ low while ensuring
+    every hiring workflow is executed by the book.
+  apply_answer: turnaround time
+  apply_translation: Hacer seguimiento diario a las requisiciones antiguas mantiene
+    bajo el tiempo de respuesta mientras garantiza que todo flujo de contratación
+    se ejecute bajo norma.
+roleplay:
+  ai_role: DHL GSC Analytics & Quality Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: Revisión técnica sobre gobernanza de procesos Live/Non-Live, diseño de
+    playbooks automatizados y control integral de KPIs.
+  turns:
+  - speaker: ai
+    text: How do you use root cause analysis to resolve bottlenecks in both live operational
+      support and scheduled reporting, and how do you ensure scalability?
+  - speaker: user
+    goal: Explica cómo hallas la causa raíz ('get to the bottom of') en flujos 'real-time'
+      y cómo los playbooks activan ('trigger') alertas con 'safety net'.
+    suggested_lines:
+    - Using business intelligence methodologies for root cause analysis, I get to
+      the bottom of process bottlenecks and govern both real-time live workflows and
+      scheduled non-live reporting.
+    - I standardize operations into documented playbooks with clear benchmarks and
+      thresholds that trigger automated alerts, building scalable n8n and agentic
+      pipelines with strict guardrails as a safety net.
+  - speaker: ai
+    text: Which productivity and stakeholder satisfaction KPIs do you monitor closely?
+  - speaker: user
+    goal: Detalla que vigilas de cerca ('keep a close eye on') los costos y tiempos
+      sin desperdicio ('leave no room for waste'), entregando 'on the dot' para frenar
+      insatisfacción ('nip dissatisfaction in the bud').
+    suggested_lines:
+    - To maximize team productivity, I keep a close eye on unit cost per transaction,
+      cycle time, and output per specialist, ensuring we balance workloads and leave
+      no room for waste.
+    - On the service front, I track On-Time Delivery, OTIF, CSAT, and NPS, categorizing
+      friction early so we deliver support on the dot and nip stakeholder or candidate
+      dissatisfaction in the bud.
+  - speaker: ai
+    text: And how do you control turnaround time, aging queues, and compliance?
+  - speaker: user
+    goal: Explica cómo reduces el 'turnaround time' y aseguras cumplimiento estricto
+      ('by the book').
+    suggested_lines:
+    - For operational quality, I monitor incident rates, aging queues, and slash turnaround
+      time for ticket resolution while ensuring every process runs strictly by the
+      book for full compliance.

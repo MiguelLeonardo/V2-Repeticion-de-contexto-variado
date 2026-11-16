@@ -1,0 +1,99 @@
+id: a2-cv-pl-2-suministro-flota
+title: Timber Supply Chain, Fleet & Peak Logistics
+title_es: Cadena de Suministro (El Carutal) y Flota en Horas Pico (Rappi)
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en El Carutal y Rappi: canales maderables, previsión de
+  mano de obra, inventarios ERP, coordinación de transportistas, días festivos y flota.'
+phrases:
+- id: cv-pl-2-suministro-flota-1
+  text: At El Carutal, I managed supply for our factory.
+  translation: En El Carutal gestioné suministro para la planta.
+  visual_hint: 🚚🌲
+  cloze:
+  - 4
+  glossary:
+  - word: managed
+    meaning: gestioné
+  common: true
+  kind: phrase
+  apply_sentence: I ____ supply at El Carutal.
+  apply_answer: managed
+  apply_translation: Gestioné suministro en El Carutal.
+- id: cv-pl-2-suministro-flota-2
+  text: I scheduled shifts so workers arrived on time.
+  translation: Programé turnos para que trabajadores llegaran a tiempo.
+  visual_hint: 🚚🌲
+  cloze:
+  - 1
+  glossary:
+  - word: scheduled
+    meaning: programé
+  common: true
+  kind: phrase
+  apply_sentence: I ____ worker shifts early.
+  apply_answer: scheduled
+  apply_translation: Programé turnos temprano.
+- id: cv-pl-2-suministro-flota-3
+  text: We checked stock inside our ERP system.
+  translation: Revisamos stock dentro de nuestro sistema ERP.
+  visual_hint: 🚚🌲
+  cloze:
+  - 1
+  glossary:
+  - word: checked
+    meaning: revisamos
+  common: true
+  kind: phrase
+  apply_sentence: We ____ stock inside ERP.
+  apply_answer: checked
+  apply_translation: Revisamos stock en el ERP.
+- id: cv-pl-2-suministro-flota-4
+  text: Could we add drivers during busy hours?
+  translation: ¿Podríamos sumar conductores en horas pico?
+  visual_hint: 🚚🌲
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could we
+    meaning: podríamos
+  common: true
+  kind: phrase
+  apply_sentence: ____ add drivers right now?
+  apply_answer: Could we
+  apply_translation: ¿Podríamos sumar conductores ahora?
+- id: cv-pl-2-suministro-flota-5
+  text: I sent weekly updates to our corporate clients.
+  translation: Envié avances semanales a clientes corporativos.
+  visual_hint: 🚚🌲
+  cloze:
+  - 1
+  glossary:
+  - word: sent
+    meaning: envié
+  common: true
+  kind: phrase
+  apply_sentence: I ____ weekly updates to clients.
+  apply_answer: sent
+  apply_translation: Envié avances semanales a clientes.
+roleplay:
+  ai_role: VP of Logistics & Fleet Operations
+  user_role: Logistics Manager Candidate
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Cadena
+    de Suministro (El Carutal) y Flota en Horas Pico (Rappi).'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - At El Carutal, I managed supply for our factory.
+    - We checked stock inside our ERP system.
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - I scheduled shifts so workers arrived on time.
+    - Could we add drivers during busy hours?

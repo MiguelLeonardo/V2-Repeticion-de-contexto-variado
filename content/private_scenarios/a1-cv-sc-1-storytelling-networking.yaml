@@ -1,0 +1,98 @@
+id: a1-cv-sc-1-storytelling-networking
+title: Product Storytelling, Storytimes & Soft Skills
+title_es: Storytelling de Producto, Storytimes y Habilidades Blandas
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: Storytelling de producto y operaciones, relatos prácticos del día a día,
+  formación en Universidad de Ibagué, escucha activa y mindset sistémico.
+phrases:
+- id: cv-sc-1-storytelling-networking-1
+  text: Hello! I tell clear work stories.
+  translation: ¡Hola! Cuento historias claras de trabajo.
+  visual_hint: 🎙️💡
+  cloze:
+  - 5
+  glossary:
+  - word: stories
+    meaning: historias
+  common: true
+  kind: phrase
+  apply_sentence: I tell clear work ____.
+  apply_answer: stories
+  apply_translation: Cuento historias claras de trabajo.
+- id: cv-sc-1-storytelling-networking-2
+  text: I always listen well to people.
+  translation: Siempre escucho bien a las personas.
+  visual_hint: 🎙️💡
+  cloze:
+  - 2
+  glossary:
+  - word: listen
+    meaning: escucho
+  common: true
+  kind: phrase
+  apply_sentence: I always ____ well to people.
+  apply_answer: listen
+  apply_translation: Siempre escucho bien a las personas.
+- id: cv-sc-1-storytelling-networking-3
+  text: I studied Engineering in Ibagué.
+  translation: Estudié Ingeniería en Ibagué.
+  visual_hint: 🎙️💡
+  cloze:
+  - 1
+  glossary:
+  - word: studied
+    meaning: estudié
+  common: true
+  kind: phrase
+  apply_sentence: I ____ Engineering in Ibagué.
+  apply_answer: studied
+  apply_translation: Estudié Ingeniería en Ibagué.
+- id: cv-sc-1-storytelling-networking-4
+  text: There is a clear goal here.
+  translation: Aquí hay una meta clara.
+  visual_hint: 🎙️💡
+  cloze:
+  - 4
+  glossary:
+  - word: goal
+    meaning: meta
+  common: true
+  kind: phrase
+  apply_sentence: There is a clear ____ here.
+  apply_answer: goal
+  apply_translation: Aquí hay una meta clara.
+- id: cv-sc-1-storytelling-networking-5
+  text: I check every small detail.
+  translation: Reviso cada pequeño detalle.
+  visual_hint: 🎙️💡
+  cloze:
+  - 4
+  glossary:
+  - word: detail
+    meaning: detalle
+  common: true
+  kind: phrase
+  apply_sentence: I check every small ____.
+  apply_answer: detail
+  apply_translation: Reviso cada pequeño detalle.
+roleplay:
+  ai_role: Executive Leadership Coach & Tech Peer
+  user_role: Industrial Engineer & Operations Storyteller
+  setting: 'Práctica básica A1 sobre: Storytelling de Producto, Storytimes y Habilidades
+    Blandas.'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - Hello! I tell clear work stories.
+    - I always listen well to people.
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - I studied Engineering in Ibagué.
+    - There is a clear goal here.

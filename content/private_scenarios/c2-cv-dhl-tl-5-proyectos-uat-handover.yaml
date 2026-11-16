@@ -1,0 +1,129 @@
+id: c2-cv-dhl-tl-5-proyectos-uat-handover
+title: 'Module 5: Projects, UAT & Handover'
+title_es: 'Módulo 5: Implementación de Proyectos, UAT y Handover Operativo'
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: Ciclo de vida de proyectos, WBS y Ruta Crítica, EVM (SPI/CPI), coordinación
+  UAT, handover y forecasting.
+phrases:
+- id: dhl-tl-5-1
+  text: By optimizing Critical Path dependencies in Asana, I map out milestones so
+    bottlenecks never arise.
+  translation: Al optimizar Ruta Crítica en Asana, trazo hitos para que no surjan
+    cuellos de botella.
+  visual_hint: 🗺️🚧
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: map out
+    meaning: trazar / cuellos de botella
+  - word: bottlenecks
+    meaning: trazar / cuellos de botella
+  common: true
+  kind: idiom
+  apply_sentence: Rigorous WBS designs ____ dependencies and avert bottlenecks.
+  apply_answer: map out
+  apply_translation: Diseños WBS rigurosos trazan dependencias y evitan bloqueos.
+- id: dhl-tl-5-2
+  text: Leveraging Earned Value metrics, we nip scope creep in the bud and stay within
+    budget.
+  translation: Aprovechando EVM, cortamos de raíz desviaciones de alcance dentro del
+    presupuesto.
+  visual_hint: ✂️💵
+  cloze:
+  - 5
+  - 13
+  glossary:
+  - word: nip
+    meaning: cortar de raíz / en presupuesto
+  - word: within budget
+    meaning: cortar de raíz / en presupuesto
+  common: true
+  kind: idiom
+  apply_sentence: SPI alerts ____ delays in the bud to stay within budget.
+  apply_answer: nip
+  apply_translation: Alertas SPI cortan retrasos de raíz en presupuesto.
+- id: dhl-tl-5-3
+  text: Orchestrating Gantt UATs and AI SOPs keeps everyone on track throughout end-to-end
+    handovers.
+  translation: Orquestar UATs Gantt y SOPs con IA mantiene a todos encarrilados de
+    punta a punta.
+  visual_hint: 📅🔄
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: on track
+    meaning: encarrilados / punta a punta
+  - word: end-to-end
+    meaning: encarrilados / punta a punta
+  common: true
+  kind: idiom
+  apply_sentence: Governance keeps teams ____ across end-to-end rollouts.
+  apply_answer: on track
+  apply_translation: La gobernanza mantiene encarrilados los despliegues.
+- id: dhl-tl-5-4
+  text: Were forecasting neglected, operations could scarcely staff up in time to
+    meet fluctuating demand.
+  translation: Si se descuidara el pronóstico, difícilmente se dimensionaría personal
+    para la demanda.
+  visual_hint: 👷📈
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: staff up
+    meaning: dimensionar / cumplir demanda
+  - word: meet demand
+    meaning: dimensionar / cumplir demanda
+  common: true
+  kind: idiom
+  apply_sentence: Predictive models let hubs ____ and meet demand.
+  apply_answer: staff up
+  apply_translation: Modelos predictivos permiten dimensionar y cumplir demanda.
+- id: dhl-tl-5-5
+  text: Only after signing off on QA gates do we close projects and smooth over executive
+    friction.
+  translation: Solo tras aprobar compuertas QA cerramos proyectos suavizando fricciones
+    ejecutivas.
+  visual_hint: ✍️🤝
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: signing off
+    meaning: aprobar / suavizar
+  - word: smooth over
+    meaning: aprobar / suavizar
+  common: true
+  kind: idiom
+  apply_sentence: Formal ____ on UAT helps smooth over transition risks.
+  apply_answer: signing off
+  apply_translation: Aprobar formalmente el UAT suaviza riesgos de transición.
+roleplay:
+  ai_role: DHL PMO & Transition Governance Director
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Módulo 5: Implementación de Proyectos, UAT y Handover Operativo.'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - By optimizing Critical Path dependencies in Asana, I map out milestones so bottlenecks
+      never arise.
+    - Leveraging Earned Value metrics, we nip scope creep in the bud and stay within
+      budget.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - Orchestrating Gantt UATs and AI SOPs keeps everyone on track throughout end-to-end
+      handovers.
+    - Were forecasting neglected, operations could scarcely staff up in time to meet
+      fluctuating demand.

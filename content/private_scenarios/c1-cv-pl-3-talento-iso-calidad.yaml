@@ -1,0 +1,112 @@
+id: c1-cv-pl-3-talento-iso-calidad
+title: HR Payroll, ISO Audits & Time-Motion Studies
+title_es: Talento Humano, Nómina (NGSOFT), ISO y Estudios de Tiempos (Tecnicolor)
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: Diplomado en Talento Humano, administración de nómina en NGSOFT, coordinación
+  de cuadrillas, auditorías ISO y estudios de tiempos y movimientos en Tecnicolor.
+phrases:
+- id: cv-pl-3-talento-iso-calidad-1
+  text: Wearing many hats across NGSOFT payroll, crew scheduling, and ISO audits anchored
+    my career.
+  translation: Desempeñar múltiples roles en nómina NGSOFT, cuadrillas y ISO ancló
+    mi carrera.
+  visual_hint: 📋⏱️
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Wearing many hats
+    meaning: múltiples roles
+  common: true
+  kind: idiom
+  apply_sentence: Early on, ____ built my versatility.
+  apply_answer: wearing many hats
+  apply_translation: Desempeñar múltiples roles forjó mi versatilidad.
+- id: cv-pl-3-talento-iso-calidad-2
+  text: My Talent Management diploma bridges people development with SLA accountability.
+  translation: Mi diplomado en Talento Humano une desarrollo de personas con cumplimiento
+    SLA.
+  visual_hint: 📋⏱️
+  cloze:
+  - 4
+  glossary:
+  - word: bridges
+    meaning: une / conecta
+  common: true
+  kind: idiom
+  apply_sentence: Coaching ____ upskilling and results.
+  apply_answer: bridges
+  apply_translation: El coaching une capacitación y resultados.
+- id: cv-pl-3-talento-iso-calidad-3
+  text: At Tecnicolor, time-and-motion studies let us drill down into manufacturing
+    inefficiencies.
+  translation: En Tecnicolor, estudios de tiempos permitieron profundizar en ineficiencias.
+  visual_hint: 📋⏱️
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: drill down into
+    meaning: profundizar en
+  common: true
+  kind: idiom
+  apply_sentence: Inspectors ____ cycle delays.
+  apply_answer: drill down into
+  apply_translation: Inspectores profundizan en retrasos.
+- id: cv-pl-3-talento-iso-calidad-4
+  text: Standardizing workflows eliminated non-value-added motion and cut production
+    costs.
+  translation: Estandarizar flujos eliminó movimientos sin valor y redujo costos.
+  visual_hint: 📋⏱️
+  cloze:
+  - 2
+  glossary:
+  - word: eliminated
+    meaning: eliminó
+  common: true
+  kind: idiom
+  apply_sentence: Lean methods ____ redundant steps.
+  apply_answer: eliminated
+  apply_translation: Métodos Lean eliminaron pasos redundantes.
+- id: cv-pl-3-talento-iso-calidad-5
+  text: Rigorous ISO compliance ensured every procedural update was documented by
+    the book.
+  translation: El rigor ISO aseguró que cada mejora quedara documentada bajo norma.
+  visual_hint: 📋⏱️
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: by the book
+    meaning: bajo norma
+  common: true
+  kind: idiom
+  apply_sentence: Quality leaders document changes ____.
+  apply_answer: by the book
+  apply_translation: Líderes documentan cambios bajo norma.
+roleplay:
+  ai_role: HR Operations & Quality Assurance Director
+  user_role: Process & People Operations Specialist
+  setting: Conversación sobre gestión de talento humano, nómina, auditorías ISO y
+    optimización de manufactura mediante estudios de tiempos.
+  turns:
+  - speaker: ai
+    text: How did your early roles in payroll, crew coordination, and ISO audits shape
+      your process mindset?
+  - speaker: user
+    goal: Describe tu experiencia con NGSOFT, coordinación de cuadrillas, auditorías
+      ISO y diplomado en Talento Humano.
+    suggested_lines:
+    - As an Administrative Assistant at Topografía Satelital, I coordinated field
+      crews, ran payroll in NGSOFT, and supported ISO audits.
+    - Combining that hands-on foundation with my Talent Management diploma taught
+      me how people governance and compliance reinforce each other.
+  - speaker: ai
+    text: And what did you achieve as a Process Quality Inspector at Tecnicolor?
+  - speaker: user
+    goal: Explica los estudios de tiempos y movimientos para estandarizar flujos y
+      reducir ineficiencias de manufactura.
+    suggested_lines:
+    - At Tecnicolor, I conducted time-and-motion studies and standardized workflows
+      to expose hidden costs and eliminate manufacturing waste.

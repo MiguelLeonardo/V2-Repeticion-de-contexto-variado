@@ -1,0 +1,180 @@
+id: c1-cv-dhl-tl-2-torre-control-4pl
+title: 'Module 2: 4PL Control Tower Operations & Support'
+title_es: 'Módulo 2: Operaciones en Torre de Control 4PL y Soporte'
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: Experiencia en Torre de Control 4PL, manejo de escalaciones, prevención
+  de churn y control de fraude, picos de demanda y automatización con n8n.
+phrases:
+- id: dhl-tl-2-1
+  text: As a Lead Operations Manager at Rappi, I ran our Control Tower as the operational
+    nerve center, tying together delivery fleets, warehouse partners, analytics agents,
+    and automated playbooks to ensure seamless service.
+  translation: Como Lead Operations Manager en Rappi, dirigí nuestra Torre de Control
+    como el centro neurálgico operativo (nerve center), conectando entre sí (tying
+    together) flotas de entrega, aliados de almacén, agentes de analítica y playbooks
+    automatizados para asegurar un servicio fluido.
+  visual_hint: 🗼🔗
+  cloze:
+  - 15
+  - 16
+  glossary:
+  - word: nerve center
+    meaning: centro neurálgico
+  - word: tie together
+    meaning: integrar o conectar entre sí
+  common: true
+  kind: idiom
+  apply_sentence: A GSC Business Support hub acts as an operational ____ that ties
+    together reporting tools, master data, and regional service teams.
+  apply_answer: nerve center
+  apply_translation: Un hub de Business Support en GSC actúa como un centro neurálgico
+    operativo que conecta herramientas de reporte, datos maestros y equipos regionales
+    de servicio.
+- id: dhl-tl-2-2
+  text: Beyond putting out fires during complex operational escalations, I engineered
+    structured incident-response workflows so my team could step up proactively and
+    drive continuous improvement.
+  translation: Más allá de apagar incendios (putting out fires) durante escalaciones
+    operativas complejas, diseñé flujos estructurados de respuesta a incidentes para
+    que mi equipo respondiera proactivamente (step up) e impulsara la mejora continua.
+  visual_hint: 🧯🚀
+  cloze:
+  - 1
+  - 2
+  - 3
+  - 17
+  - 18
+  glossary:
+  - word: put out fires
+    meaning: apagar incendios o resolver crisis urgentes
+  - word: step up
+    meaning: responder a la altura
+  common: true
+  kind: idiom
+  apply_sentence: Clear escalation matrices empower support analysts to ____ on high-priority
+    tickets instead of constantly putting out fires.
+  apply_answer: step up
+  apply_translation: Matrices de escalación claras empoderan a los analistas de soporte
+    para responder a la altura en tickets prioritarios en lugar de apagar incendios
+    constantemente.
+- id: dhl-tl-2-3
+  text: As National Operations Account Manager for Rappi's pharmacy vertical, I resolved
+    UX and tech friction to curb churn, while optimizing financial controls on courier
+    cards to crack down on fraud.
+  translation: Como National Operations Account Manager para la vertical de farmacias
+    en Rappi, resolví fricciones técnicas y de UX para frenar la pérdida de clientes
+    (curb churn), mientras optimizaba controles financieros en tarjetas de repartidores
+    para tomar medidas drásticas contra (crack down on) el fraude.
+  visual_hint: 🛡️📉
+  cloze:
+  - 16
+  - 17
+  - 26
+  - 27
+  - 28
+  glossary:
+  - word: curb churn
+    meaning: frenar la pérdida de clientes
+  - word: crack down on
+    meaning: tomar medidas drásticas contra
+  common: true
+  kind: idiom
+  apply_sentence: Shared services leaders must ____ master data inconsistencies while
+    improving internal user experience to curb churn.
+  apply_answer: crack down on
+  apply_translation: Los líderes de servicios compartidos deben tomar medidas drásticas
+    contra las inconsistencias de datos maestros mientras mejoran la experiencia interna
+    para frenar el abandono.
+- id: dhl-tl-2-4
+  text: To brace for holiday volume surges, I designed tailored operational playbooks
+    and prioritized team capacity, cutting delays and maintaining high service quality
+    during peak hours.
+  translation: Para prepararme ante (brace for) picos de volumen en festivos, diseñé
+    playbooks operativos a medida y prioricé la capacidad del equipo, reduciendo retrasos
+    y manteniendo alta calidad de servicio durante horas pico (peak hours).
+  visual_hint: ⏱️📈
+  cloze:
+  - 1
+  - 2
+  - 23
+  - 24
+  glossary:
+  - word: brace for
+    meaning: prepararse para alta demanda
+  - word: peak hours
+    meaning: horas pico
+  common: true
+  kind: idiom
+  apply_sentence: Support teams must ____ end-of-quarter recruitment and reporting
+    surges by reallocating capacity ahead of peak hours.
+  apply_answer: brace for
+  apply_translation: Los equipos de soporte deben prepararse para picos de reclutamiento
+    y reportes de fin de trimestre reasignando capacidad antes de las horas pico.
+- id: dhl-tl-2-5
+  text: I rolled out automated n8n workflows to resolve stuck orders automatically,
+    preventing aging tickets from bottling up in the queue and dramatically boosting
+    SLA compliance.
+  translation: Desplegué (rolled out) flujos automatizados en n8n para resolver pedidos
+    atascados automáticamente, evitando que los tickets antiguos se estancaran (bottling
+    up) en la cola e impulsando drásticamente el cumplimiento de SLA.
+  visual_hint: 🤖⚡
+  cloze:
+  - 1
+  - 2
+  - 15
+  - 16
+  glossary:
+  - word: roll out
+    meaning: desplegar o lanzar
+  - word: bottle up
+    meaning: estancarse o atascarse
+  common: true
+  kind: idiom
+  apply_sentence: When we ____ automated ticket routing, aging requisitions stopped
+    bottling up in the support backlog.
+  apply_answer: rolled out
+  apply_translation: Cuando desplegamos el enrutamiento automatizado de tickets, las
+    requisiciones antiguas dejaron de atascarse en el backlog de soporte.
+roleplay:
+  ai_role: DHL GSC Service Delivery Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: Entrevista operativa sobre cómo la experiencia en Torre de Control 4PL
+    y automatización de tickets se traduce al entorno DHL GSC.
+  turns:
+  - speaker: ai
+    text: How does your experience running a 4PL Control Tower at Rappi translate
+      to managing a centralized Business Support team?
+  - speaker: user
+    goal: Explica cómo la Torre de Control funcionaba como 'nerve center' conectando
+      ('tying together') flotas, analítica y playbooks.
+    suggested_lines:
+    - As a Lead Operations Manager at Rappi, I ran our Control Tower as the operational
+      nerve center, tying together delivery fleets, warehouse partners, analytics
+      agents, and automated playbooks to ensure seamless service.
+  - speaker: ai
+    text: In high-pressure scenarios with complex escalations or fraud/churn risks,
+      how do you react?
+  - speaker: user
+    goal: Menciona cómo pasaste de 'putting out fires' a lograr que el equipo 'step
+      up', además de 'curb churn' y 'crack down on' fraude.
+    suggested_lines:
+    - Beyond putting out fires during complex operational escalations, I engineered
+      structured incident-response workflows so my team could step up proactively
+      and drive continuous improvement.
+    - As National Operations Account Manager for Rappi's pharmacy vertical, I resolved
+      UX and tech friction to curb churn, while optimizing financial controls on courier
+      cards to crack down on fraud.
+  - speaker: ai
+    text: And what about sudden volume surges or ticket backlogs?
+  - speaker: user
+    goal: Explica cómo prepararse ('brace for') para 'peak hours' y cómo desplegaste
+      ('rolled out') flujos n8n para evitar que los tickets se atasquen ('bottling
+      up').
+    suggested_lines:
+    - To brace for holiday volume surges, I designed tailored operational playbooks
+      and prioritized team capacity, cutting delays and maintaining high service quality
+      during peak hours.
+    - I rolled out automated n8n workflows to resolve stuck orders automatically,
+      preventing aging tickets from bottling up in the queue and dramatically boosting
+      SLA compliance.

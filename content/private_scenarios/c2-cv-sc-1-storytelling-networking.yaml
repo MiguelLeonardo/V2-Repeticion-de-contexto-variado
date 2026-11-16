@@ -1,0 +1,119 @@
+id: c2-cv-sc-1-storytelling-networking
+title: Product Storytelling, Storytimes & Soft Skills
+title_es: Storytelling de Producto, Storytimes y Habilidades Blandas
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: Storytelling de producto y operaciones, relatos prácticos del día a día,
+  formación en Universidad de Ibagué, escucha activa y mindset sistémico.
+phrases:
+- id: cv-sc-1-storytelling-networking-1
+  text: Translating intricate operational realities into compelling storytimes gets
+    diverse stakeholders on the same page.
+  translation: Traducir realidades operativas en storytimes atractivos alinea a diversos
+    stakeholders.
+  visual_hint: 🎙️💡
+  cloze:
+  - 12
+  - 13
+  glossary:
+  - word: same page
+    meaning: misma sintonía
+  common: true
+  kind: idiom
+  apply_sentence: Vivid narratives get leadership on the ____.
+  apply_answer: same page
+  apply_translation: Narrativas vivas alinean a directivos.
+- id: cv-sc-1-storytelling-networking-2
+  text: Not only does active listening uncover unspoken bottlenecks, but it also fosters
+    assertive alignment.
+  translation: No solo la escucha activa revela bloqueos tácitos, sino que fomenta
+    alineación asertiva.
+  visual_hint: 🎙️💡
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Not only
+    meaning: no solo / fomenta
+  - word: fosters
+    meaning: no solo / fomenta
+  common: true
+  kind: idiom
+  apply_sentence: ____ does empathy build trust, but it also fosters ownership.
+  apply_answer: Not only
+  apply_translation: No solo crea confianza, sino que fomenta apropiación.
+- id: cv-sc-1-storytelling-networking-3
+  text: Guided by a systemic mindset forged at Universidad de Ibagué, I connect micro-details
+    to the big picture.
+  translation: Guiado por mindset sistémico forjado en Ibagué, conecto microdetalles
+    al panorama.
+  visual_hint: 🎙️💡
+  cloze:
+  - 15
+  - 16
+  glossary:
+  - word: big picture
+    meaning: panorama general
+  common: true
+  kind: idiom
+  apply_sentence: Systemic rigor links detail to the ____.
+  apply_answer: big picture
+  apply_translation: El rigor sistémico une detalle y panorama.
+- id: cv-sc-1-storytelling-networking-4
+  text: Shrewd supply negotiation hinges on crunching the numbers while smoothing
+    over vendor friction.
+  translation: Negociar suministros depende de procesar cifras suavizando fricciones
+    con proveedores.
+  visual_hint: 🎙️💡
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: smoothing over
+    meaning: suavizando
+  common: true
+  kind: idiom
+  apply_sentence: Data-backed tact excels at ____ disputes.
+  apply_answer: smoothing over
+  apply_translation: El tacto con datos suaviza disputas.
+- id: cv-sc-1-storytelling-networking-5
+  text: Were results orientation pursued without attention to detail, operational
+    quality would swiftly erode.
+  translation: Si se buscara resultados sin atención al detalle, la calidad se erosionaría.
+  visual_hint: 🎙️💡
+  cloze:
+  - 12
+  glossary:
+  - word: erode
+    meaning: erosionaría
+  common: true
+  kind: idiom
+  apply_sentence: Neglecting detail causes trust to ____.
+  apply_answer: erode
+  apply_translation: Descuidar detalles erosiona la confianza.
+roleplay:
+  ai_role: Executive Leadership Coach & Tech Peer
+  user_role: Industrial Engineer & Operations Storyteller
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Storytelling de Producto, Storytimes y Habilidades Blandas.'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - Translating intricate operational realities into compelling storytimes gets
+      diverse stakeholders on the same page.
+    - Not only does active listening uncover unspoken bottlenecks, but it also fosters
+      assertive alignment.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - Guided by a systemic mindset forged at Universidad de Ibagué, I connect micro-details
+      to the big picture.
+    - Shrewd supply negotiation hinges on crunching the numbers while smoothing over
+      vendor friction.

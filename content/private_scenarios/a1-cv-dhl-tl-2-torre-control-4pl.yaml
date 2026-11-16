@@ -1,0 +1,98 @@
+id: a1-cv-dhl-tl-2-torre-control-4pl
+title: 'Module 2: 4PL Control Tower & Support'
+title_es: 'Módulo 2: Operaciones en Torre de Control 4PL y Soporte'
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: Torre de control 4PL, manejo de escalaciones, prevención de churn y fraude,
+  picos de demanda y n8n.
+phrases:
+- id: dhl-tl-2-1
+  text: I work in a Control Tower.
+  translation: Trabajo en una Torre de Control.
+  visual_hint: 🗼🔗
+  cloze:
+  - 5
+  glossary:
+  - word: Tower
+    meaning: torre
+  common: true
+  kind: phrase
+  apply_sentence: I work in a Control ____.
+  apply_answer: Tower
+  apply_translation: Trabajo en una Torre de Control.
+- id: dhl-tl-2-2
+  text: Can we fix this urgent order now?
+  translation: ¿Podemos arreglar este pedido urgente ahora?
+  visual_hint: 🧯🚀
+  cloze:
+  - 4
+  glossary:
+  - word: urgent
+    meaning: urgente
+  common: true
+  kind: phrase
+  apply_sentence: Can we fix this ____ order?
+  apply_answer: urgent
+  apply_translation: ¿Podemos arreglar este pedido urgente?
+- id: dhl-tl-2-3
+  text: There is a rule to stop fraud.
+  translation: Hay una regla para frenar el fraude.
+  visual_hint: 🛡️📉
+  cloze:
+  - 6
+  glossary:
+  - word: fraud
+    meaning: fraude
+  common: true
+  kind: phrase
+  apply_sentence: There is a rule against ____.
+  apply_answer: fraud
+  apply_translation: Hay una regla contra el fraude.
+- id: dhl-tl-2-4
+  text: Holidays have many extra orders.
+  translation: Los festivos tienen muchos pedidos extra.
+  visual_hint: ⏱️📈
+  cloze:
+  - 4
+  glossary:
+  - word: orders
+    meaning: pedidos
+  common: true
+  kind: phrase
+  apply_sentence: Holidays have many extra ____.
+  apply_answer: orders
+  apply_translation: Los festivos tienen muchos pedidos extra.
+- id: dhl-tl-2-5
+  text: Smart bots help our support team.
+  translation: Bots inteligentes ayudan a nuestro equipo.
+  visual_hint: 🤖⚡
+  cloze:
+  - 1
+  glossary:
+  - word: bots
+    meaning: bots
+  common: true
+  kind: phrase
+  apply_sentence: Smart ____ help our team.
+  apply_answer: bots
+  apply_translation: Bots inteligentes ayudan al equipo.
+roleplay:
+  ai_role: DHL GSC Service Delivery Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Práctica básica A1 sobre: Módulo 2: Operaciones en Torre de Control 4PL
+    y Soporte.'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - I work in a Control Tower.
+    - Can we fix this urgent order now?
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - There is a rule to stop fraud.
+    - Holidays have many extra orders.

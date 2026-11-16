@@ -1,0 +1,124 @@
+id: c2-cv-pl-2-suministro-flota
+title: Timber Supply Chain, Fleet & Peak Logistics
+title_es: Cadena de Suministro (El Carutal) y Flota en Horas Pico (Rappi)
+cefr: C2
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en El Carutal y Rappi: canales maderables, previsión de
+  mano de obra, inventarios ERP, coordinación de transportistas, días festivos y flota.'
+phrases:
+- id: cv-pl-2-suministro-flota-1
+  text: Were labor forecasting divorced from ERP inventory cycles, plant fulfillment
+    would inevitably stall.
+  translation: Si el pronóstico laboral se separara del ERP, el abastecimiento de
+    planta se estancaría.
+  visual_hint: 🚚🌲
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: divorced from
+    meaning: separado de / estancarse
+  - word: stall
+    meaning: separado de / estancarse
+  common: true
+  kind: idiom
+  apply_sentence: Planning must never be ____ inventory reality.
+  apply_answer: divorced from
+  apply_translation: La planeación nunca debe separarse del inventario.
+- id: cv-pl-2-suministro-flota-2
+  text: Through end-to-end quality verification, we left no stone unturned from timber
+    intake to delivery.
+  translation: Mediante verificación integral de calidad, no dejamos cabos sueltos
+    desde ingreso hasta entrega.
+  visual_hint: 🚚🌲
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: stone unturned
+    meaning: cabo suelto
+  common: true
+  kind: idiom
+  apply_sentence: Audits leave no ____ in outbound logistics.
+  apply_answer: stone unturned
+  apply_translation: Auditorías no dejan cabos sueltos en salidas.
+- id: cv-pl-2-suministro-flota-3
+  text: So effectively did partner playbooks brace for holiday surges that cancellations
+    plummeted.
+  translation: Tan eficazmente prepararon los playbooks los picos festivos que las
+    cancelaciones se desplomaron.
+  visual_hint: 🚚🌲
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: brace for
+    meaning: prepararse / se desplomaron
+  - word: plummeted
+    meaning: prepararse / se desplomaron
+  common: true
+  kind: idiom
+  apply_sentence: When teams ____ surges, cancellations plummet.
+  apply_answer: brace for
+  apply_translation: Cuando equipos se preparan, las cancelaciones caen.
+- id: cv-pl-2-suministro-flota-4
+  text: Optimizing fleet dynamics during peak hours proved pivotal in curbing UX-driven
+    churn.
+  translation: Optimizar la flota en horas pico fue decisivo para frenar el abandono
+    por UX.
+  visual_hint: 🚚🌲
+  cloze:
+  - 9
+  - 11
+  glossary:
+  - word: curbing
+    meaning: frenar / abandono
+  - word: churn
+    meaning: frenar / abandono
+  common: true
+  kind: idiom
+  apply_sentence: Reliable peak ETAs help ____ customer churn.
+  apply_answer: curb
+  apply_translation: ETAs fiables en hora pico frenan el abandono.
+- id: cv-pl-2-suministro-flota-5
+  text: By pairing carrier coordination with executive transparency, we forged lasting
+    corporate trust.
+  translation: Al unir coordinación de transportistas con transparencia ejecutiva,
+    forjamos confianza duradera.
+  visual_hint: 🚚🌲
+  cloze:
+  - 8
+  glossary:
+  - word: forged
+    meaning: forjamos
+  common: true
+  kind: idiom
+  apply_sentence: Consistent KPIs ____ strong client partnerships.
+  apply_answer: forged
+  apply_translation: KPIs consistentes forjaron alianzas sólidas.
+roleplay:
+  ai_role: VP of Logistics & Fleet Operations
+  user_role: Logistics Manager Candidate
+  setting: 'Diálogo ejecutivo C2 con precisión retórica e inversión sintáctica sobre:
+    Cadena de Suministro (El Carutal) y Flota en Horas Pico (Rappi).'
+  turns:
+  - speaker: ai
+    text: Were you tasked with scaling governance across global stakeholders, what
+      strategic levers would you pull first?
+  - speaker: user
+    goal: Responde con estructuras C2 (inversión sintáctica, cláusulas enfáticas y
+      modismos avanzados).
+    suggested_lines:
+    - Were labor forecasting divorced from ERP inventory cycles, plant fulfillment
+      would inevitably stall.
+    - Through end-to-end quality verification, we left no stone unturned from timber
+      intake to delivery.
+  - speaker: ai
+    text: How do you ensure operational excellence endures under peak pressure?
+  - speaker: user
+    goal: Articula tu respuesta con matices ejecutivos C2.
+    suggested_lines:
+    - So effectively did partner playbooks brace for holiday surges that cancellations
+      plummeted.
+    - Optimizing fleet dynamics during peak hours proved pivotal in curbing UX-driven
+      churn.

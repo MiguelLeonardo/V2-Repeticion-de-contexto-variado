@@ -1,0 +1,99 @@
+id: a2-cv-dhl-tl-6-stack-tecnico-mejora
+title: 'Module 6: Tech Stack & Continuous Improvement'
+title_es: 'Módulo 6: Stack Técnico (Excel, Power BI, SQL) y Mejora Continua'
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: Ingeniería Industrial, Google Cloud/ADK, Excel/Power BI/SQL/Python, ETL,
+  SIMIO, ISO, Git y estudios de tiempos.
+phrases:
+- id: dhl-tl-6-1
+  text: I took Google Cloud and AI courses last year.
+  translation: Tomé cursos de Google Cloud e IA el año pasado.
+  visual_hint: 🎓☁️
+  cloze:
+  - 1
+  glossary:
+  - word: took
+    meaning: tomé
+  common: true
+  kind: phrase
+  apply_sentence: I ____ Cloud courses last year.
+  apply_answer: took
+  apply_translation: Tomé cursos de Cloud el año pasado.
+- id: dhl-tl-6-2
+  text: I used Python and SQL to clean big tables.
+  translation: Usé Python y SQL para limpiar tablas grandes.
+  visual_hint: 💻📊
+  cloze:
+  - 1
+  glossary:
+  - word: used
+    meaning: usé
+  common: true
+  kind: phrase
+  apply_sentence: I ____ Python to clean data.
+  apply_answer: used
+  apply_translation: Usé Python para limpiar datos.
+- id: dhl-tl-6-3
+  text: Could you check this automated ETL report?
+  translation: ¿Podrías revisar este reporte ETL automatizado?
+  visual_hint: 🏗️🧮
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could you
+    meaning: podrías
+  common: true
+  kind: phrase
+  apply_sentence: ____ check this ETL report?
+  apply_answer: Could you
+  apply_translation: ¿Podrías revisar este reporte ETL?
+- id: dhl-tl-6-4
+  text: We ran SIMIO tests before changing the process.
+  translation: Corrimos pruebas SIMIO antes de cambiar el proceso.
+  visual_hint: 🧪🔧
+  cloze:
+  - 1
+  glossary:
+  - word: ran
+    meaning: corrimos
+  common: true
+  kind: phrase
+  apply_sentence: We ____ tests before the launch.
+  apply_answer: ran
+  apply_translation: Corrimos pruebas antes del lanzamiento.
+- id: dhl-tl-6-5
+  text: I checked payroll and time studies to cut waste.
+  translation: Revisé nómina y estudios de tiempos para ahorrar.
+  visual_hint: 🎩⏱️
+  cloze:
+  - 8
+  glossary:
+  - word: waste
+    meaning: desperdicio
+  common: true
+  kind: phrase
+  apply_sentence: Time studies help cut ____.
+  apply_answer: waste
+  apply_translation: Estudios de tiempos reducen desperdicio.
+roleplay:
+  ai_role: DHL BI, Reporting & Process Excellence Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Módulo
+    6: Stack Técnico (Excel, Power BI, SQL) y Mejora Continua.'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - I took Google Cloud and AI courses last year.
+    - Could you check this automated ETL report?
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - I used Python and SQL to clean big tables.
+    - We ran SIMIO tests before changing the process.

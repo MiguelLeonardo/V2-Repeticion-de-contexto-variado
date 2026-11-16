@@ -1,0 +1,98 @@
+id: a1-cv-dhl-tl-6-stack-tecnico-mejora
+title: 'Module 6: Tech Stack & Continuous Improvement'
+title_es: 'Módulo 6: Stack Técnico (Excel, Power BI, SQL) y Mejora Continua'
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: Ingeniería Industrial, Google Cloud/ADK, Excel/Power BI/SQL/Python, ETL,
+  SIMIO, ISO, Git y estudios de tiempos.
+phrases:
+- id: dhl-tl-6-1
+  text: I have an Engineering degree.
+  translation: Tengo un título en Ingeniería.
+  visual_hint: 🎓☁️
+  cloze:
+  - 4
+  glossary:
+  - word: degree
+    meaning: título
+  common: true
+  kind: phrase
+  apply_sentence: I have an Engineering ____.
+  apply_answer: degree
+  apply_translation: Tengo un título en Ingeniería.
+- id: dhl-tl-6-2
+  text: Can you open Excel and Power BI?
+  translation: ¿Puedes abrir Excel y Power BI?
+  visual_hint: 💻📊
+  cloze:
+  - 2
+  glossary:
+  - word: open
+    meaning: abrir
+  common: true
+  kind: phrase
+  apply_sentence: Can you ____ Excel right now?
+  apply_answer: open
+  apply_translation: ¿Puedes abrir Excel ahora?
+- id: dhl-tl-6-3
+  text: There are many rows in SQL.
+  translation: Hay muchas filas en SQL.
+  visual_hint: 🏗️🧮
+  cloze:
+  - 3
+  glossary:
+  - word: rows
+    meaning: filas
+  common: true
+  kind: phrase
+  apply_sentence: There are many ____ in SQL.
+  apply_answer: rows
+  apply_translation: Hay muchas filas en SQL.
+- id: dhl-tl-6-4
+  text: We test changes safely first.
+  translation: Probamos cambios de forma segura primero.
+  visual_hint: 🧪🔧
+  cloze:
+  - 3
+  glossary:
+  - word: safely
+    meaning: de forma segura
+  common: true
+  kind: phrase
+  apply_sentence: We test changes ____ first.
+  apply_answer: safely
+  apply_translation: Probamos cambios de forma segura primero.
+- id: dhl-tl-6-5
+  text: I help HR with daily audits.
+  translation: Ayudo a RRHH con auditorías diarias.
+  visual_hint: 🎩⏱️
+  cloze:
+  - 5
+  glossary:
+  - word: audits
+    meaning: auditorías
+  common: true
+  kind: phrase
+  apply_sentence: I help HR with ____.
+  apply_answer: audits
+  apply_translation: Ayudo a RRHH con auditorías.
+roleplay:
+  ai_role: DHL BI, Reporting & Process Excellence Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Práctica básica A1 sobre: Módulo 6: Stack Técnico (Excel, Power BI, SQL)
+    y Mejora Continua.'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - I have an Engineering degree.
+    - Can you open Excel and Power BI?
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - There are many rows in SQL.
+    - We test changes safely first.

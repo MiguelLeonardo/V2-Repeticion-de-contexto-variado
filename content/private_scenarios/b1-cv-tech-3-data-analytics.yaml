@@ -1,0 +1,100 @@
+id: b1-cv-tech-3-data-analytics
+title: 'Data Analytics: Python, SQL, Power BI & ETL'
+title_es: 'Analítica de Datos: Python, SQL, Power BI, Excel y ETL'
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: 'Stack analítico avanzado: Python, SQL (Avanzado), Power BI, MS Excel
+  (Avanzado), Data Insights Models, ETL y análisis cuantitativo CPGS.'
+phrases:
+- id: cv-tech-3-data-analytics-1
+  text: I write advanced SQL queries and Python scripts for data models.
+  translation: Escribo consultas SQL avanzadas y Python para modelos de datos.
+  visual_hint: 📊🐍
+  cloze:
+  - 4
+  glossary:
+  - word: queries
+    meaning: consultas
+  common: true
+  kind: idiom
+  apply_sentence: Analysts optimize ____ for speed.
+  apply_answer: queries
+  apply_translation: Analistas optimizan consultas por velocidad.
+- id: cv-tech-3-data-analytics-2
+  text: I design ETL pipelines that prepare clean data for Power BI.
+  translation: Diseño pipelines ETL que preparan datos limpios para Power BI.
+  visual_hint: 📊🐍
+  cloze:
+  - 5
+  glossary:
+  - word: prepare
+    meaning: preparan
+  common: true
+  kind: idiom
+  apply_sentence: ETL jobs ____ weekly reports.
+  apply_answer: prepare
+  apply_translation: Trabajos ETL preparan reportes semanales.
+- id: cv-tech-3-data-analytics-3
+  text: In my CPG role, I analyzed supply traceability and shipping KPIs.
+  translation: En mi rol CPG analicé trazabilidad de suministro y KPIs.
+  visual_hint: 📊🐍
+  cloze:
+  - 5
+  glossary:
+  - word: analyzed
+    meaning: analicé
+  common: true
+  kind: idiom
+  apply_sentence: I ____ distribution cost trends.
+  apply_answer: analyzed
+  apply_translation: Analicé tendencias de costo.
+- id: cv-tech-3-data-analytics-4
+  text: Executive dashboards turn raw numbers into clear business insights.
+  translation: Tableros ejecutivos vuelven cifras crudas en hallazgos claros.
+  visual_hint: 📊🐍
+  cloze:
+  - 8
+  glossary:
+  - word: insights
+    meaning: hallazgos
+  common: true
+  kind: idiom
+  apply_sentence: Charts reveal actionable ____.
+  apply_answer: insights
+  apply_translation: Gráficos revelan hallazgos accionables.
+- id: cv-tech-3-data-analytics-5
+  text: Digital planning tools helped us optimize resources and dispatch times.
+  translation: Herramientas digitales ayudaron a optimizar recursos y despacho.
+  visual_hint: 📊🐍
+  cloze:
+  - 5
+  glossary:
+  - word: optimize
+    meaning: optimizar
+  common: true
+  kind: idiom
+  apply_sentence: Analytics ____ resource planning.
+  apply_answer: optimize
+  apply_translation: La analítica optimiza planeación.
+roleplay:
+  ai_role: Head of Business Intelligence & Data
+  user_role: Data-Driven Operations Lead
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Analítica de Datos:
+    Python, SQL, Power BI, Excel y ETL.'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - I write advanced SQL queries and Python scripts for data models.
+    - I design ETL pipelines that prepare clean data for Power BI.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - In my CPG role, I analyzed supply traceability and shipping KPIs.
+    - Executive dashboards turn raw numbers into clear business insights.

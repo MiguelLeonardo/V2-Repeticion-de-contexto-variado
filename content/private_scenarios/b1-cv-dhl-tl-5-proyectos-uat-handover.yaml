@@ -1,0 +1,103 @@
+id: b1-cv-dhl-tl-5-proyectos-uat-handover
+title: 'Module 5: Projects, UAT & Handover'
+title_es: 'Módulo 5: Implementación de Proyectos, UAT y Handover Operativo'
+cefr: B1
+topic: cv-dhl-gsc-tl
+description: Ciclo de vida de proyectos, WBS y Ruta Crítica, EVM (SPI/CPI), coordinación
+  UAT, handover y forecasting.
+phrases:
+- id: dhl-tl-5-1
+  text: I use Work Breakdown Structures to map out tasks and avoid bottlenecks.
+  translation: Uso estructuras EDT para trazar tareas y evitar cuellos de botella.
+  visual_hint: 🗺️🚧
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: map out
+    meaning: trazar / planear
+  common: true
+  kind: idiom
+  apply_sentence: Project leads ____ milestones early.
+  apply_answer: map out
+  apply_translation: Los líderes trazan hitos temprano.
+- id: dhl-tl-5-2
+  text: Tracking EVM metrics helps us catch delays early and stay within budget.
+  translation: Seguir métricas EVM ayuda a detectar retrasos y cuidar el presupuesto.
+  visual_hint: ✂️💵
+  cloze:
+  - 10
+  - 11
+  glossary:
+  - word: within budget
+    meaning: dentro del presupuesto
+  common: true
+  kind: idiom
+  apply_sentence: Careful planning keeps projects ____.
+  apply_answer: within budget
+  apply_translation: Planear con cuidado mantiene el presupuesto.
+- id: dhl-tl-5-3
+  text: I manage Gantt timelines and SOPs for a smooth handover to operations.
+  translation: Gestiono Gantt y SOPs para una entrega fluida a operaciones.
+  visual_hint: 📅🔄
+  cloze:
+  - 9
+  glossary:
+  - word: handover
+    meaning: entrega / traspaso
+  common: true
+  kind: idiom
+  apply_sentence: Projects finish with a formal ____.
+  apply_answer: handover
+  apply_translation: Los proyectos cierran con entrega formal.
+- id: dhl-tl-5-4
+  text: I created labor forecasts so teams could hire and meet demand.
+  translation: Creé pronósticos laborales para contratar y satisfacer demanda.
+  visual_hint: 👷📈
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: meet demand
+    meaning: satisfacer demanda
+  common: true
+  kind: idiom
+  apply_sentence: Accurate forecasts help teams ____.
+  apply_answer: meet demand
+  apply_translation: Pronósticos precisos ayudan a cumplir demanda.
+- id: dhl-tl-5-5
+  text: I reviewed quality deliverables and resolved issues with corporate clients.
+  translation: Revisé entregables de calidad y resolví temas con clientes.
+  visual_hint: ✍️🤝
+  cloze:
+  - 3
+  glossary:
+  - word: deliverables
+    meaning: entregables
+  common: true
+  kind: idiom
+  apply_sentence: Managers sign off on final ____.
+  apply_answer: deliverables
+  apply_translation: Los gerentes aprueban los entregables finales.
+roleplay:
+  ai_role: DHL PMO & Transition Governance Director
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Entrevista funcional B1 sobre procesos y resultados en: Módulo 5: Implementación
+    de Proyectos, UAT y Handover Operativo.'
+  turns:
+  - speaker: ai
+    text: Could you explain how you improved workflows or metrics in your previous
+      roles?
+  - speaker: user
+    goal: Responde usando conectores funcionales (in order to, so that, because) o
+      Present Perfect.
+    suggested_lines:
+    - I use Work Breakdown Structures to map out tasks and avoid bottlenecks.
+    - Tracking EVM metrics helps us catch delays early and stay within budget.
+  - speaker: ai
+    text: How do you keep your team or projects organized when demand grows?
+  - speaker: user
+    goal: Explica tu método laboral con claridad nivel B1.
+    suggested_lines:
+    - I manage Gantt timelines and SOPs for a smooth handover to operations.
+    - I created labor forecasts so teams could hire and meet demand.

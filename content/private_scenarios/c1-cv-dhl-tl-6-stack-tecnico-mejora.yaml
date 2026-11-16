@@ -1,0 +1,182 @@
+id: c1-cv-dhl-tl-6-stack-tecnico-mejora
+title: 'Module 6: Tech Stack (Excel, Power BI, SQL) & Continuous Improvement'
+title_es: 'Módulo 6: Stack Técnico (Excel, Power BI, SQL) y Mejora Continua'
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: Formación en Ingeniería Industrial y Google Cloud/ADK, analítica en Excel/Power
+  BI/SQL/Python, pipelines ETL escalables, simulación SIMIO/ISO/Git y fundamentos
+  operativos.
+phrases:
+- id: dhl-tl-6-1
+  text: I built on my Industrial Engineering degree from Universidad de Ibagué with
+    certifications in Google Cloud Infrastructure, Kubernetes, and Agent Development
+    Kit to stay ahead of the curve in automation.
+  translation: Construí sobre (built on) mi título de Ingeniería Industrial de la
+    Universidad de Ibagué con certificaciones en Google Cloud, Kubernetes y ADK para
+    mantenerme a la vanguardia (stay ahead of the curve) en automatización.
+  visual_hint: 🎓☁️
+  cloze:
+  - 1
+  - 2
+  - 23
+  - 24
+  - 25
+  - 26
+  glossary:
+  - word: build on
+    meaning: construir sobre o complementar
+  - word: stay ahead of the curve
+    meaning: mantenerse a la vanguardia
+  common: true
+  kind: idiom
+  apply_sentence: Team Leaders who ____ their analytical foundation with modern AI
+    and cloud tools always stay ahead of the curve.
+  apply_answer: build on
+  apply_translation: Los Team Leaders que construyen sobre su base analítica con herramientas
+    modernas de IA y nube siempre se mantienen a la vanguardia.
+- id: dhl-tl-6-2
+  text: I leverage advanced MS Excel, Power BI, SQL, and Python to sift through massive
+    datasets, connecting the dots between raw operational metrics and strategic executive
+    updates.
+  translation: Aprovecho MS Excel avanzado, Power BI, SQL y Python para filtrar minuciosamente
+    (sift through) conjuntos masivos de datos, conectando patrones (connecting the
+    dots) entre métricas operativas crudas y reportes ejecutivos estratégicos.
+  visual_hint: 💻📊
+  cloze:
+  - 11
+  - 12
+  - 15
+  - 16
+  - 17
+  glossary:
+  - word: sift through
+    meaning: examinar o filtrar minuciosamente
+  - word: connect the dots
+    meaning: atar cabos o encontrar patrones
+  common: true
+  kind: idiom
+  apply_sentence: Automated Power BI dashboards help global stakeholders ____ immediately
+    without having to sift through raw Excel exports.
+  apply_answer: connect the dots
+  apply_translation: Los tableros automatizados de Power BI ayudan a los stakeholders
+    globales a conectar los puntos de inmediato sin tener que filtrar exportaciones
+    crudas de Excel.
+- id: dhl-tl-6-3
+  text: I build automated ETL pipelines and scalable reporting models from the ground
+    up, using advanced Excel, SQL, and Python to crunch the numbers reliably across
+    multiple stakeholders.
+  translation: Construyo pipelines ETL automatizados y modelos de reporte escalables
+    desde cero (from the ground up), usando Excel avanzado, SQL y Python para procesar
+    los datos (crunch the numbers) con fiabilidad para múltiples stakeholders.
+  visual_hint: 🏗️🧮
+  cloze:
+  - 9
+  - 10
+  - 11
+  - 12
+  - 20
+  - 21
+  glossary:
+  - word: from the ground up
+    meaning: desde cero
+  - word: crunch the numbers
+    meaning: procesar o analizar los datos numéricos
+  common: true
+  kind: idiom
+  apply_sentence: When designing a standardized KPI scorecard ____, analysts rely
+    on SQL and Excel to crunch the numbers accurately.
+  apply_answer: from the ground up
+  apply_translation: Al diseñar un scorecard de KPIs estandarizado desde cero, los
+    analistas confían en SQL y Excel para procesar los datos con precisión.
+- id: dhl-tl-6-4
+  text: I engineer AI agents with ADK, use SIMIO simulations to test the waters before
+    modifying workflows under the hood, conduct ISO audits, and govern documentation
+    versions via Git and GitHub.
+  translation: Desarrollo agentes IA con ADK, uso simulaciones en SIMIO para probar
+    escenarios antes de ejecutar (test the waters) y modificar flujos a nivel arquitectura
+    (under the hood), realizo auditorías ISO y gobierno versiones con Git y GitHub.
+  visual_hint: 🧪🔧
+  cloze:
+  - 10
+  - 11
+  - 12
+  - 16
+  - 17
+  - 18
+  glossary:
+  - word: test the waters
+    meaning: probar o simular escenarios antes de ejecutar
+  - word: under the hood
+    meaning: por dentro o a nivel arquitectura
+  common: true
+  kind: idiom
+  apply_sentence: Running sandbox UAT sessions lets Business Support teams ____ on
+    workflow updates before changing production systems under the hood.
+  apply_answer: test the waters
+  apply_translation: Ejecutar sesiones sandbox de UAT permite a los equipos de Business
+    Support probar actualizaciones de flujos antes de modificar sistemas en producción
+    por dentro.
+- id: dhl-tl-6-5
+  text: Early in my career, I wore many hats managing HR payroll systems, crew coordination,
+    and ISO audits, before conducting time-and-motion studies at Tecnicolor to cut
+    process waste.
+  translation: Al inicio de mi carrera desempeñé múltiples roles (wore many hats)
+    gestionando nómina de RRHH, coordinación de personal y auditorías ISO, antes de
+    realizar estudios de tiempos y movimientos en Tecnicolor para eliminar desperdicios
+    de proceso (cut process waste).
+  visual_hint: 🎩⏱️
+  cloze:
+  - 3
+  - 8
+  - 10
+  glossary:
+  - word: wear many hats
+    meaning: desempeñar múltiples roles o funciones
+  - word: cut waste
+    meaning: eliminar desperdicios o ineficiencias
+  common: true
+  kind: idiom
+  apply_sentence: Business Support Team Leaders often ____, balancing HR administration
+    support while conducting process reviews to cut waste.
+  apply_answer: wear many hats
+  apply_translation: Los Team Leaders de Business Support suelen desempeñar múltiples
+    roles, equilibrando soporte administrativo de RRHH con revisiones de procesos
+    para eliminar desperdicios.
+roleplay:
+  ai_role: DHL BI, Reporting & Process Excellence Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: Evaluación técnica sobre stack analítico (Excel, Power BI, SQL, Python),
+    ETL, validación de procesos, ISO y experiencia base en RRHH/tiempos.
+  turns:
+  - speaker: ai
+    text: How does your Industrial Engineering background combined with AI/Cloud certifications
+      and your Excel, Power BI, SQL, and Python skills add value to Business Support?
+  - speaker: user
+    goal: Explica cómo complementaste ('built on') tu carrera para mantenerte a la
+      vanguardia ('stay ahead of the curve'), y cómo filtras datos ('sift through')
+      conectando patrones ('connecting the dots').
+    suggested_lines:
+    - I built on my Industrial Engineering degree from Universidad de Ibagué with
+      certifications in Google Cloud Infrastructure, Kubernetes, and Agent Development
+      Kit to stay ahead of the curve in automation.
+    - I leverage advanced MS Excel, Power BI, SQL, and Python to sift through massive
+      datasets, connecting the dots between raw operational metrics and strategic
+      executive updates.
+  - speaker: ai
+    text: How do you build scalable reporting solutions and validate workflow changes
+      safely before deploying them?
+  - speaker: user
+    goal: Menciona construir desde cero ('from the ground up') para procesar datos
+      ('crunch the numbers'), simular antes de cambiar arquitectura ('test the waters',
+      'under the hood') y tu versatilidad inicial ('wore many hats', 'cut process
+      waste').
+    suggested_lines:
+    - I build automated ETL pipelines and scalable reporting models from the ground
+      up, using advanced Excel, SQL, and Python to crunch the numbers reliably across
+      multiple stakeholders.
+    - I engineer AI agents with ADK, use SIMIO simulations to test the waters before
+      modifying workflows under the hood, conduct ISO audits, and govern documentation
+      versions via Git and GitHub.
+    - Early in my career, I wore many hats managing HR payroll systems, crew coordination,
+      and ISO audits, before conducting time-and-motion studies at Tecnicolor to cut
+      process waste.

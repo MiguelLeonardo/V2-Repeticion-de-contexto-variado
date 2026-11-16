@@ -1,0 +1,106 @@
+id: b2-cv-dhl-tl-2-torre-control-4pl
+title: 'Module 2: 4PL Control Tower & Support'
+title_es: 'Módulo 2: Operaciones en Torre de Control 4PL y Soporte'
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: Torre de control 4PL, manejo de escalaciones, prevención de churn y fraude,
+  picos de demanda y n8n.
+phrases:
+- id: dhl-tl-2-1
+  text: Running the Control Tower meant tying together fleets, partners, and automated
+    playbooks.
+  translation: Dirigir la Torre significó conectar flotas, aliados y playbooks automatizados.
+  visual_hint: 🗼🔗
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: tying together
+    meaning: conectar entre sí
+  common: true
+  kind: idiom
+  apply_sentence: Our hub excels at ____ regional teams.
+  apply_answer: tying together
+  apply_translation: Nuestro hub destaca conectando equipos regionales.
+- id: dhl-tl-2-2
+  text: Rather than constantly putting out fires, I empowered analysts to step up.
+  translation: En vez de apagar incendios constantemente, empoderé al equipo a responder.
+  visual_hint: 🧯🚀
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: putting out
+    meaning: apagando (incendios)
+  common: true
+  kind: idiom
+  apply_sentence: Clear playbooks stop us from ____ fires daily.
+  apply_answer: putting out
+  apply_translation: Playbooks claros evitan que apaguemos incendios a diario.
+- id: dhl-tl-2-3
+  text: We resolved tech friction to curb churn while cracking down on card fraud.
+  translation: Resolvimos fricciones para frenar el abandono y combatir el fraude.
+  visual_hint: 🛡️📉
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: curb churn
+    meaning: frenar el abandono
+  common: true
+  kind: idiom
+  apply_sentence: Better UX is essential to ____.
+  apply_answer: curb churn
+  apply_translation: Una mejor UX es esencial para frenar el abandono.
+- id: dhl-tl-2-4
+  text: By preparing playbooks early, we braced for volume surges during peak hours.
+  translation: Al preparar playbooks temprano, nos preparamos para picos en horas
+    pico.
+  visual_hint: ⏱️📈
+  cloze:
+  - 10
+  - 11
+  glossary:
+  - word: peak hours
+    meaning: horas pico
+  common: true
+  kind: idiom
+  apply_sentence: We allocate extra agents during ____.
+  apply_answer: peak hours
+  apply_translation: Asignamos agentes extra durante las horas pico.
+- id: dhl-tl-2-5
+  text: We rolled out n8n flows to stop aging tickets from bottling up.
+  translation: Desplegamos flujos n8n para evitar que tickets antiguos se atascaran.
+  visual_hint: 🤖⚡
+  cloze:
+  - 1
+  - 2
+  glossary:
+  - word: rolled out
+    meaning: desplegamos
+  common: true
+  kind: idiom
+  apply_sentence: Last month we ____ automated routing.
+  apply_answer: rolled out
+  apply_translation: El mes pasado desplegamos enrutamiento automático.
+roleplay:
+  ai_role: DHL GSC Service Delivery Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Módulo 2: Operaciones
+    en Torre de Control 4PL y Soporte.'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - Running the Control Tower meant tying together fleets, partners, and automated
+      playbooks.
+    - Rather than constantly putting out fires, I empowered analysts to step up.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - We resolved tech friction to curb churn while cracking down on card fraud.
+    - By preparing playbooks early, we braced for volume surges during peak hours.

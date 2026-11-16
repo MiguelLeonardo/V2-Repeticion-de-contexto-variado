@@ -1,0 +1,107 @@
+id: b2-cv-sc-1-storytelling-networking
+title: Product Storytelling, Storytimes & Soft Skills
+title_es: Storytelling de Producto, Storytimes y Habilidades Blandas
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: Storytelling de producto y operaciones, relatos prácticos del día a día,
+  formación en Universidad de Ibagué, escucha activa y mindset sistémico.
+phrases:
+- id: cv-sc-1-storytelling-networking-1
+  text: Product and operations storytelling turns complex workflows into relatable
+    stories.
+  translation: El storytelling de producto y operaciones vuelve complejos flujos en
+    relatos cercanos.
+  visual_hint: 🎙️💡
+  cloze:
+  - 8
+  glossary:
+  - word: relatable
+    meaning: cercanos / comprensibles
+  common: true
+  kind: idiom
+  apply_sentence: Storytimes make tech ____ for everyone.
+  apply_answer: relatable
+  apply_translation: Storytimes hacen la tecnología cercana.
+- id: cv-sc-1-storytelling-networking-2
+  text: Pairing active listening with assertive communication helps get everyone on
+    the same page.
+  translation: Unir escucha activa con comunicación asertiva alinea a todo el equipo.
+  visual_hint: 🎙️💡
+  cloze:
+  - 11
+  - 12
+  glossary:
+  - word: same page
+    meaning: misma sintonía
+  common: true
+  kind: idiom
+  apply_sentence: Clear narratives get teams on the ____.
+  apply_answer: same page
+  apply_translation: Narrativas claras alinean al equipo.
+- id: cv-sc-1-storytelling-networking-3
+  text: A systemic mindset lets me see how small friction impacts the big picture.
+  translation: Un mindset sistémico deja ver cómo pequeñas fricciones afectan el panorama.
+  visual_hint: 🎙️💡
+  cloze:
+  - 11
+  - 12
+  glossary:
+  - word: big picture
+    meaning: panorama general
+  common: true
+  kind: idiom
+  apply_sentence: Systemic thinkers protect the ____.
+  apply_answer: big picture
+  apply_translation: Pensadores sistémicos cuidan el panorama.
+- id: cv-sc-1-storytelling-networking-4
+  text: Building on my Universidad de Ibagué degree, I balance detail with speed.
+  translation: Sobre mi título de Universidad de Ibagué, equilibro detalle y velocidad.
+  visual_hint: 🎙️💡
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Building on
+    meaning: construyendo sobre
+  common: true
+  kind: idiom
+  apply_sentence: ____ strong basics accelerates growth.
+  apply_answer: Building on
+  apply_translation: Construir sobre bases acelera crecer.
+- id: cv-sc-1-storytelling-networking-5
+  text: Supply negotiation succeeds when data-driven arguments meet collaborative
+    problem-solving.
+  translation: Negociar suministros triunfa cuando datos y solución colaborativa se
+    unen.
+  visual_hint: 🎙️💡
+  cloze:
+  - 7
+  glossary:
+  - word: collaborative
+    meaning: colaborativa
+  common: true
+  kind: idiom
+  apply_sentence: Strong vendor deals need ____ trust.
+  apply_answer: collaborative
+  apply_translation: Acuerdos sólidos exigen confianza colaborativa.
+roleplay:
+  ai_role: Executive Leadership Coach & Tech Peer
+  user_role: Industrial Engineer & Operations Storyteller
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Storytelling
+    de Producto, Storytimes y Habilidades Blandas.'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - Product and operations storytelling turns complex workflows into relatable stories.
+    - Pairing active listening with assertive communication helps get everyone on
+      the same page.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - A systemic mindset lets me see how small friction impacts the big picture.
+    - Building on my Universidad de Ibagué degree, I balance detail with speed.

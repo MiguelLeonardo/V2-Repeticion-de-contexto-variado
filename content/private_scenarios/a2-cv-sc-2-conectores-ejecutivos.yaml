@@ -1,0 +1,100 @@
+id: a2-cv-sc-2-conectores-ejecutivos
+title: Executive Connectors in Operational Context
+title_es: Conectores Ejecutivos en Contexto Operativo (CV)
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: Práctica enfocada de conectores de causa, contraste, propósito e inversión
+  aplicados a logros reales en Rappi, El Carutal y Topografía Satelital.
+phrases:
+- id: cv-sc-2-conectores-ejecutivos-1
+  text: We used n8n because manual queues were slow.
+  translation: Usamos n8n porque las colas manuales eran lentas.
+  visual_hint: 🧩🔗
+  cloze:
+  - 3
+  glossary:
+  - word: because
+    meaning: porque
+  common: true
+  kind: phrase
+  apply_sentence: We used n8n ____ queues were slow.
+  apply_answer: because
+  apply_translation: Usamos n8n porque colas eran lentas.
+- id: cv-sc-2-conectores-ejecutivos-2
+  text: Although holidays were busy, deliveries arrived on time.
+  translation: Aunque hubo festivos, entregas llegaron a tiempo.
+  visual_hint: 🧩🔗
+  cloze:
+  - 0
+  glossary:
+  - word: Although
+    meaning: aunque
+  common: true
+  kind: phrase
+  apply_sentence: ____ holidays were busy, we delivered.
+  apply_answer: Although
+  apply_translation: Aunque hubo festivos, entregamos.
+- id: cv-sc-2-conectores-ejecutivos-3
+  text: I planned shifts so that our plant stayed ready.
+  translation: Planeé turnos para que la planta siguiera lista.
+  visual_hint: 🧩🔗
+  cloze:
+  - 3
+  - 4
+  glossary:
+  - word: so that
+    meaning: para que
+  common: true
+  kind: phrase
+  apply_sentence: I planned shifts ____ teams were ready.
+  apply_answer: so that
+  apply_translation: Planeé turnos para que estuvieran listos.
+- id: cv-sc-2-conectores-ejecutivos-4
+  text: First we check SPI, and then we adjust.
+  translation: Primero revisamos SPI y luego ajustamos.
+  visual_hint: 🧩🔗
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: and then
+    meaning: y luego
+  common: true
+  kind: phrase
+  apply_sentence: We check SPI, ____ we adjust.
+  apply_answer: and then
+  apply_translation: Revisamos SPI y luego ajustamos.
+- id: cv-sc-2-conectores-ejecutivos-5
+  text: We saved money while keeping high quality.
+  translation: Ahorramos dinero mientras mantuvimos alta calidad.
+  visual_hint: 🧩🔗
+  cloze:
+  - 3
+  glossary:
+  - word: while
+    meaning: mientras
+  common: true
+  kind: phrase
+  apply_sentence: We saved money ____ keeping quality.
+  apply_answer: while
+  apply_translation: Ahorramos manteniendo calidad.
+roleplay:
+  ai_role: Executive Communication & Interview Coach
+  user_role: Team Leader Candidate
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Conectores
+    Ejecutivos en Contexto Operativo (CV).'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - We used n8n because manual queues were slow.
+    - I planned shifts so that our plant stayed ready.
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - Although holidays were busy, deliveries arrived on time.
+    - First we check SPI, and then we adjust.

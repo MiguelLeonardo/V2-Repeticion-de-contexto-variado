@@ -1,0 +1,117 @@
+id: c1-cv-pl-2-suministro-flota
+title: Timber Supply Chain, Fleet & Peak Logistics
+title_es: Cadena de Suministro (El Carutal) y Flota en Horas Pico (Rappi)
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en El Carutal y Rappi: canales maderables, previsión de
+  mano de obra, inventarios ERP, coordinación de transportistas, días festivos y flota.'
+phrases:
+- id: cv-pl-2-suministro-flota-1
+  text: I orchestrated timber supply channels and labor forecasting to keep plant
+    capacity aligned.
+  translation: Orquesté canales maderables y previsión laboral para alinear la capacidad
+    de planta.
+  visual_hint: 🚚🌲
+  cloze:
+  - 1
+  glossary:
+  - word: orchestrated
+    meaning: orquesté
+  common: true
+  kind: idiom
+  apply_sentence: Logistics leads ____ supply and labor.
+  apply_answer: orchestrated
+  apply_translation: Líderes logísticos orquestaron suministro y mano de obra.
+- id: cv-pl-2-suministro-flota-2
+  text: Governing ERP inventory cycles and outbound verification left zero blind spots
+    in fulfillment.
+  translation: Gobernar ciclos ERP y verificación de salidas no dejó puntos ciegos
+    en despacho.
+  visual_hint: 🚚🌲
+  cloze:
+  - 9
+  - 10
+  glossary:
+  - word: blind spots
+    meaning: puntos ciegos
+  common: true
+  kind: idiom
+  apply_sentence: Strict verification eliminates ____.
+  apply_answer: blind spots
+  apply_translation: La verificación estricta elimina puntos ciegos.
+- id: cv-pl-2-suministro-flota-3
+  text: By rolling out holiday playbooks per logistics partner, we curbed cancellations
+    across the board.
+  translation: Al desplegar playbooks festivos por operador, frenamos cancelaciones
+    en todas las áreas.
+  visual_hint: 🚚🌲
+  cloze:
+  - 9
+  - 11
+  glossary:
+  - word: curbed
+    meaning: frenamos / en todas áreas
+  - word: across the board
+    meaning: frenamos / en todas áreas
+  common: true
+  kind: idiom
+  apply_sentence: Partner playbooks ____ delays across the board.
+  apply_answer: curbed
+  apply_translation: Playbooks por aliado frenaron retrasos en todas áreas.
+- id: cv-pl-2-suministro-flota-4
+  text: Fine-tuning fleet allocation during peak hours elevated UX while cutting delivery
+    turnaround.
+  translation: Ajustar la flota en horas pico elevó la UX reduciendo tiempos de entrega.
+  visual_hint: 🚚🌲
+  cloze:
+  - 11
+  glossary:
+  - word: turnaround
+    meaning: tiempo de entrega
+  common: true
+  kind: idiom
+  apply_sentence: Smart dispatch slashes delivery ____.
+  apply_answer: turnaround
+  apply_translation: Despacho inteligente reduce tiempo de entrega.
+- id: cv-pl-2-suministro-flota-5
+  text: Delivering executive briefings to corporate accounts smoothed over carrier
+    friction effortlessly.
+  translation: Entregar reportes ejecutivos a cuentas corporativas suavizó fricciones
+    con transportistas.
+  visual_hint: 🚚🌲
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: smoothed over
+    meaning: suavizó
+  common: true
+  kind: idiom
+  apply_sentence: Proactive updates ____ operational friction.
+  apply_answer: smoothed over
+  apply_translation: Avances proactivos suavizaron fricciones operativas.
+roleplay:
+  ai_role: VP of Logistics & Fleet Operations
+  user_role: Logistics Manager Candidate
+  setting: Entrevista sobre planificación de abastecimiento de planta, control ERP,
+    coordinación de transportistas y optimización de flota en picos.
+  turns:
+  - speaker: ai
+    text: Tell me about your experience managing timber supply channels at El Carutal
+      and fleet optimization at Rappi.
+  - speaker: user
+    goal: Conecta el pronóstico de mano de obra y calidad en El Carutal con la reducción
+      de cancelaciones en horas pico en Rappi.
+    suggested_lines:
+    - At El Carutal, I planned timber supply channels, labor forecasting, and ERP
+      inventory cycles to guarantee plant fulfillment.
+    - At Rappi, I built holiday playbooks and optimized fleet dispatch during peak
+      hours to cut cancellations.
+  - speaker: ai
+    text: How did you handle corporate client reporting and carrier coordination?
+  - speaker: user
+    goal: Explica la verificación de entregas, coordinación de transportistas y reportes
+      ejecutivos.
+    suggested_lines:
+    - I directed end-to-end delivery quality verification, coordinated carriers, and
+      delivered executive reports to corporate clients.

@@ -1,0 +1,119 @@
+id: c1-cv-pl-1-obras-evm
+title: Construction Projects, Critical Path & EVM
+title_es: Proyectos Constructivos, Ruta Crítica (CPM) y EVM
+cefr: C1
+topic: cv-dhl-gsc-tl
+description: 'Experiencia en Topografía Satelital de Colombia: EDT (WBS), Ruta Crítica
+  (CPM), Control Financiero EVM (SPI/CPI), Gantt, Asana, Notion y Workday.'
+phrases:
+- id: cv-pl-1-obras-evm-1
+  text: I architect rural civil works from end to end by pairing WBS in Asana with
+    Critical Path optimization.
+  translation: Estructuro obras civiles campestres de punta a punta combinando EDT
+    en Asana con Ruta Crítica.
+  visual_hint: 🏗️📐
+  cloze:
+  - 10
+  - 15
+  glossary:
+  - word: pair
+    meaning: combinar / Ruta Crítica
+  - word: Critical Path
+    meaning: combinar / Ruta Crítica
+  common: true
+  kind: idiom
+  apply_sentence: By optimizing ____ in Notion, we prevent schedule slip.
+  apply_answer: Critical Path
+  apply_translation: Al optimizar Ruta Crítica en Notion, evitamos retrasos.
+- id: cv-pl-1-obras-evm-2
+  text: Leveraging Earned Value Management via SPI and CPI keeps capital allocation
+    tightly within budget.
+  translation: Aprovechar Gestión del Valor Ganado vía SPI y CPI mantiene el capital
+    bajo presupuesto.
+  visual_hint: 🏗️📐
+  cloze:
+  - 12
+  - 13
+  glossary:
+  - word: within budget
+    meaning: dentro del presupuesto
+  common: true
+  kind: idiom
+  apply_sentence: Strict SPI tracking keeps builds ____.
+  apply_answer: within budget
+  apply_translation: El seguimiento SPI mantiene obras en presupuesto.
+- id: cv-pl-1-obras-evm-3
+  text: Coupling Gantt deviation controls with local AI SOPs keeps field execution
+    on track.
+  translation: Combinar control de desviaciones Gantt con SOPs de IA local mantiene
+    la ejecución encarrilada.
+  visual_hint: 🏗️📐
+  cloze:
+  - 11
+  - 12
+  glossary:
+  - word: on track
+    meaning: encarrilada
+  common: true
+  kind: idiom
+  apply_sentence: AI-assisted SOPs keep crews ____.
+  apply_answer: on track
+  apply_translation: SOPs con IA mantienen cuadrillas encarriladas.
+- id: cv-pl-1-obras-evm-4
+  text: Integrating Workday with automated workflows gives leadership real-time visibility
+    across site inventory.
+  translation: Integrar Workday con flujos automáticos da visibilidad en tiempo real
+    del inventario.
+  visual_hint: 🏗️📐
+  cloze:
+  - 7
+  glossary:
+  - word: real-time
+    meaning: tiempo real
+  common: true
+  kind: idiom
+  apply_sentence: Workday pipelines deliver ____ stock metrics.
+  apply_answer: real-time
+  apply_translation: Pipelines en Workday dan métricas en tiempo real.
+- id: cv-pl-1-obras-evm-5
+  text: Disciplined forecasting and deviation management allow us to nip cost overruns
+    in the bud.
+  translation: Previsión disciplinada y control de desviaciones permiten cortar sobrecostos
+    de raíz.
+  visual_hint: 🏗️📐
+  cloze:
+  - 11
+  - 12
+  glossary:
+  - word: in the bud
+    meaning: de raíz
+  common: true
+  kind: idiom
+  apply_sentence: Early CPI alerts nip overruns ____.
+  apply_answer: in the bud
+  apply_translation: Alertas CPI cortan sobrecostos de raíz.
+roleplay:
+  ai_role: PMO & Construction Operations Director
+  user_role: Project & Product Manager (Topografía Satelital)
+  setting: Revisión de avance financiero y cronograma de obras civiles campestres
+    usando EDT, CPM, SPI/CPI y Workday.
+  turns:
+  - speaker: ai
+    text: How do you structure our civil construction projects and keep both budget
+      and schedule under control?
+  - speaker: user
+    goal: Explica cómo usas WBS/EDT y Critical Path en Asana/Notion junto con EVM
+      (SPI y CPI).
+    suggested_lines:
+    - I structure civil works using Work Breakdown Structures and Critical Path optimization
+      in Asana, Notion, and Excel.
+    - Using Earned Value Management with SPI and CPI metrics, we spot deviations early
+      and keep every project on budget.
+  - speaker: ai
+    text: What about team coordination and supply chain tracking on site?
+  - speaker: user
+    goal: Menciona tableros Gantt, SOPs asistidos por IA local y trazabilidad de inventarios
+      en Workday.
+    suggested_lines:
+    - We coordinate technical crews with Gantt boards, deviation controls, and local
+      AI-assisted SOPs while tracking inventory in Workday.

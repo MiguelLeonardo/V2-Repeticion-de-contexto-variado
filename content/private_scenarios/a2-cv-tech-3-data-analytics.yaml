@@ -1,0 +1,99 @@
+id: a2-cv-tech-3-data-analytics
+title: 'Data Analytics: Python, SQL, Power BI & ETL'
+title_es: 'Analítica de Datos: Python, SQL, Power BI, Excel y ETL'
+cefr: A2
+topic: cv-dhl-gsc-tl
+description: 'Stack analítico avanzado: Python, SQL (Avanzado), Power BI, MS Excel
+  (Avanzado), Data Insights Models, ETL y análisis cuantitativo CPGS.'
+phrases:
+- id: cv-tech-3-data-analytics-1
+  text: I used Excel and SQL to sort big tables.
+  translation: Usé Excel y SQL para ordenar tablas grandes.
+  visual_hint: 📊🐍
+  cloze:
+  - 1
+  glossary:
+  - word: used
+    meaning: usé
+  common: true
+  kind: phrase
+  apply_sentence: I ____ SQL to sort tables.
+  apply_answer: used
+  apply_translation: Usé SQL para ordenar tablas.
+- id: cv-tech-3-data-analytics-2
+  text: Python scripts cleaned raw files before reporting.
+  translation: Scripts Python limpiaron archivos antes de reportar.
+  visual_hint: 📊🐍
+  cloze:
+  - 2
+  glossary:
+  - word: cleaned
+    meaning: limpiaron
+  common: true
+  kind: phrase
+  apply_sentence: Python scripts ____ raw logs.
+  apply_answer: cleaned
+  apply_translation: Scripts Python limpiaron registros.
+- id: cv-tech-3-data-analytics-3
+  text: Could you open the Power BI cost dashboard?
+  translation: ¿Podrías abrir el tablero de costos en Power BI?
+  visual_hint: 📊🐍
+  cloze:
+  - 0
+  - 1
+  glossary:
+  - word: Could you
+    meaning: podrías
+  common: true
+  kind: phrase
+  apply_sentence: ____ open the Power BI chart?
+  apply_answer: Could you
+  apply_translation: ¿Podrías abrir el gráfico Power BI?
+- id: cv-tech-3-data-analytics-4
+  text: At Rappi CPGS, I checked supply numbers daily.
+  translation: En Rappi CPGS revisé cifras de suministro a diario.
+  visual_hint: 📊🐍
+  cloze:
+  - 4
+  glossary:
+  - word: checked
+    meaning: revisé
+  common: true
+  kind: phrase
+  apply_sentence: I ____ supply numbers at Rappi.
+  apply_answer: checked
+  apply_translation: Revisé cifras de suministro en Rappi.
+- id: cv-tech-3-data-analytics-5
+  text: ETL tools moved data safely to our dashboards.
+  translation: Herramientas ETL movieron datos seguro a tableros.
+  visual_hint: 📊🐍
+  cloze:
+  - 2
+  glossary:
+  - word: moved
+    meaning: movieron
+  common: true
+  kind: phrase
+  apply_sentence: ETL tools ____ data automatically.
+  apply_answer: moved
+  apply_translation: Herramientas ETL movieron datos.
+roleplay:
+  ai_role: Head of Business Intelligence & Data
+  user_role: Data-Driven Operations Lead
+  setting: 'Conversación A2 sobre experiencia pasada y peticiones sencillas en: Analítica
+    de Datos: Python, SQL, Power BI, Excel y ETL.'
+  turns:
+  - speaker: ai
+    text: Hi! What did you do in your last job?
+  - speaker: user
+    goal: Usa pasado simple básico para contar qué hiciste.
+    suggested_lines:
+    - I used Excel and SQL to sort big tables.
+    - Could you open the Power BI cost dashboard?
+  - speaker: ai
+    text: That sounds helpful. What do you want to check today?
+  - speaker: user
+    goal: Haz una pregunta cortés con 'Could you...' o describe tu apoyo.
+    suggested_lines:
+    - Python scripts cleaned raw files before reporting.
+    - At Rappi CPGS, I checked supply numbers daily.

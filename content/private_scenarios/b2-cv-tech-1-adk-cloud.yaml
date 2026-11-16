@@ -1,0 +1,100 @@
+id: b2-cv-tech-1-adk-cloud
+title: AI Agents (Google ADK), Cloud & Kubernetes
+title_es: Agentes IA (Google ADK), Cloud y Kubernetes
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: Certificaciones en Google ADK (Sept. 2026), Google Cloud Core Infrastructure,
+  Kubernetes Engine y SOPs asistidos por IA local.
+phrases:
+- id: cv-tech-1-adk-cloud-1
+  text: With Google ADK and Cloud certifications, I bridge operations and AI.
+  translation: Con certificaciones Google ADK y Cloud, uno operaciones e IA.
+  visual_hint: 🤖☁️
+  cloze:
+  - 7
+  glossary:
+  - word: bridge
+    meaning: unir / conectar
+  common: true
+  kind: idiom
+  apply_sentence: Certifications ____ engineering and AI.
+  apply_answer: bridge
+  apply_translation: Certificaciones unen ingeniería e IA.
+- id: cv-tech-1-adk-cloud-2
+  text: Understanding Kubernetes Engine helps me deploy resilient cloud services.
+  translation: Entender Kubernetes Engine me ayuda a desplegar servicios resilientes.
+  visual_hint: 🤖☁️
+  cloze:
+  - 6
+  glossary:
+  - word: resilient
+    meaning: resilientes
+  common: true
+  kind: idiom
+  apply_sentence: GKE keeps workloads ____.
+  apply_answer: resilient
+  apply_translation: GKE mantiene cargas resilientes.
+- id: cv-tech-1-adk-cloud-3
+  text: Local AI-assisted SOPs accelerate onboarding without exposing private data.
+  translation: SOPs con IA local aceleran el onboarding sin exponer datos privados.
+  visual_hint: 🤖☁️
+  cloze:
+  - 6
+  glossary:
+  - word: exposing
+    meaning: exponer
+  common: true
+  kind: idiom
+  apply_sentence: Local AI runs without ____ secrets.
+  apply_answer: exposing
+  apply_translation: La IA local corre sin exponer secretos.
+- id: cv-tech-1-adk-cloud-4
+  text: We build agentic pipelines with thresholds that serve as a safety net.
+  translation: Construimos pipelines agénticos con umbrales como red de seguridad.
+  visual_hint: 🤖☁️
+  cloze:
+  - 10
+  - 11
+  glossary:
+  - word: safety net
+    meaning: red de seguridad
+  common: true
+  kind: idiom
+  apply_sentence: Thresholds act as a ____.
+  apply_answer: safety net
+  apply_translation: Umbrales actúan como red de seguridad.
+- id: cv-tech-1-adk-cloud-5
+  text: Staying updated in cloud computing keeps our processes ahead of the curve.
+  translation: Mantenerse al día en cloud mantiene procesos a la vanguardia.
+  visual_hint: 🤖☁️
+  cloze:
+  - 8
+  - 9
+  glossary:
+  - word: ahead of
+    meaning: a la vanguardia
+  common: true
+  kind: idiom
+  apply_sentence: Continuous learning keeps us ____.
+  apply_answer: ahead of
+  apply_translation: Aprender continuo mantiene a la vanguardia.
+roleplay:
+  ai_role: Principal Cloud & AI Architecture Lead
+  user_role: Agentic Automation Engineer
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Agentes IA
+    (Google ADK), Cloud y Kubernetes.'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - With Google ADK and Cloud certifications, I bridge operations and AI.
+    - Understanding Kubernetes Engine helps me deploy resilient cloud services.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - Local AI-assisted SOPs accelerate onboarding without exposing private data.
+    - We build agentic pipelines with thresholds that serve as a safety net.

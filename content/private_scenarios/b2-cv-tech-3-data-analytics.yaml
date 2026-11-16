@@ -1,0 +1,102 @@
+id: b2-cv-tech-3-data-analytics
+title: 'Data Analytics: Python, SQL, Power BI & ETL'
+title_es: 'Analítica de Datos: Python, SQL, Power BI, Excel y ETL'
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: 'Stack analítico avanzado: Python, SQL (Avanzado), Power BI, MS Excel
+  (Avanzado), Data Insights Models, ETL y análisis cuantitativo CPGS.'
+phrases:
+- id: cv-tech-3-data-analytics-1
+  text: Leveraging Python, SQL, and Power BI, I sift through complex datasets.
+  translation: Usando Python, SQL y Power BI, filtro conjuntos de datos complejos.
+  visual_hint: 📊🐍
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: sift through
+    meaning: filtrar minuciosamente
+  common: true
+  kind: idiom
+  apply_sentence: Dashboards help us ____ raw logs.
+  apply_answer: sift through
+  apply_translation: Tableros ayudan a filtrar registros.
+- id: cv-tech-3-data-analytics-2
+  text: Building automated ETL models from the ground up removes manual errors.
+  translation: Construir modelos ETL desde cero elimina errores manuales.
+  visual_hint: 📊🐍
+  cloze:
+  - 6
+  - 7
+  glossary:
+  - word: ground up
+    meaning: desde cero
+  common: true
+  kind: idiom
+  apply_sentence: We built pipelines from the ____.
+  apply_answer: ground up
+  apply_translation: Construimos pipelines desde cero.
+- id: cv-tech-3-data-analytics-3
+  text: As a CPG Analyst, I drilled down into traceability to cut costs.
+  translation: Como Analista CPG, profundicé en trazabilidad para bajar costos.
+  visual_hint: 📊🐍
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: drilled down
+    meaning: profundicé
+  common: true
+  kind: idiom
+  apply_sentence: We ____ into delivery logs.
+  apply_answer: drilled down
+  apply_translation: Profundizamos en registros de entrega.
+- id: cv-tech-3-data-analytics-4
+  text: Power BI scorecards help stakeholders connect the dots across KPIs.
+  translation: Scorecards en Power BI ayudan a conectar puntos entre KPIs.
+  visual_hint: 📊🐍
+  cloze:
+  - 5
+  - 6
+  glossary:
+  - word: connect the dots
+    meaning: conectar los puntos
+  common: true
+  kind: idiom
+  apply_sentence: Visuals let leaders ____.
+  apply_answer: connect the dots
+  apply_translation: Visuales permiten conectar puntos.
+- id: cv-tech-3-data-analytics-5
+  text: Advanced Excel and Python let us crunch the numbers accurately.
+  translation: Excel avanzado y Python permiten procesar cifras con precisión.
+  visual_hint: 📊🐍
+  cloze:
+  - 6
+  glossary:
+  - word: crunch
+    meaning: procesar
+  common: true
+  kind: idiom
+  apply_sentence: Scripts ____ millions of rows.
+  apply_answer: crunch
+  apply_translation: Scripts procesan millones de filas.
+roleplay:
+  ai_role: Head of Business Intelligence & Data
+  user_role: Data-Driven Operations Lead
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Analítica de
+    Datos: Python, SQL, Power BI, Excel y ETL.'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - Leveraging Python, SQL, and Power BI, I sift through complex datasets.
+    - Building automated ETL models from the ground up removes manual errors.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - As a CPG Analyst, I drilled down into traceability to cut costs.
+    - Power BI scorecards help stakeholders connect the dots across KPIs.

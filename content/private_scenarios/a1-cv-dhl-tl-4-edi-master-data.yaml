@@ -1,0 +1,98 @@
+id: a1-cv-dhl-tl-4-edi-master-data
+title: 'Module 4: EDI, Master Data & Supply Chain'
+title_es: 'Módulo 4: Integraciones EDI, Master Data y Cadena de Suministro'
+cefr: A1
+topic: cv-dhl-gsc-tl
+description: Master Data, control documental, gobernanza a prueba de auditorías, integraciones
+  SAP/CargoWise/EDI y costos CPG.
+phrases:
+- id: dhl-tl-4-1
+  text: Where are all the client files?
+  translation: ¿Dónde están todos los archivos de clientes?
+  visual_hint: 🗂️🔎
+  cloze:
+  - 5
+  glossary:
+  - word: files
+    meaning: archivos
+  common: true
+  kind: phrase
+  apply_sentence: Where are the client ____?
+  apply_answer: files
+  apply_translation: ¿Dónde están los archivos de clientes?
+- id: dhl-tl-4-2
+  text: Our records pass every audit.
+  translation: Nuestros registros pasan toda auditoría.
+  visual_hint: 🏛️⚡
+  cloze:
+  - 4
+  glossary:
+  - word: audit
+    meaning: auditoría
+  common: true
+  kind: phrase
+  apply_sentence: Clean records pass every ____.
+  apply_answer: audit
+  apply_translation: Registros limpios pasan toda auditoría.
+- id: dhl-tl-4-3
+  text: Can I fix this system error?
+  translation: ¿Puedo arreglar este error del sistema?
+  visual_hint: 🔌🛠️
+  cloze:
+  - 4
+  glossary:
+  - word: system
+    meaning: sistema
+  common: true
+  kind: phrase
+  apply_sentence: Can I fix this ____ error?
+  apply_answer: system
+  apply_translation: ¿Puedo arreglar este error del sistema?
+- id: dhl-tl-4-4
+  text: I check supply data every morning.
+  translation: Reviso datos de suministro cada mañana.
+  visual_hint: 📦📉
+  cloze:
+  - 2
+  glossary:
+  - word: supply
+    meaning: suministro
+  common: true
+  kind: phrase
+  apply_sentence: I check ____ data every morning.
+  apply_answer: supply
+  apply_translation: Reviso datos de suministro cada mañana.
+- id: dhl-tl-4-5
+  text: We need more staff right now.
+  translation: Necesitamos más personal ahora mismo.
+  visual_hint: 🎛️📈
+  cloze:
+  - 3
+  glossary:
+  - word: staff
+    meaning: personal
+  common: true
+  kind: phrase
+  apply_sentence: We need more ____ right now.
+  apply_answer: staff
+  apply_translation: Necesitamos más personal ahora mismo.
+roleplay:
+  ai_role: DHL Master Data & Systems Integration Manager
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Práctica básica A1 sobre: Módulo 4: Integraciones EDI, Master Data y Cadena
+    de Suministro.'
+  turns:
+  - speaker: ai
+    text: Hello! Tell me about your work and tools.
+  - speaker: user
+    goal: Responde en presente simple usando frases cortas (4 a 7 palabras).
+    suggested_lines:
+    - Where are all the client files?
+    - Our records pass every audit.
+  - speaker: ai
+    text: Great! How do you help your team every day?
+  - speaker: user
+    goal: Menciona cómo apoyas al equipo con vocabulario básico.
+    suggested_lines:
+    - Can I fix this system error?
+    - I check supply data every morning.

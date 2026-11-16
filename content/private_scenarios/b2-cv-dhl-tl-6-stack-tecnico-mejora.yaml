@@ -1,0 +1,104 @@
+id: b2-cv-dhl-tl-6-stack-tecnico-mejora
+title: 'Module 6: Tech Stack & Continuous Improvement'
+title_es: 'Módulo 6: Stack Técnico (Excel, Power BI, SQL) y Mejora Continua'
+cefr: B2
+topic: cv-dhl-gsc-tl
+description: Ingeniería Industrial, Google Cloud/ADK, Excel/Power BI/SQL/Python, ETL,
+  SIMIO, ISO, Git y estudios de tiempos.
+phrases:
+- id: dhl-tl-6-1
+  text: I built on my engineering degree with Cloud and ADK to stay ahead of the curve.
+  translation: Construí sobre mi ingeniería con Cloud y ADK para ir a la vanguardia.
+  visual_hint: 🎓☁️
+  cloze:
+  - 12
+  - 13
+  glossary:
+  - word: ahead of
+    meaning: a la vanguardia
+  common: true
+  kind: idiom
+  apply_sentence: Learning AI keeps us ____ the curve.
+  apply_answer: ahead of
+  apply_translation: Aprender IA nos mantiene a la vanguardia.
+- id: dhl-tl-6-2
+  text: Using SQL and Power BI, I sift through datasets to connect the dots.
+  translation: Usando SQL y Power BI, filtro datos para conectar los puntos.
+  visual_hint: 💻📊
+  cloze:
+  - 10
+  - 11
+  glossary:
+  - word: connect the dots
+    meaning: conectar los puntos
+  common: true
+  kind: idiom
+  apply_sentence: Clean visuals help managers ____.
+  apply_answer: connect the dots
+  apply_translation: Visuales claros ayudan a conectar puntos.
+- id: dhl-tl-6-3
+  text: I design automated ETL models from the ground up to crunch the numbers.
+  translation: Diseño modelos ETL automatizados desde cero para procesar cifras.
+  visual_hint: 🏗️🧮
+  cloze:
+  - 7
+  - 8
+  glossary:
+  - word: ground up
+    meaning: desde cero
+  common: true
+  kind: idiom
+  apply_sentence: We built the scorecard from the ____.
+  apply_answer: ground up
+  apply_translation: Construimos el scorecard desde cero.
+- id: dhl-tl-6-4
+  text: We use SIMIO to test the waters before altering workflows under the hood.
+  translation: Usamos SIMIO para probar antes de alterar flujos por dentro.
+  visual_hint: 🧪🔧
+  cloze:
+  - 4
+  - 5
+  glossary:
+  - word: test the waters
+    meaning: probar escenarios
+  common: true
+  kind: idiom
+  apply_sentence: Sandboxes let teams ____ safely.
+  apply_answer: test the waters
+  apply_translation: Los sandboxes permiten probar con seguridad.
+- id: dhl-tl-6-5
+  text: I wore many hats in HR payroll and time studies to cut process waste.
+  translation: Desempeñé múltiples roles en nómina y estudios de tiempos para reducir
+    desperdicio.
+  visual_hint: 🎩⏱️
+  cloze:
+  - 2
+  - 3
+  glossary:
+  - word: many hats
+    meaning: múltiples roles
+  common: true
+  kind: idiom
+  apply_sentence: Support leads often wear ____.
+  apply_answer: many hats
+  apply_translation: Los líderes de soporte suelen desempeñar muchos roles.
+roleplay:
+  ai_role: DHL BI, Reporting & Process Excellence Lead
+  user_role: Team Leader (Business Support) Candidate
+  setting: 'Entrevista técnica B2 con condicionales y colocaciones en: Módulo 6: Stack
+    Técnico (Excel, Power BI, SQL) y Mejora Continua.'
+  turns:
+  - speaker: ai
+    text: How would you handle bottlenecks or data quality risks across regional teams?
+  - speaker: user
+    goal: Usa condicionales, voz pasiva o colocaciones profesionales.
+    suggested_lines:
+    - I built on my engineering degree with Cloud and ADK to stay ahead of the curve.
+    - Using SQL and Power BI, I sift through datasets to connect the dots.
+  - speaker: ai
+    text: And what practices have you been using to maintain high performance?
+  - speaker: user
+    goal: Describe prácticas continuas y resultados medibles.
+    suggested_lines:
+    - I design automated ETL models from the ground up to crunch the numbers.
+    - We use SIMIO to test the waters before altering workflows under the hood.
