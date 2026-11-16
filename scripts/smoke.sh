@@ -20,7 +20,7 @@ H=(-H "Authorization: Bearer $TOKEN")
 
 N=$(curl -fsS "${H[@]}" "$BASE/v1/levels" | j 'len(d)'); [[ "$N" == 6 ]] && pass "6 CEFR levels" || fail levels
 STAGES=$(curl -fsS "${H[@]}" "$BASE/v1/lessons/a1-ordering-coffee" | j '",".join(s["type"] for s in d["stages"])')
-[[ "$STAGES" == "shadowing,recall,guided,completion" ]] && pass "lesson stages" || fail "stages=$STAGES"
+[[ "$STAGES" == "shadowing,guided,completion,recall" ]] && pass "lesson stages" || fail "stages=$STAGES"
 
 EX="a1-ordering-coffee.can-i-have.shadowing"
 if [[ "${USE_MOCK:-1}" == 1 ]]; then

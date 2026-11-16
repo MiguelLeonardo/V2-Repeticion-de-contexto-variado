@@ -181,8 +181,11 @@
           🎙️
         </div>
         <div>
-          <span class="font-bold text-base tracking-tight text-white">SpeakFlow</span>
-          <span class="hidden sm:inline-block text-xs text-slate-400 ml-2">Inglés conversacional paso a paso</span>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-base tracking-tight text-white">SpeakFlow V2</span>
+            <span class="px-2 py-0.5 rounded-full bg-indigo-500/20 border border-indigo-400/40 text-[10px] font-bold text-indigo-300 uppercase tracking-wider">Repetición de Contexto Variado</span>
+          </div>
+          <span class="hidden sm:inline-block text-xs text-slate-400">Cada modismo en 4 contextos distintos (Sombra → Practica → Completa → Aplica) + Conversa con IA</span>
         </div>
       </div>
 
@@ -64267,8 +64270,8 @@
     function getIdiomFocus(scenarioId = '', phraseId = '', phraseObj = null) {
       let p = phraseObj;
       if (!p && scenarioId && phraseId) {
-        const sc = (typeof SCENARIOS !== 'undefined' ? SCENARIOS : []).find(s => s.id === scenarioId)
-          || (state.currentScenario && state.currentScenario.id === scenarioId ? state.currentScenario : null);
+        const sc = (state.currentScenario && state.currentScenario.id === scenarioId ? state.currentScenario : null)
+          || (typeof FALLBACK_SCENARIOS !== 'undefined' ? FALLBACK_SCENARIOS : []).find(s => s.id === scenarioId);
         if (sc && sc.phrases) p = sc.phrases.find(x => x.id === phraseId) || null;
       }
       if (!p) return { label: '', meaning: '', terms: [] };
@@ -64285,8 +64288,11 @@
         if (clozeWords.length) terms.push(clozeWords.join(' '));
       }
       const uniqueTerms = [...new Set(terms.filter(Boolean))];
-      const label = p.apply_answer || (p.glossary && p.glossary[0] && p.glossary[0].word) || uniqueTerms[0] || '';
-      const meaning = (p.glossary && p.glossary[0] && p.glossary[0].meaning) || '';
+      const glossWords = Array.isArray(p.glossary) ? p.glossary.map(g => g && g.word && g.word.trim()).filter(Boolean) : [];
+      const label = p.apply_answer || (glossWords.length ? glossWords.join(' · ') : uniqueTerms[0] || '');
+      const meaning = Array.isArray(p.glossary) && p.glossary.length
+        ? p.glossary.map(g => g && g.meaning).filter(Boolean).join(' / ')
+        : '';
       return { label, meaning, terms: uniqueTerms };
     }
 
@@ -64707,12 +64713,253 @@
     }
 
     function buildLocalLesson(scenario) {
-      const cloze = p => { const s = new Set(p.cloze || [1]); return p.text.split(' ').map((w, i) => s.has(i) ? '____' : w).join(' '); };
-      const getIdiomTarget = p => {
-        const info = getIdiomFocus(scenario.id, p.id, p);
-        return info.label || p.text;
+      const firstHint = t => String(t || '').split(/\s+/).map(w => {
+        const c = w.replace(/[.,!?]+$/, '');
+        if (c.length <= 1) return w;
+        const count = Math.min(c.length - 1, Math.max(c.length >= 4 ? 2 : 1, Math.round(c.length * 0.33)));
+        return c.slice(0, count) + '_'.repeat(c.length - count) + w.slice(c.length);
+      }).join(' ');
+
+      const shortMean = (g, fallback) => {
+        if (!g || !g.meaning) return fallback;
+        let m = g.meaning.split('/')[0].split('(')[0].trim();
+        if (m.includes(':')) m = m.split(':').slice(1).join(':').trim();
+        return (!m || m.length > 32) ? fallback : m;
       };
-      const mk = (p, type, support, th, inst, disp, tr, gl, aud, expOverride = null, ctxSentence = null) => {
+
+      const extractTargets = p => {
+        const info = getIdiomFocus(scenario.id, p.id, p);
+        const glossList = Array.isArray(p.glossary) ? p.glossary : [];
+        const g0 = glossList[0] || null;
+        const g1 = glossList[1] || null;
+        const rawTarget0 = (info.label || (g0 && g0.word) || '').trim();
+        const target0 = rawTarget0 || (p.text || '').split(/\s+/).find(w => w.replace(/[^a-zA-Z]/g, '').length > 3) || 'expression';
+        const target1 = (g1 && g1.word && g1.word.toLowerCase() !== target0.toLowerCase()) ? g1.word.trim() : '';
+        const mean0 = shortMean(g0, target0);
+        const mean1 = target1 ? shortMean(g1, target1) : '';
+        const targetTerms = [target0, target1]
+          .filter(Boolean)
+          .flatMap(t => t.split(/\s+/))
+          .map(w => w.replace(/[^a-zA-Z0-9'-]/g, ''))
+          .filter(Boolean);
+        return {
+          info,
+          target0,
+          target1,
+          mean0,
+          mean1,
+          terms: targetTerms.length ? [...new Set(targetTerms)] : info.terms
+        };
+      };
+
+      const maskSentence = (sentence, terms, mode) => {
+        const tokens = String(sentence || '').split(/\s+/);
+        const mask = computeIdiomTokenMask(tokens, terms);
+        if (!mask.some(Boolean) && tokens.length) {
+          mask[Math.floor(tokens.length / 2)] = true;
+        }
+        return tokens.map((tok, i) => {
+          if (!mask[i]) return tok;
+          if (mode === 'cloze') {
+            const core = tok.replace(/[.,!?]+$/, '');
+            const tail = tok.slice(core.length);
+            return '____' + tail;
+          }
+          return firstHint(tok);
+        }).join(' ');
+      };
+
+      const extractVp = (sentence, target) => {
+        const s = String(sentence || '');
+        const idx = s.toLowerCase().indexOf(String(target || '').toLowerCase());
+        if (idx === -1) return target;
+        let vp = s.slice(idx).trim();
+        for (const sep of ['?', '!', '.', ';', ', please', ' please']) {
+          if (vp.includes(sep)) vp = vp.split(sep)[0].trim();
+        }
+        return vp || target;
+      };
+
+      const variedContext = (p, stageType, idx, targets) => {
+        const { target0, mean0 } = targets;
+        const lower0 = target0.toLowerCase();
+        const baseEn = String(p.text || '').trim();
+        const baseEs = String(p.translation || '').split('(')[0].trim().replace(/\.$/, '');
+
+        if (p.kind === 'phrasal_verb') {
+          const vpText = extractVp(baseEn, target0);
+          let vpApply = target0;
+          if (p.apply_sentence && p.apply_sentence.includes('____')) {
+            const after = p.apply_sentence.split('____')[1].trim().replace(/[.!?]+$/, '');
+            if (after && !after.startsWith(',')) {
+              vpApply = `${target0} ${after}`.split(',')[0].trim();
+            }
+          }
+          if (lower0.endsWith('ing')) {
+            if (stageType === 'guided') {
+              return {
+                en: `At the central station, my coworker was ${vpApply}.`,
+                es: `En la estación central, mi compañero estaba aplicando "${mean0}".`
+              };
+            }
+            if (stageType === 'completion') {
+              return {
+                en: `During the afternoon break, we were ${vpText}.`,
+                es: `Durante la pausa de la tarde, estábamos practicando "${mean0}".`
+              };
+            }
+            return {
+              en: `Right before the flight, several passengers were ${vpApply}.`,
+              es: `Justo antes del vuelo, varios pasajeros estaban usando "${mean0}".`
+            };
+          }
+          if (stageType === 'guided') {
+            const opts = [
+              {
+                en: `During a busy morning at work, you often need to ${vpText}.`,
+                es: `En una mañana ocupada en el trabajo, a menudo necesitas "${mean0}" (${baseEs.toLowerCase()}).`
+              },
+              {
+                en: `When traveling with friends, we always try to ${vpText}.`,
+                es: `Al viajar con amigos, siempre intentamos "${mean0}" en esta situación.`
+              },
+              {
+                en: `At the service counter, the staff asked us to ${vpText}.`,
+                es: `En el mostrador de atención, el personal nos pidió "${mean0}".`
+              }
+            ];
+            return opts[idx % opts.length];
+          }
+          if (stageType === 'completion') {
+            const opts = [
+              {
+                en: `Before finishing the shift, make sure to ${vpApply}.`,
+                es: `Antes de terminar el turno, asegúrate de "${mean0}" según lo indicado.`
+              },
+              {
+                en: `Even on a hectic Monday, our team managed to ${vpApply}.`,
+                es: `Incluso en un lunes ajetreado, nuestro equipo logró "${mean0}" a tiempo.`
+              },
+              {
+                en: `At the hotel reception, guests usually need to ${vpApply}.`,
+                es: `En la recepción del hotel, los huéspedes suelen necesitar "${mean0}".`
+              }
+            ];
+            return opts[idx % opts.length];
+          }
+          const opts = [
+            {
+              en: `Whenever a new client arrives, we ${vpApply} right away.`,
+              es: `Siempre que llega un cliente nuevo, decidimos "${mean0}" de inmediato.`
+            },
+            {
+              en: `Before the meeting starts, everyone should ${vpApply}.`,
+              es: `Antes de que empiece la reunión, todos deberían "${mean0}".`
+            }
+          ];
+          return opts[idx % opts.length];
+        }
+
+        if (p.kind === 'idiom' || p.kind === 'expression') {
+          const isNominal = /^(a |an |the |piece of)/i.test(lower0);
+          const isVerbIdiom = /^(have |call |make |take |get |feel |fit |break |hit |cut |keep |let )/i.test(lower0);
+          if (stageType === 'guided') {
+            if (isNominal) {
+              return {
+                en: `Thanks to the clear guide, setting up the account was ${target0} for the team.`,
+                es: `Gracias a la guía clara, configurar la cuenta fue "${mean0}" para el equipo.`
+              };
+            }
+            if (isVerbIdiom) {
+              return {
+                en: `After finishing the main presentation, the team decided to ${target0} together.`,
+                es: `Después de terminar la presentación principal, el equipo decidió "${mean0}" juntos.`
+              };
+            }
+            return {
+              en: `At the downtown office, our colleagues handled the request ${target0} this morning.`,
+              es: `En la oficina del centro, nuestros colegas gestionaron la solicitud "${mean0}" esta mañana.`
+            };
+          }
+          if (stageType === 'completion') {
+            if (isNominal) {
+              return {
+                en: `Once we practiced the steps, the final interview felt like ${target0} today.`,
+                es: `Una vez que practicamos los pasos, la entrevista final se sintió como "${mean0}" hoy.`
+              };
+            }
+            if (isVerbIdiom) {
+              return {
+                en: `Before the weekend trip starts, we always ${target0} so everything goes well.`,
+                es: `Antes de que empiece el viaje de fin de semana, siempre procuramos "${mean0}" para que todo salga bien.`
+              };
+            }
+            return {
+              en: `During the afternoon check-in, the receptionist confirmed our booking ${target0}.`,
+              es: `Durante el registro de la tarde, la recepcionista confirmó nuestra reserva "${mean0}".`
+            };
+          }
+          return {
+            en: `In the new project, everyone was glad to see the plan work ${target0}.`,
+            es: `En el nuevo proyecto, todos se alegraron de ver funcionar el plan "${mean0}".`
+          };
+        }
+
+        const clause = (baseEn.length > 1 && !/^I[\s']/i.test(baseEn))
+          ? baseEn[0].toLowerCase() + baseEn.slice(1)
+          : baseEn;
+        if (stageType === 'guided') {
+          const frames = [
+            {
+              en: `At the hotel lounge, you turn to the staff and say: ${clause}`,
+              es: `En el salón del hotel, te diriges al personal y dices: «${baseEs}».`
+            },
+            {
+              en: `During your morning break downtown, you politely say: ${clause}`,
+              es: `Durante tu descanso de la mañana en el centro, dices con cortesía: «${baseEs}».`
+            },
+            {
+              en: `At the airport counter before boarding, you tell the agent: ${clause}`,
+              es: `En el mostrador del aeropuerto antes de abordar, dices al agente: «${baseEs}».`
+            }
+          ];
+          return frames[idx % frames.length];
+        }
+        if (stageType === 'completion') {
+          const frames = [
+            {
+              en: `While visiting a new city with friends, you step up and say: ${clause}`,
+              es: `Mientras visitas una ciudad nueva con amigos, te acercas y dices: «${baseEs}».`
+            },
+            {
+              en: `At the central station desk, you smile and say: ${clause}`,
+              es: `En el mostrador de la estación central, sonríes y dices: «${baseEs}».`
+            },
+            {
+              en: `Before the afternoon meeting begins, you ask the host: ${clause}`,
+              es: `Antes de que empiece la reunión de la tarde, dices al anfitrión: «${baseEs}».`
+            }
+          ];
+          return frames[idx % frames.length];
+        }
+        const frames = [
+          {
+            en: `Later that evening at the reception desk, you naturally say: ${clause}`,
+            es: `Más tarde esa noche en recepción, dices con naturalidad: «${baseEs}».`
+          },
+          {
+            en: `When arriving at the main office, you clearly say: ${clause}`,
+            es: `Al llegar a la oficina principal, dices claramente: «${baseEs}».`
+          },
+          {
+            en: `During the business trip abroad, you confidently say: ${clause}`,
+            es: `Durante el viaje de negocios en el extranjero, dices con confianza: «${baseEs}».`
+          }
+        ];
+        return frames[idx % frames.length];
+      };
+
+      const mk = (p, type, support, th, inst, disp, tr, gl, aud, expOverride = null, focusTerms = null) => {
         const info = getIdiomFocus(scenario.id, p.id, p);
         return {
           id: `${scenario.id}.${p.id}.${type}`, type, support, scenario_id: scenario.id, phrase_id: p.id,
@@ -64724,171 +64971,77 @@
             glossary: gl || [],
             visual_hint: p.visual_hint,
             audio_text: aud,
-            focus_words: info.terms,
-            context_sentence: ctxSentence
+            focus_words: focusTerms || info.terms
           }
         };
       };
+
       return {
         scenario_id: scenario.id, title: scenario.title, cefr: scenario.cefr, topic: scenario.topic,
+        flow_mode: 'varied_context_by_phrase',
         stages: [
           {
             type: 'shadowing',
             support: 'full',
             exercises: scenario.phrases.map(p => mk(
               p, 'shadowing', 'full', 0.70,
-              'Escucha el audio (se reproduce solo) y repite la frase imitando el ritmo. Fíjate en el modismo resaltado.',
+              'Contexto 1 de 4 · Escucha el audio (se reproduce solo) y repite la frase. Fíjate en el modismo resaltado.',
               p.text, p.translation, p.glossary || [], p.text
             ))
           },
           {
             type: 'guided',
             support: 'partial',
-            exercises: scenario.phrases.map(p => {
-              const info = getIdiomFocus(scenario.id, p.id, p);
-              const firstHint = t => String(t || '').split(/\s+/).map(w => {
-                const c = w.replace(/[.,!?]+$/, '');
-                if (c.length <= 1) return w;
-                const count = Math.min(c.length - 1, Math.max(c.length >= 4 ? 2 : 1, Math.round(c.length * 0.33)));
-                return c.slice(0, count) + '_'.repeat(c.length - count) + w.slice(c.length);
-              }).join(' ');
-              const tokens = (p.text || '').split(/\s+/);
-              const mask = computeIdiomTokenMask(tokens, info.terms);
-              const maskedSentence = tokens.map((tok, idx) => mask[idx] ? firstHint(tok) : tok).join(' ');
+            exercises: scenario.phrases.map((p, idx) => {
+              const targets = extractTargets(p);
+              const ctx2 = p.practice_sentence
+                ? { en: p.practice_sentence, es: p.practice_translation || p.translation }
+                : variedContext(p, 'guided', idx, targets);
+              const maskedSentence = maskSentence(ctx2.en, targets.terms, 'partial');
               return mk(
                 p, 'guided', 'partial', 0.75,
-                'Practica la frase completa ayudándote con las letras incompletas únicamente en el modismo.',
-                maskedSentence, p.translation, p.glossary || [], p.text, p.text
+                'Contexto 2 de 4 · Practica los mismos modismos en una nueva situación con ayuda de las letras incompletas.',
+                maskedSentence, ctx2.es, p.glossary || [], ctx2.en, ctx2.en, targets.terms
               );
             })
           },
           {
             type: 'completion',
             support: 'low',
-            exercises: scenario.phrases.map(p => mk(
-              p, 'completion', 'low', 0.85,
-              'Completa las palabras que faltan diciendo toda la frase (puedes usar la guía de audio).',
-              cloze(p), null, [], p.text
-            ))
+            exercises: scenario.phrases.map((p, idx) => {
+              const targets = extractTargets(p);
+              const ctx3 = p.complete_sentence
+                ? { en: p.complete_sentence, es: p.complete_translation || p.translation }
+                : variedContext(p, 'completion', idx, targets);
+              const clozedSentence = maskSentence(ctx3.en, targets.terms, 'cloze');
+              return mk(
+                p, 'completion', 'low', 0.80,
+                'Contexto 3 de 4 · Completa los espacios ____ usando los mismos modismos en una tercera situación (puedes usar el audio guía).',
+                clozedSentence, ctx3.es, [], ctx3.en, ctx3.en, targets.terms
+              );
+            })
           },
           {
             type: 'recall',
             support: 'full',
             exercises: scenario.phrases.map((p, idx) => {
-              const info = getIdiomFocus(scenario.id, p.id, p);
-              const firstHint = t => String(t || '').split(/\s+/).map(w => {
-                const c = w.replace(/[.,!?]+$/, '');
-                if (c.length <= 1) return w;
-                const count = Math.min(c.length - 1, Math.max(c.length >= 4 ? 2 : 1, Math.round(c.length * 0.33)));
-                return c.slice(0, count) + '_'.repeat(c.length - count) + w.slice(c.length);
-              }).join(' ');
+              const targets = extractTargets(p);
               if (p.apply_sentence) {
                 const fullApplied = p.apply_sentence.replace('____', p.apply_answer || '');
                 const maskedApplied = p.apply_sentence.replace('____', firstHint(p.apply_answer || ''));
-                return {
-                  id: `${scenario.id}.${p.id}.recall`, type: 'recall', support: 'full', scenario_id: scenario.id, phrase_id: p.id,
-                  expected_text: fullApplied, pass_threshold: 0.75, response_mode: 'speech',
-                  prompt: {
-                    instruction_es: 'Aplica la expresión aprendida en un contexto diferente guiándote por las letras incompletas.',
-                    display_text: maskedApplied, translation: p.apply_translation, glossary: p.glossary || [],
-                    visual_hint: p.visual_hint, audio_text: fullApplied,
-                    focus_words: info.terms
-                  }
-                };
+                return mk(
+                  p, 'recall', 'full', 0.85,
+                  'Contexto 4 de 4 · Aplica la expresión aprendida en un cuarto contexto guiándote por las letras incompletas.',
+                  maskedApplied, p.apply_translation, p.glossary || [], fullApplied, fullApplied, targets.terms
+                );
               }
-
-              // Vary the context naturally for phrases without an explicit apply_sentence
-              const glossList = Array.isArray(p.glossary) ? p.glossary : [];
-              const g0 = glossList[0] || null;
-              const g1 = glossList[1] || null;
-              const shortMean = (g, fallback) => {
-                if (!g || !g.meaning) return fallback;
-                let m = g.meaning.split('/')[0].split('(')[0].trim();
-                if (m.includes(':')) m = m.split(':')[1].trim();
-                return m.length > 32 ? fallback : m;
-              };
-
-              const rawTarget0 = (info.label || (g0 && g0.word) || '').trim();
-              const target0 = rawTarget0 || (p.text || '').split(/\s+/).find(w => w.replace(/[^a-zA-Z]/g, '').length > 3) || 'expression';
-              const target1 = (g1 && g1.word && g1.word.toLowerCase() !== target0.toLowerCase()) ? g1.word.trim() : '';
-              const mean0 = shortMean(g0, target0);
-              const mean1 = target1 ? shortMean(g1, target1) : '';
-              const lowerTarget0 = target0.toLowerCase();
-              const lowerText = (p.text || '').toLowerCase();
-
-              let variedEn = '';
-              let variedEs = '';
-              if (target1) {
-                if (/^been\s+/i.test(lowerTarget0)) {
-                  variedEn = `My teammate has ${target0} on our ${target1} tasks since early morning.`;
-                  variedEs = `Mi compañero ha estado trabajando (${target0}) en nuestras tareas de ${mean1} desde temprano.`;
-                } else {
-                  const pairTemplates = [
-                    {
-                      en: `During the afternoon shift, we used ${target0} and ${target1} to solve the issue quickly.`,
-                      es: `Durante el turno de la tarde, usamos "${mean0}" y "${mean1}" para resolver el problema rápido.`
-                    },
-                    {
-                      en: `At the new office, everyone relies on ${target0} along with ${target1} every single day.`,
-                      es: `En la nueva oficina, todos confían en "${mean0}" junto con "${mean1}" cada día.`
-                    },
-                    {
-                      en: `Before the meeting ended, she combined ${target0} with ${target1} in her final plan.`,
-                      es: `Antes de terminar la reunión, ella combinó "${mean0}" con "${mean1}" en su plan final.`
-                    }
-                  ];
-                  const pick = pairTemplates[idx % pairTemplates.length];
-                  variedEn = pick.en;
-                  variedEs = pick.es;
-                }
-              } else if (/ly$/.test(lowerTarget0) && !/\s/.test(lowerTarget0)) {
-                variedEn = `When the main system went offline, the team handled every order ${target0} until noon.`;
-                variedEs = `Cuando el sistema principal se cayó, el equipo gestionó cada pedido ${mean0} hasta el mediodía.`;
-              } else if (/^(can i|could i|may i|could you|would you)\b/i.test(lowerText)) {
-                variedEn = `At a different counter later that day, you politely ask about ${target0} before paying.`;
-                variedEs = `En otro mostrador más tarde ese día, preguntas con cortesía por "${mean0}" antes de pagar.`;
-              } else if (/\?$/.test((p.text || '').trim())) {
-                variedEn = `In a new situation, a coworker asks you to double-check ${target0} before sending the report.`;
-                variedEs = `En una nueva situación, un compañero te pide revisar "${mean0}" antes de enviar el informe.`;
-              } else {
-                const templates = [
-                  {
-                    en: `During last week's project, everyone noticed how useful ${target0} was for the whole team.`,
-                    es: `Durante el proyecto de la semana pasada, todos notaron lo útil que fue "${mean0}" para todo el equipo.`
-                  },
-                  {
-                    en: `At the new office downtown, clients often appreciate ${target0} right from the first visit.`,
-                    es: `En la nueva oficina del centro, los clientes suelen valorar "${mean0}" desde la primera visita.`
-                  },
-                  {
-                    en: `Before finishing the trip, we made sure to arrange ${target0} ahead of time.`,
-                    es: `Antes de terminar el viaje, nos aseguramos de organizar "${mean0}" con anticipación.`
-                  }
-                ];
-                const pick = templates[idx % templates.length];
-                variedEn = pick.en;
-                variedEs = pick.es;
-              }
-
-              const targetTerms = [target0, target1]
-                .filter(Boolean)
-                .flatMap(t => t.split(/\s+/))
-                .map(w => w.replace(/[^a-zA-Z0-9'-]/g, ''))
-                .filter(Boolean);
-              const tokens = variedEn.split(/\s+/);
-              const mask = computeIdiomTokenMask(tokens, targetTerms.length ? targetTerms : info.terms);
-              const maskedVaried = tokens.map((tok, i) => mask[i] ? firstHint(tok) : tok).join(' ');
-
-              return {
-                id: `${scenario.id}.${p.id}.recall`, type: 'recall', support: 'full', scenario_id: scenario.id, phrase_id: p.id,
-                expected_text: variedEn, pass_threshold: 0.75, response_mode: 'speech',
-                prompt: {
-                  instruction_es: 'Aplica las expresiones aprendidas en un contexto diferente guiándote por las letras incompletas.',
-                  display_text: maskedVaried, translation: variedEs, glossary: p.glossary || [],
-                  visual_hint: p.visual_hint, audio_text: variedEn,
-                  focus_words: targetTerms.length ? targetTerms : info.terms
-                }
-              };
+              const ctx4 = variedContext(p, 'recall', idx, targets);
+              const maskedVaried = maskSentence(ctx4.en, targets.terms, 'partial');
+              return mk(
+                p, 'recall', 'full', 0.85,
+                'Contexto 4 de 4 · Aplica las expresiones aprendidas en un cuarto contexto guiándote por las letras incompletas.',
+                maskedVaried, ctx4.es, p.glossary || [], ctx4.en, ctx4.en, targets.terms
+              );
             })
           },
         ]
@@ -65396,19 +65549,50 @@
     async function renderLessonView() {
       if (!state.lesson) return;
       const stages = state.lesson.stages;
+      const totalPhrases = stages[0] ? stages[0].exercises.length : 0;
+      if (state.stageIndex < 4 && state.exerciseIndex >= totalPhrases) {
+        state.exerciseIndex = Math.max(0, totalPhrases - 1);
+      }
+
+      const phrases = (state.currentScenario && state.currentScenario.phrases) || [];
+      const modismoPills = [
+        ...Array.from({ length: totalPhrases }, (_, pIdx) => {
+          const pObj = phrases[pIdx] || null;
+          const info = getIdiomFocus(state.lesson.scenario_id, pObj ? pObj.id : '', pObj);
+          const rawLabel = info.label || (pObj ? pObj.text : `Modismo ${pIdx + 1}`);
+          const shortLabel = rawLabel.length > 22 ? rawLabel.slice(0, 20) + '…' : rawLabel;
+          const isActive = state.stageIndex < 4 && state.exerciseIndex === pIdx;
+          return `
+            <button onclick="jumpModismo(${pIdx})" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 ${
+              isActive
+                ? 'bg-amber-500/20 border-amber-400 text-amber-200 shadow-xs ring-1 ring-amber-400/30'
+                : 'bg-slate-900/90 border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700'
+            }">
+              <span class="px-1.5 py-0.2 rounded-md text-[10px] font-mono font-bold ${isActive ? 'bg-amber-400 text-slate-950' : 'bg-slate-800 text-slate-400'}">M${pIdx + 1}</span>
+              <span>${shortLabel}</span>
+            </button>
+          `;
+        }),
+        `<button onclick="jumpStage(4)" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 ${
+          state.stageIndex === 4
+            ? 'bg-rose-600 border-rose-400 text-white shadow-xs'
+            : 'bg-rose-500/10 border-rose-500/30 text-rose-300 hover:bg-rose-500/20'
+        }"><span>🎭</span><span>5. Conversa (IA)</span></button>`
+      ].join('');
+
       const stagePills = [
         ...stages.map((st, idx) => `
-          <button ${isTestEnv() ? `onclick="jumpStage(${idx})"` : 'disabled'} class="px-3 py-1.5 rounded-xl text-xs font-medium border transition ${
+          <button onclick="jumpStage(${idx})" class="px-3 py-1.5 rounded-xl text-xs font-medium border transition ${
             idx === state.stageIndex ? 'bg-indigo-600 border-indigo-400 text-white shadow-xs' : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200'
-          }">${STAGE_LABELS[st.type].title}</button>
+          }">${STAGE_LABELS[st.type].title} <span class="opacity-75 text-[10px] font-mono">· Ctx ${idx + 1}</span></button>
         `),
-        `<button ${isTestEnv() ? 'onclick="jumpStage(4)"' : 'disabled'} class="px-3 py-1.5 rounded-xl text-xs font-medium border transition ${
+        `<button onclick="jumpStage(4)" class="px-3 py-1.5 rounded-xl text-xs font-medium border transition ${
           state.stageIndex === 4 ? 'bg-rose-600 border-rose-400 text-white shadow-xs' : 'bg-rose-500/10 border-rose-500/30 text-rose-300 hover:bg-rose-500/20'
         }">5. Conversa</button>`
       ].join('');
 
       if (state.stageIndex === 4) {
-        return renderRoleplayView(true, stagePills);
+        return renderRoleplayView(true, modismoPills);
       }
 
       const stage = stages[state.stageIndex];
@@ -65417,11 +65601,22 @@
 
       document.getElementById('stage-container').innerHTML = `
         <div class="space-y-5">
-          <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800/80">
-            <div class="flex flex-wrap gap-1.5">${stagePills}</div>
-            <span class="text-xs text-slate-400">${state.currentScenario ? state.currentScenario.title_es : ''}</span>
+          <div class="space-y-2.5 pb-3 border-b border-slate-800/80">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-300/90 flex items-center gap-1.5">
+                <span>🔁</span><span>Paso 1: Modismo ${state.exerciseIndex + 1} de ${totalPhrases} (recorre 4 contextos antes del siguiente)</span>
+              </span>
+              <span class="text-xs text-slate-400">${state.currentScenario ? state.currentScenario.title_es : ''}</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5">${modismoPills}</div>
+            <div class="pt-1 flex flex-wrap items-center justify-between gap-2">
+              <div class="flex flex-wrap gap-1.5">${stagePills}</div>
+              <span class="px-2.5 py-0.5 rounded-lg bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
+                Contexto ${state.stageIndex + 1} de 4 · Modismo ${state.exerciseIndex + 1}/${totalPhrases}
+              </span>
+            </div>
           </div>
-          ${renderExerciseCard(ex, meta, state.exerciseIndex, stage.exercises.length, 'nextLessonItem')}
+          ${renderExerciseCard(ex, meta, state.stageIndex, stages.length, 'nextLessonItem')}
         </div>
         ${renderMicrophoneControls(ex, null, 'nextLessonItem')}
         <div class="mt-5">${renderEvaluationResult(ex, 'nextLessonItem')}</div>
@@ -65456,26 +65651,62 @@
       }
     }
 
+    function jumpModismo(exIdx) {
+      clearEvaluationState();
+      state.exerciseIndex = exIdx;
+      if (state.stageIndex === 4) {
+        state.stageIndex = 0;
+      }
+      renderLessonView();
+    }
+
     function jumpStage(idx) {
       clearEvaluationState();
       state.stageIndex = idx;
-      state.exerciseIndex = 0;
-      if (idx === 4) state.roleplayPhase = 'briefing';
+      if (idx === 4) {
+        state.roleplayPhase = 'briefing';
+      } else if (state.lesson && state.lesson.stages && state.lesson.stages[idx]) {
+        const maxIdx = Math.max(0, state.lesson.stages[idx].exercises.length - 1);
+        state.exerciseIndex = Math.min(Math.max(0, state.exerciseIndex), maxIdx);
+      }
       renderLessonView();
     }
 
     function nextLessonItem(delta) {
       const stages = state.lesson.stages;
-      if (state.stageIndex === 4) return;
-      const stage = stages[state.stageIndex];
-      let nextIdx = state.exerciseIndex + delta;
-      if (nextIdx >= stage.exercises.length) {
-        if (state.stageIndex + 1 < stages.length) { state.stageIndex++; state.exerciseIndex = 0; }
-        else { state.stageIndex = 4; state.exerciseIndex = 0; }
-      } else if (nextIdx < 0) {
-        if (state.stageIndex > 0) { state.stageIndex--; state.exerciseIndex = stages[state.stageIndex].exercises.length - 1; }
-        else state.exerciseIndex = 0;
-      } else state.exerciseIndex = nextIdx;
+      const totalPhrases = stages[0] ? stages[0].exercises.length : 0;
+      if (!totalPhrases) return;
+      if (state.stageIndex === 4) {
+        if (delta < 0) {
+          state.stageIndex = stages.length - 1;
+          state.exerciseIndex = totalPhrases - 1;
+          clearEvaluationState();
+          renderLessonView();
+        }
+        return;
+      }
+      if (delta > 0) {
+        if (state.stageIndex + 1 < stages.length) {
+          state.stageIndex++;
+        } else if (state.exerciseIndex + 1 < totalPhrases) {
+          state.exerciseIndex++;
+          state.stageIndex = 0;
+        } else {
+          state.stageIndex = 4;
+          state.exerciseIndex = 0;
+          state.roleplayPhase = 'briefing';
+        }
+      } else if (delta < 0) {
+        if (state.stageIndex > 0) {
+          state.stageIndex--;
+        } else if (state.exerciseIndex > 0) {
+          state.exerciseIndex--;
+          state.stageIndex = stages.length - 1;
+        } else {
+          state.exerciseIndex = 0;
+          state.stageIndex = 0;
+        }
+      }
       clearEvaluationState();
       renderLessonView();
     }
@@ -65517,11 +65748,11 @@
       const progressPct = Math.round(((idx + 1) / Math.max(1, total)) * 100);
 
       const idiomInfo = getIdiomFocus(ex.scenario_id, ex.phrase_id);
-      const showIdiomBadge = (ex.type === 'shadowing' || ex.type === 'guided' || state.lastEvaluation) && idiomInfo.label;
+      const showIdiomBadge = Boolean(idiomInfo.label);
       const idiomBadgeHtml = showIdiomBadge ? `
         <div class="inline-flex flex-wrap items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-2xl bg-amber-500/15 border border-amber-400/35 text-xs text-amber-200 shadow-xs">
           <span>✨</span>
-          <span class="text-amber-300/90 font-medium">Modismo / Expresión clave:</span>
+          <span class="text-amber-300/90 font-medium">Modismo en práctica (Contexto ${idx + 1} de ${total}):</span>
           <strong class="text-amber-200 font-extrabold">“${idiomInfo.label}”</strong>
           ${idiomInfo.meaning ? `<span class="text-slate-300">(${idiomInfo.meaning})</span>` : ''}
         </div>
@@ -65536,12 +65767,12 @@
           guidanceBannerHtml = `
             <div class="flex flex-col items-center gap-2 mb-2">
               <div class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold shadow-xs">
-                <span>🎯</span><span>Completa la frase guiándote por las letras iniciales del modismo o palabra clave.</span>
+                <span>🎯</span><span>Etapa 4 (Aplica · Contexto 4): Pronuncia la oración completa aplicando el modismo en esta nueva situación.</span>
               </div>
               ${cleanSpanishCue ? `
                 <div class="inline-flex flex-wrap items-center justify-center gap-1.5 px-4 py-2 rounded-2xl bg-amber-500/15 border border-amber-400/35 text-amber-200 text-xs font-semibold shadow-xs">
                   <span>🧠</span>
-                  <span>Pista de significado (en español):</span>
+                  <span>Significado clave:</span>
                   <strong class="text-amber-300 font-extrabold">“${cleanSpanishCue}”</strong>
                 </div>
               ` : ''}
@@ -65550,13 +65781,19 @@
         } else if (ex.type === 'guided') {
           guidanceBannerHtml = `
             <div class="mb-2 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold shadow-xs">
-              <span>💡</span><span>Practica la frase completa guiándote por las letras incompletas del modismo.</span>
+              <span>💡</span><span>Etapa 2 (Practica · Contexto 2): Usa el mismo modismo en un segundo contexto guiándote por las letras iniciales.</span>
             </div>
           `;
         } else if (ex.type === 'completion') {
           guidanceBannerHtml = `
             <div class="mb-2 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold shadow-xs">
-              <span>🧩</span><span>Aplica y completa la oración diciendo las palabras que faltan.</span>
+              <span>🧩</span><span>Etapa 3 (Completa · Contexto 3): Completa los espacios en blanco con el modismo en este tercer contexto.</span>
+            </div>
+          `;
+        } else if (ex.type === 'shadowing') {
+          guidanceBannerHtml = `
+            <div class="mb-2 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-semibold shadow-xs">
+              <span>🎧</span><span>Etapa 1 (Sombra · Contexto 1): Escucha y repite el primer contexto de este modismo.</span>
             </div>
           `;
         }
@@ -65579,8 +65816,8 @@
         </div>
       ` : '';
 
-      // Translation visibility: in completion (Stage 4), hide translation before recording for pure memory recall
-      const showTranslation = ex.type !== 'completion' || state.lastEvaluation;
+      // Translation visibility: show across contexts so the learner understands the new situational sentence
+      const showTranslation = true;
 
       // Audio model button: keep available in Sombra (shadowing), Practica (guided), and Completa (completion)
       const allowListenBeforeEval = ex.type === 'shadowing' || ex.type === 'guided' || ex.type === 'completion' || state.lastEvaluation;
@@ -65588,9 +65825,9 @@
       return `
         <div class="space-y-4">
           <div class="flex items-center justify-between gap-4">
-            <span class="text-xs font-medium px-3 py-1 rounded-full border ${meta.color}">${meta.subtitle}</span>
+            <span class="text-xs font-medium px-3 py-1 rounded-full border ${meta.color}">${meta.title} · ${meta.subtitle}</span>
             <div class="flex items-center gap-2 text-xs text-slate-400">
-              <span>${idx + 1} de ${total}</span>
+              <span>Etapa ${idx + 1} de ${total}</span>
               <div class="w-20 h-1.5 bg-slate-800 rounded-full overflow-hidden">
                 <div class="h-full bg-indigo-500 rounded-full transition-all" style="width:${progressPct}%"></div>
               </div>
@@ -66287,6 +66524,20 @@
         </li>
       `).join('');
 
+      let nextStepLabel = 'Continuar';
+      if (navFn === 'nextLessonItem' && state.lesson && state.lesson.stages) {
+        const stages = state.lesson.stages;
+        const totalPhrases = stages[0] ? stages[0].exercises.length : 0;
+        if (state.stageIndex + 1 < stages.length) {
+          const nextSt = stages[state.stageIndex + 1];
+          nextStepLabel = `Continuar a ${STAGE_LABELS[nextSt.type].title} (Contexto ${state.stageIndex + 2})`;
+        } else if (state.exerciseIndex + 1 < totalPhrases) {
+          nextStepLabel = `Pasar al Modismo ${state.exerciseIndex + 2} (1. Sombra · Ctx 1)`;
+        } else {
+          nextStepLabel = 'Ir a 5. Conversa (IA)';
+        }
+      }
+
       const continueBtnHtml = navFn ? `
         <div class="pt-3 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3">
           <button onclick="recordWithMicrophone('${ex ? ex.id : ''}', '${fullEsc}', '')"
@@ -66294,8 +66545,8 @@
             <span>🎙️</span><span>Repetir pronunciación completa</span>
           </button>
           <button id="btn-continue-exercise" onclick="${navFn}(1)"
-            class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-sm shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-2 transition transform hover:scale-[1.02] active:scale-95">
-            <span>Continuar</span><span>→</span>
+            class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-sm shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-2 transition transform hover:scale-[1.02] active:scale-95">
+            <span>${nextStepLabel}</span><span>→</span>
           </button>
         </div>
       ` : '';
@@ -66332,7 +66583,7 @@
       return `
         <div class="mt-5 pt-4 border-t border-slate-800/80 space-y-3">
           <div class="flex items-center justify-between gap-3">
-            ${(navFn && isTestEnv()) ? `<button onclick="${navFn}(-1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-400 hover:text-slate-200 transition">← Anterior</button>` : '<div></div>'}
+            ${navFn ? `<button onclick="${navFn}(-1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-400 hover:text-slate-200 transition">← Anterior</button>` : '<div></div>'}
 
             <div class="flex items-center justify-center">
               <button id="mic-btn" onclick="recordWithMicrophone('${ex.id}', '${target}', '${cardId || ''}')"
@@ -66341,7 +66592,7 @@
               </button>
             </div>
 
-            ${(navFn && isTestEnv()) ? `<button onclick="${navFn}(1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-400 hover:text-slate-200 transition">Siguiente →</button>` : '<div></div>'}
+            ${navFn ? `<button onclick="${navFn}(1)" class="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-400 hover:text-slate-200 transition">Siguiente →</button>` : '<div></div>'}
           </div>
           <p id="mic-notice" class="hidden text-center text-xs font-semibold text-amber-300 bg-amber-500/10 border border-amber-500/30 rounded-xl px-3 py-2"></p>
           <p class="text-center text-[11px] text-slate-500 flex items-center justify-center gap-1.5">

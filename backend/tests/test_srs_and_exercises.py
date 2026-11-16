@@ -24,15 +24,25 @@ def test_schedule_progression_and_lapse():
     assert lapsed.ease >= srs.MIN_EASE
 
 
-def test_lesson_has_decreasing_support():
+def test_lesson_has_varied_contexts_across_four_stages():
     repo = get_repository()
     plan = build_lesson(repo.get("a1-ordering-coffee"))
-    assert [s.type for s in plan.stages] == [ExerciseType.SHADOWING, ExerciseType.RECALL,
-                                             ExerciseType.GUIDED, ExerciseType.COMPLETION]
-    recall, guided, completion = plan.stages[1].exercises[0], plan.stages[2].exercises[0], plan.stages[3].exercises[0]
-    assert recall.prompt.glossary and recall.prompt.translation
-    assert guided.prompt.display_text.startswith("C__ I h___") and not guided.prompt.glossary
-    assert "____" in completion.prompt.display_text and completion.prompt.translation is None
+    assert plan.flow_mode == "varied_context_by_phrase"
+    assert [s.type for s in plan.stages] == [
+        ExerciseType.SHADOWING,
+        ExerciseType.GUIDED,
+        ExerciseType.COMPLETION,
+        ExerciseType.RECALL,
+    ]
+    shadow, guided, completion, recall = (plan.stages[i].exercises[0] for i in range(4))
+    assert shadow.prompt.glossary and shadow.prompt.translation
+    assert "_" in guided.prompt.display_text and guided.prompt.translation and guided.prompt.audio_text
+    assert "____" in completion.prompt.display_text
+    assert completion.prompt.translation is None and completion.prompt.audio_text
+    assert "_" in recall.prompt.display_text and recall.prompt.translation and recall.prompt.glossary
+    # All 4 stages for the same phrase must present 4 distinct varied contexts
+    contexts = {shadow.expected_text, guided.expected_text, completion.expected_text, recall.expected_text}
+    assert len(contexts) == 4
     assert all(e.response_mode == "speech" for st in plan.stages for e in st.exercises)
     thresholds = [st.exercises[0].pass_threshold for st in plan.stages]
     assert thresholds == sorted(thresholds)

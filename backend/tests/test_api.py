@@ -145,8 +145,8 @@ def test_translate_and_bookmark_phrase(client, auth):
 
 
 def test_attempt_feedback_and_srs_loop(client, auth):
-    ex = "a1-ordering-coffee.can-i-have.recall"
-    bad = speak(client, f"/v1/exercises/{ex}/attempts", auth, "can I half a coffee").json()
+    ex = "a1-ordering-coffee.can-i-have.shadowing"
+    bad = speak(client, f"/v1/exercises/{ex}/attempts", auth, "can I half a tea").json()
     assert bad["evaluation"]["passed"] is False
     assert bad["feedback"]["level"] == "retry"
     assert {u["kind"] for u in bad["srs"]} == {"phrase", "feedback"}
@@ -158,10 +158,15 @@ def test_attempt_feedback_and_srs_loop(client, auth):
     kinds = {d["kind"] for d in due}
     assert "feedback" in kinds
     fb_item = next(d for d in due if d["kind"] == "feedback")
-    assert set(fb_item["exercise"]["prompt"]["focus_words"]) == {"have", "please"}
+    assert set(fb_item["exercise"]["prompt"]["focus_words"]) == {"have", "coffee", "please"}
     assert fb_item["exercise"]["type"] == "recall"
 
-    good = speak(client, f"/v1/review/{fb_item['card_id']}/attempts", auth, "Can I have a coffee please").json()
+    good = speak(
+        client,
+        f"/v1/review/{fb_item['card_id']}/attempts",
+        auth,
+        fb_item["exercise"]["expected_text"],
+    ).json()
     assert good["evaluation"]["passed"] and good["feedback"]["level"] == "excellent"
     nxt = {u["kind"]: u for u in good["srs"]}
     assert datetime.fromisoformat(nxt["feedback"]["next_due_at"]) > datetime.now(UTC) + timedelta(hours=12)

@@ -36,6 +36,14 @@ class Phrase(BaseModel):
     cloze: list[int] = Field(default_factory=list, description="word indexes hidden in completion stage")
     common: bool = True  # belongs to the "common phrases" bank
     kind: str = "phrase"  # phrase | idiom | phrasal_verb | expression
+    practice_sentence: str | None = Field(
+        default=None, description="Context 2 sentence for guided practice using the target expression"
+    )
+    practice_translation: str | None = None
+    complete_sentence: str | None = Field(
+        default=None, description="Context 3 sentence for completion using the target expression"
+    )
+    complete_translation: str | None = None
     apply_sentence: str | None = Field(
         default=None, description="new sentence with ____ to fill with the practiced expression"
     )
